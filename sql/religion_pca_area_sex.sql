@@ -19,7 +19,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: area_religion_sex; Type: TABLE; Schema: public; Owner: factlyin; Tablespace:
+-- Name: area_religion_sex; Type: TABLE; Schema: public; Owner: wazimap; Tablespace:
 --
 
 CREATE TABLE area_religion_sex (
@@ -32,10 +32,10 @@ CREATE TABLE area_religion_sex (
 );
 
 
-ALTER TABLE area_religion_sex OWNER TO factlyin;
+ALTER TABLE area_religion_sex OWNER TO wazimap;
 
 --
--- Data for Name: area_religion_sex; Type: TABLE DATA; Schema: public; Owner: factlyin
+-- Data for Name: area_religion_sex; Type: TABLE DATA; Schema: public; Owner: wazimap
 --
 
 COPY area_religion_sex (geo_code, geo_level, religion, area, sex, total) FROM stdin WITH DELIMITER ',';
@@ -21675,7 +21675,7 @@ IN,country,Religion not stated,Urban,Female,604075
 
 
 --
--- Name: area_religion_sex_pkey; Type: CONSTRAINT; Schema: public; Owner: factlyin; Tablespace:
+-- Name: area_religion_sex_pkey; Type: CONSTRAINT; Schema: public; Owner: wazimap; Tablespace:
 --
 
 ALTER TABLE ONLY area_religion_sex
