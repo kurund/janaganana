@@ -1,91 +1,155 @@
-# pull in the default wazimap settings
-from wazimap.settings import *  # noqa
-from decouple import config
+from wazimap.settings import * 
+import os
 
-DEBUG = config('DJANGO_DEBUG', default=True, cast=bool)
-TEMPLATE_DEBUG = DEBUG
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-# DJANGO_SETTINGS_MODULE = config('DJANGO_SETTINGS_MODULE')
 
-# install this app before Wazimap
-INSTALLED_APPS = ['janaganana', 'django.contrib.sitemaps'] + INSTALLED_APPS
-# INSTALLED_APPS = ['janaganana', 'pipeline'] + INSTALLED_APPS
+# Quick-start development settings - unsuitable for production
+# See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
+
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = 'wt08^t@ugzs4sw*qn=c*=$d+jgkqkkp4$0z98j-k5s!o2um$(n'
+
+# SECURITY WARNING: don't run with debug turned on in production!
+DEBUG = True
+
+ALLOWED_HOSTS = ['*']
+
+# Application definition
+
+INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'census',
+    'wazimap',
+    'django.contrib.humanize',
+    'django.contrib.sitemaps',
+    'sass_processor',
+]
+
+MIDDLEWARE_CLASSES = [
+    'django.middleware.security.SecurityMiddleware',
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django.middleware.cache.UpdateCacheMiddleware',
+    'django.middleware.cache.FetchFromCacheMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
+]
 
 ROOT_URLCONF = 'janaganana.urls'
+# database settings
+DATABASES = {
+    'default': {
+        'ENGINE':   'django.db.backends.postgresql',
+        'NAME':     'wazimap',
+        'USER':     'wazimap',
+        'PASSWORD': 'wazimap',
+        'HOST':     'localhost',
+        'PORT': '',
+    }
+}
 
-DATABASE_URL = config('DATABASE_URL', default='postgresql://factlyin:factlyin@localhost/factlyin')
-DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
-DATABASES['default']['ATOMIC_REQUESTS'] = True
+INSTALLED_APPS = ['janaganana'] + INSTALLED_APPS
 
 # Localise this instance of Wazimap
 WAZIMAP['name'] = 'Counting India'
 # NB: this must be https if your site supports HTTPS.
-WAZIMAP['url'] = 'http://www.countingindia.com'
+WAZIMAP['url'] = 'http://127.0.0.1:8000'
 WAZIMAP['country_code'] = 'IN'
 WAZIMAP['profile_builder'] = 'janaganana.profiles.get_census_profile'
-
+#WAZIMAP['ga_tracking_id'] = 'UA-88773672-1'
 WAZIMAP['levels'] = {
     'country': {
+        'name': 'country',
         'plural': 'countries',
         'children': ['state']
     },
 
     'state': {
+        'name':'state',
         'plural': 'states',
         'children': ['district']
     },
 
     'district': {
+        'name':'district',
         'plural': 'districts',
         'children': []
     }
 }
 
-WAZIMAP['comparative_levels'] = ['country', 'state', 'district']
-WAZIMAP['geometry_data'] = {
-    'country':  'geo/country.topojson',
-    'state':    'geo/state.topojson',
-    'district': 'geo/district.topojson',
-}
 
-WAZIMAP['ga_tracking_id'] = 'UA-88773672-1'
-WAZIMAP['twitter'] = '@factlydotin'
+WAZIMAP['default_geo_version'] = None
+WAZIMAP['comparative_levels'] = ['country', 'state', 'district']
+
+WAZIMAP['geometry_data'] = {'': {
+  'country':  'geo/country.topojson',
+  'state':    'geo/state.topojson',
+  'district': 'geo/district.topojson',
+}}
+
+# testing GDAL
+try:
+    import osgeo.gdal  # noqa
+    HAS_GDAL = True
+except ImportError:
+    HAS_GDAL = False
+
+#WAZIMAP['ga_tracking_id'] = 'UA-88773672-1'
 WAZIMAP['cache_secs'] = 0
 WAZIMAP['embed_cache_secs'] = 0
 WAZIMAP['map_centre'] = [20.5937, 78.9629]
 WAZIMAP['map_zoom'] = 4
 
-#WAZIMAP['cache_secs'] = 7 * 24 * 60 * 60
 
-# Custom Settings
-WAZIMAP['email'] = 'ci@factly.in'
-WAZIMAP['github'] = 'https://github.com/factly/janaganana'
-WAZIMAP['tagline'] = 'Make sense of Indian census data'
+WSGI_APPLICATION = 'janaganana.wsgi.application'
 
-SECRET_KEY = config('DJANGO_SECRET_KEY')
+
+
+# Password validation
+# https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
+
+AUTH_PASSWORD_VALIDATORS = [
+    {
+        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+    },
+    {
+        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+    },
+]
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static-root')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-    # 'pipeline.finders.PipelineFinder',
 )
 
 # STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
 
-STATICFILES_DIRS = (
-    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'),
-)
-
-MIDDLEWARE_CLASSES = [
-    'django.middleware.cache.UpdateCacheMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.cache.FetchFromCacheMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-]
+#STATICFILES_DIRS = (
+#    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'),
+#)
 
 if DEBUG:
     CACHES = {
@@ -142,29 +206,4 @@ LOGGING = {
         },
     }
 }
-
-# PIPELINE = {
-#     'STYLESHEETS': {
-#         'colors': {
-#             'source_filenames': (
-#               'css/vendor/*.js',
-#               'css/*.css',
-#             ),
-#             'output_filename': 'css/colors.css',
-#             'extra_context': {
-#                 'media': 'screen,projection',
-#             },
-#         },
-#     },
-#     'JAVASCRIPT': {
-#         'stats': {
-#             'source_filenames': (
-#               'js/vendor/*.js',
-#               'js/*.js',
-#             ),
-#             'output_filename': 'js/stats.js',
-#         }
-#     }
-# }
-
 SITE_ID = 1

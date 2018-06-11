@@ -19,7 +19,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: ruralpopulation; Type: TABLE; Schema: public; Owner: factlyin; Tablespace:
+-- Name: ruralpopulation; Type: TABLE; Schema: public; Owner: wazimap; Tablespace:
 --
 
 CREATE TABLE ruralpopulation (
@@ -31,10 +31,10 @@ CREATE TABLE ruralpopulation (
 );
 
 
-ALTER TABLE ruralpopulation OWNER TO factlyin;
+ALTER TABLE ruralpopulation OWNER TO wazimap;
 
 --
--- Data for Name: ruralpopulation; Type: TABLE DATA; Schema: public; Owner: factlyin
+-- Data for Name: ruralpopulation; Type: TABLE DATA; Schema: public; Owner: wazimap
 --
 
 COPY ruralpopulation (geo_code,geo_level,villages,"rural population",total) FROM stdin WITH DELIMITER ',';
@@ -1394,7 +1394,7 @@ IN,country,597608,Female,405967794
 
 
 --
--- Name: ruralpopulation_pkey; Type: CONSTRAINT; Schema: public; Owner: factlyin; Tablespace:
+-- Name: ruralpopulation_pkey; Type: CONSTRAINT; Schema: public; Owner: wazimap; Tablespace:
 --
 
 ALTER TABLE ONLY ruralpopulation
