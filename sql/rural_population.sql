@@ -27,7 +27,8 @@ CREATE TABLE ruralpopulation (
     geo_code character varying(10) NOT NULL,
     villages integer NOT NULL,
     "rural population" character varying(10) NOT NULL,
-    total integer NOT NULL
+    total integer NOT NULL,
+    geo_version character varying(100) NULL
 );
 
 

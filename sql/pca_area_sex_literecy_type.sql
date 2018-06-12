@@ -28,7 +28,8 @@ CREATE TABLE area_literacy_sex (
     area character varying(10) NOT NULL,
     literacy character varying(20) NOT NULL,
     sex character varying(10) NOT NULL,
-    total integer NOT NULL
+    total integer NOT NULL,
+    geo_version character varying(100) NULL
 );
 
 
