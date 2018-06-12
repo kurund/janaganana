@@ -27,7 +27,8 @@ CREATE TABLE area_sex (
     geo_code character varying(10) NOT NULL,
     area character varying(10) NOT NULL,
     sex character varying(10) NOT NULL,
-    total integer NOT NULL
+    total integer NOT NULL,
+    geo_version character varying(100) NULL
 );
 
 

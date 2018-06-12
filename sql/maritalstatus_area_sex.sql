@@ -28,7 +28,8 @@ CREATE TABLE area_maritalstatus_sex (
     area character varying(10) NOT NULL,
     sex character varying(10) NOT NULL,
     maritalstatus character varying(50) NOT NULL,
-    total integer NOT NULL
+    total integer NOT NULL,
+    geo_version character varying(100) NULL
 );
 
 
