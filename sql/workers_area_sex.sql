@@ -28,7 +28,8 @@ CREATE TABLE area_workers_workerssex (
     area character varying(10) NOT NULL,
     workerssex character varying(10) NOT NULL,
     workers character varying(50) NOT NULL,
-    total integer NOT NULL
+    total integer NOT NULL,
+    geo_version character varying(100) NULL
 );
 
 
