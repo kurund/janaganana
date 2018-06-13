@@ -29,7 +29,7 @@ CREATE TABLE area_maritalstatus_sex (
     sex character varying(10) NOT NULL,
     maritalstatus character varying(50) NOT NULL,
     total integer NOT NULL,
-    geo_version character varying(100) NULL
+    geo_version character varying(100) DEFAULT ''::character varying NOT NULL
 );
 
 

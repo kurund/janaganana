@@ -35,11 +35,10 @@ def sort_stats_result(ip,key=None):
 
 def get_census_profile(geo, profile_name,request):
 
-    #logger.info('Begin of transaction for {}: {}'.format(geo_level, geo_code))
+    #logger.info('Begin of transaction for {}: {}'.format(geo))
 
     session = get_session()
     try:
-        #geo_summary_levels = geo_data.get_summary_geo_info(geo_code, geo_level)
         geo_summary_levels = geo_data.get_summary_geo_info(geo)
         data = {}
 
@@ -94,7 +93,6 @@ def get_demographics_profile(geo, session):
     population_by_area_dist_data = sort_stats_result(population_by_area_dist_data)
 
     population_by_sex_dist_data, _ = get_stat_data(
-        #'sex', geo_level, geo_code, session,
         'sex', geo, session,
         recode=dict(SEX_RECODES),
         key_order=SEX_RECODES.values(),
@@ -103,7 +101,6 @@ def get_demographics_profile(geo, session):
     population_by_sex_dist_data = sort_stats_result(population_by_sex_dist_data)
 
     literacy_dist_data, _ = get_stat_data(
-        #'literacy', geo_level, geo_code, session,
         'literacy', geo, session,
         recode=dict(LITERACY_RECODES),
         key_order=LITERACY_RECODES.values(),
@@ -112,7 +109,6 @@ def get_demographics_profile(geo, session):
     literacy_dist_data = sort_stats_result(literacy_dist_data)
 
     literacy_by_sex, t_lit = get_stat_data(
-        #['sex', 'literacy'], geo_level, geo_code, session,
         ['sex', 'literacy'], geo, session,
         table_fields=['area', 'literacy', 'sex'],
         recode={'literacy': dict(LITERACY_RECODES)},
@@ -120,7 +116,6 @@ def get_demographics_profile(geo, session):
         percent_grouping=['sex'])
 
     literacy_by_area, t_lit = get_stat_data(
-        #['area', 'literacy'], geo_level, geo_code, session,
         ['area', 'literacy'], geo, session,
         table_fields=['area', 'literacy', 'sex'],
         recode={'literacy': dict(LITERACY_RECODES)},
@@ -128,7 +123,7 @@ def get_demographics_profile(geo, session):
         percent_grouping=['area'])
 
     final_data = {
-        # 'sex_ratio': sex_dist_data,
+
         'population_area_ratio': population_by_area_dist_data,
         'population_sex_ratio': population_by_sex_dist_data,
         'literacy_by_sex_distribution': literacy_by_sex,

@@ -28,7 +28,7 @@ CREATE TABLE ruralpopulation (
     villages integer NOT NULL,
     "rural population" character varying(10) NOT NULL,
     total integer NOT NULL,
-    geo_version character varying(100) NULL
+    geo_version character varying(100) DEFAULT ''::character varying NOT NULL
 );
 
 

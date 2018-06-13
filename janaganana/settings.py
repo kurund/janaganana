@@ -5,9 +5,6 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
-
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'wt08^t@ugzs4sw*qn=c*=$d+jgkqkkp4$0z98j-k5s!o2um$(n'
 
@@ -30,6 +27,8 @@ INSTALLED_APPS = [
     'django.contrib.humanize',
     'django.contrib.sitemaps',
     'sass_processor',
+    'leaflet',
+    'jsonify',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -56,6 +55,7 @@ DATABASES = {
         'PASSWORD': 'wazimap',
         'HOST':     'localhost',
         'PORT': '',
+        'ATOMIC_REQUESTS': True,
     }
 }
 
@@ -67,7 +67,7 @@ WAZIMAP['name'] = 'Counting India'
 WAZIMAP['url'] = 'http://127.0.0.1:8000'
 WAZIMAP['country_code'] = 'IN'
 WAZIMAP['profile_builder'] = 'janaganana.profiles.get_census_profile'
-#WAZIMAP['ga_tracking_id'] = 'UA-88773672-1'
+
 WAZIMAP['levels'] = {
     'country': {
         'name': 'country',
@@ -89,7 +89,7 @@ WAZIMAP['levels'] = {
 }
 
 
-WAZIMAP['default_geo_version'] = None
+WAZIMAP['default_geo_version'] = ''
 WAZIMAP['comparative_levels'] = ['country', 'state', 'district']
 
 WAZIMAP['geometry_data'] = {'': {
@@ -97,7 +97,6 @@ WAZIMAP['geometry_data'] = {'': {
   'state':    'geo/state.topojson',
   'district': 'geo/district.topojson',
 }}
-
 # testing GDAL
 try:
     import osgeo.gdal  # noqa
@@ -144,12 +143,6 @@ STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
 )
-
-# STATICFILES_STORAGE = 'pipeline.storage.PipelineCachedStorage'
-
-#STATICFILES_DIRS = (
-#    os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static'),
-#)
 
 if DEBUG:
     CACHES = {
