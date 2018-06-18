@@ -1,0 +1,20 @@
+<article id="religion" class="clearfix wrapper mdl-card mdl-shadow--2dp mdl-cell--12-col profile-section">
+    <div class="mdl-card__title">
+        <i class="material-icons">highlight</i>
+        <h2 class="mdl-card__title-text">Schools</h2>
+    </div>
+    <div class="mdl-card__supporting-text wrapper" >
+        <div class="section-container">
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--4-col">
+                  {% include 'profile/_blocks/_stat_list.html' with stat=schools.total_schools stat_type='number' %}
+                </div>
+               <div class="mdl-cell--8-col" id="chart-pie-schools-schools_by_category_distribution" data-stat-type="percentage" data-chart-title=""></div>
+            </section>
+            <!--<h2 class="section-secondary-heading">Crimes by Age</h2>
+            <section class="clearfix stat-row mdl-grid section-second-row">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-crimes-crimes_by_age_distribution" data-stat-type="scaled-percentage"></div>
+            </section>-->
+        </div>
+    </div>
+</article>
