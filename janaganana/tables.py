@@ -18,3 +18,7 @@ FieldTable(['education', 'area', 'sex'], universe='Education')
 FieldTable(['maritalstatus', 'area', 'sex'], universe='Relation')
 
 FieldTable(['workers', 'area', 'workerssex'], universe='Workers')
+
+FieldTable(['crimeage'], universe='Crimes')
+
+FieldTable(['schools'], universe='School')
