@@ -18,6 +18,8 @@ PROFILE_SECTIONS = (
     'maritalstatus',
     'workers',
     'age',
+    'crimes',
+    'schools',
 )
 
 def sort_stats_result(ip,key=None):
@@ -142,7 +144,7 @@ def get_demographics_profile(geo, session):
     }
 
     return final_data
-
+# get
 
 def get_religion_profile(geo, session):
 
@@ -514,4 +516,38 @@ def get_workers_profile(geo, session):
         }
     }
 
+    return final_data
+
+# adding crimes profile
+def get_crimes_profile(geo,session):
+     # adding crimes data
+    crimes_by_age,t_lit = get_stat_data(
+        ['crimeage'],geo,session,
+        table_fields=['crimeage'],
+    )
+    
+    final_data = {
+        'crimes_by_age_distribution': crimes_by_age,
+        'total_population': {
+            "name": "People Victims",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added schools data
+def get_schools_profile(geo,session):
+
+    schools_by_category,t_lit = get_stat_data(
+        ['schools'],geo,session,
+        table_fields=['schools'],
+    )
+
+    final_data = {
+        'schools_by_category_distribution': schools_by_category,
+        'total_schools': {
+            "name": "Total Schools",
+            "values": {"this": t_lit}
+        }
+    }
     return final_data
