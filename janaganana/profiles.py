@@ -20,6 +20,7 @@ PROFILE_SECTIONS = (
     'age',
     'crimes',
     'schools',
+    'gdp',
 )
 
 def sort_stats_result(ip,key=None):
@@ -519,7 +520,7 @@ def get_workers_profile(geo, session):
     return final_data
 
 # adding crimes profile
-def get_crimes_profile(geo,session):
+"""def get_crimes_profile(geo,session):
      # adding crimes data
     crimes_by_age,t_lit = get_stat_data(
         ['crimeage'],geo,session,
@@ -533,8 +534,9 @@ def get_crimes_profile(geo,session):
             "values": {"this": t_lit}
         }
     }
-    return final_data
+    return final_data """
 
+    
 # Added schools data
 def get_schools_profile(geo,session):
 
@@ -551,3 +553,21 @@ def get_schools_profile(geo,session):
         }
     }
     return final_data
+
+def get_gdp_profile(geo,session):
+
+    gdp_by_year,t_lit = get_stat_data(
+        ['gdp'],geo,session,
+        table_fields=['gdp'],
+    )
+
+    final_data = {
+        'gdp_by_year_distribution': gdp_by_year,
+        'total_gdp':{
+            "name": "Total GDP in Crore",
+            "values": {"this":t_lit}
+        }
+    }
+
+    return final_data
+
