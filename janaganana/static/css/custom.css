@@ -54,6 +54,10 @@ a.action-button,
     cursor: pointer;
     color: #E00015;
 }
+.action-links {
+    padding-top: 15px;
+}
+
 .action-links a:hover {
     color: #FA1A2F;
 }
