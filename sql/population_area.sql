@@ -2751,7 +2751,7 @@ IN,country,Rural,Female,405967794
 --
 
 ALTER TABLE ONLY area_sex
-    ADD CONSTRAINT area_sex_pkey PRIMARY KEY (geo_level, geo_code, area, sex);
+    ADD CONSTRAINT area_sex_pkey PRIMARY KEY (geo_level, geo_code, geo_version, area, sex);
 
 
 --
