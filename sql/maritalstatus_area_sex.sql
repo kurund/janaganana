@@ -16272,7 +16272,7 @@ IN,country,Urban,Female,unspecified,0
 --
 
 ALTER TABLE ONLY area_maritalstatus_sex
-    ADD CONSTRAINT area_maritalstatus_sex_pkey PRIMARY KEY (geo_level, geo_code, area, maritalstatus, sex);
+    ADD CONSTRAINT area_maritalstatus_sex_pkey PRIMARY KEY (geo_level, geo_code, geo_version, area, maritalstatus, sex);
 
 
 --

@@ -21680,7 +21680,7 @@ IN,country,Religion not stated,Urban,Female,604075
 --
 
 ALTER TABLE ONLY area_religion_sex
-    ADD CONSTRAINT area_religion_sex_pkey PRIMARY KEY (geo_level, geo_code, area, religion, sex);
+    ADD CONSTRAINT area_religion_sex_pkey PRIMARY KEY (geo_level, geo_code, geo_version, area, religion, sex);
 
 
 --

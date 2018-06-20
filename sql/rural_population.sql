@@ -1399,7 +1399,7 @@ IN,country,597608,Female,405967794
 --
 
 ALTER TABLE ONLY ruralpopulation
-    ADD CONSTRAINT ruralpopulation_pkey PRIMARY KEY (geo_level, geo_code, villages, "rural population");
+    ADD CONSTRAINT ruralpopulation_pkey PRIMARY KEY (geo_level, geo_code, geo_version, villages, "rural population");
 
 
 --

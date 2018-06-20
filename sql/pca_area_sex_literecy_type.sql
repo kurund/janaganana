@@ -5456,7 +5456,7 @@ IN,country,Rural,Female,Illiterate,204535333
 --
 
 ALTER TABLE ONLY area_literacy_sex
-    ADD CONSTRAINT area_literacy_sex_pkey PRIMARY KEY (geo_level, geo_code, area, literacy, sex);
+    ADD CONSTRAINT area_literacy_sex_pkey PRIMARY KEY (geo_level, geo_code, geo_version, area, literacy, sex);
 
 
 --

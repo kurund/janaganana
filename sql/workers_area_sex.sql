@@ -16272,7 +16272,7 @@ IN,country,Urban,Female,Non-workers available for work,13155932
 --
 
 ALTER TABLE ONLY area_workers_workerssex
-    ADD CONSTRAINT area_workers_workerssex_pkey PRIMARY KEY (geo_level, geo_code, area, workers, workerssex);
+    ADD CONSTRAINT area_workers_workerssex_pkey PRIMARY KEY (geo_level, geo_code, geo_version, area, workers, workerssex);
 
 
 --
