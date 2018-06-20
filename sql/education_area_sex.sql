@@ -27088,7 +27088,7 @@ IN,country,Urban,Female,Unclassified,462682
 --
 
 ALTER TABLE ONLY area_education_sex
-    ADD CONSTRAINT area_education_sex_pkey PRIMARY KEY (geo_level, geo_code, area, education, sex);
+    ADD CONSTRAINT area_education_sex_pkey PRIMARY KEY (geo_level, geo_code, geo_version, area, education, sex);
 
 
 --

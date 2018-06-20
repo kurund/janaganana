@@ -47804,7 +47804,7 @@ IN,country,Age not stated,Urban,Male,839461
 --
 
 ALTER TABLE ONLY age_area_sex
-    ADD CONSTRAINT age_area_sex_pkey PRIMARY KEY (geo_level, geo_code, area, age, sex);
+    ADD CONSTRAINT age_area_sex_pkey PRIMARY KEY (geo_level, geo_code, geo_version, area, age, sex);
 
 
 --
