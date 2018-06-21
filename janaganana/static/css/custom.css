@@ -48,7 +48,15 @@ a.action-button,
     cursor: pointer;
     color: #E00015;
 }
-.action-links {
+#schools .action-links {
+    padding-top: 30px;
+}
+
+#household .action-links {
+    padding-top: 15px;
+}
+
+#drinkingsource .action-links {
     padding-top: 15px;
 }
 

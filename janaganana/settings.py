@@ -1,9 +1,11 @@
-from wazimap.settings import * 
+from wazimap.settings import *
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+#GEOS_LIBRARY_PATH = '/usr/local/lib/libgeos_c.so'
+GDAL_LIBRARY_PATH = '/usr/local/lib/libgdal.so'
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'wt08^t@ugzs4sw*qn=c*=$d+jgkqkkp4$0z98j-k5s!o2um$(n'
