@@ -4,6 +4,7 @@ from wazimap.geo import geo_data
 from wazimap.data.tables import get_model_from_fields
 from wazimap.data.utils import get_session, calculate_median, merge_dicts, get_stat_data, get_objects_by_geo, group_remainder
 import logging
+#from osgeo import gdal
 
 # ensure tables are loaded
 import janaganana.tables  # noqa
@@ -18,9 +19,11 @@ PROFILE_SECTIONS = (
     'maritalstatus',
     'workers',
     'age',
-    'crimes',
     'schools',
     'gdp',
+    'caste',
+    'household',
+    'drinkingsource',
 )
 
 def sort_stats_result(ip,key=None):
@@ -519,34 +522,29 @@ def get_workers_profile(geo, session):
 
     return final_data
 
-# adding crimes profile
-"""def get_crimes_profile(geo,session):
-     # adding crimes data
-    crimes_by_age,t_lit = get_stat_data(
-        ['crimeage'],geo,session,
-        table_fields=['crimeage'],
-    )
-    
-    final_data = {
-        'crimes_by_age_distribution': crimes_by_age,
-        'total_population': {
-            "name": "People Victims",
-            "values": {"this": t_lit}
-        }
-    }
-    return final_data """
-
-    
 # Added schools data
 def get_schools_profile(geo,session):
 
-    schools_by_category,t_lit = get_stat_data(
+    schools_by_category,_ = get_stat_data(
         ['schools'],geo,session,
-        table_fields=['schools'],
+        table_fields=['schools','type'],
+    )
+    
+    schools_by_category2,_= get_stat_data(
+        ['type'],geo,session,
+        table_fields=['schools','type'],
+    )
+
+    schools_by_type,t_lit = get_stat_data(
+        ['schools','type'],geo,session,
+        table_fields=['schools','type'],
+        percent_grouping=['type'],
     )
 
     final_data = {
         'schools_by_category_distribution': schools_by_category,
+        'schools_by_category2_distribution': schools_by_category2,
+        'schools_by_type_distribution':schools_by_type,
         'total_schools': {
             "name": "Total Schools",
             "values": {"this": t_lit}
@@ -554,6 +552,7 @@ def get_schools_profile(geo,session):
     }
     return final_data
 
+# Added gdp data
 def get_gdp_profile(geo,session):
 
     gdp_by_year,t_lit = get_stat_data(
@@ -571,3 +570,63 @@ def get_gdp_profile(geo,session):
 
     return final_data
 
+# caste profile
+def get_caste_profile(geo,session):
+    
+    caste_dist_data, _ = get_stat_data(
+        'caste', geo, session,
+        table_fields=['caste','sex'],
+        )
+    
+    caste_by_sex,t_lit = get_stat_data(
+        ['caste','sex'],geo,session,
+        table_fields=['caste','sex'],
+        percent_grouping=['sex'],
+    )
+
+    final_data = {
+        'caste_ratio':caste_dist_data,
+        'caste_by_sex_distribution': caste_by_sex,
+        'total_population':{
+            "name": "People SC / ST",
+            "values": {"this":t_lit}
+        }
+    }
+
+    return final_data
+
+# household profile
+def get_household_profile(geo,session):
+
+    household_dis_data,t_lit= get_stat_data(
+        'household',geo,session,
+        table_fields=['household'],
+    )
+    
+    final_data = {
+        'household_ratio':household_dis_data,
+        'total_household':{
+            "name": "Total Households",
+            "values": {"this":t_lit}
+        }
+    }
+
+    return final_data
+
+# Drinking source profile
+def get_drinkingsource_profile(geo,session):
+
+    drinking_source_dis_data,t_lit= get_stat_data(
+        'drinkingsource',geo,session,
+        table_fields=['drinkingsource'],
+    )
+    
+    final_data = {
+        'drinkingsource_ratio':drinking_source_dis_data,
+        'total_population':{
+            "name": "Total Household",
+            "values": {"this":t_lit}
+        }
+    }
+
+    return final_data
