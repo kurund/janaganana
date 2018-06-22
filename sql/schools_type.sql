@@ -88,20 +88,20 @@ district,146,Upper primary only,Private,218
 district,146,Upper primary with sec./h.sec,Private,158
 district,146,Primary with upper primary sec,Private,49
 district,146,Upper primary with  sec.,Private,61
-district,474,Primary only,Government,108
-district,474,Primary with upper primary,Government,763
-district,474,Primary with upper primary sec/h.sec,Government,1
-district,474,Upper primary only,Government,36
-district,474,Upper primary with sec./h.sec,Government,2
-district,474,Primary with upper primary sec,Government,0
-district,474,Upper primary with  sec.,Government,8
-district,474,Primary only,Private,28
-district,474,Primary with upper primary,Private,131
-district,474,Primary with upper primary sec/h.sec,Private,31
-district,474,Upper primary only,Private,11
-district,474,Upper primary with sec./h.sec,Private,5
-district,474,Primary with upper primary sec,Private,19
-district,474,Upper primary with  sec.,Private,0
+district,474,Primary only,Government,3088
+district,474,Primary with upper primary,Government,577
+district,474,Primary with upper primary sec/h.sec,Government,9
+district,474,Upper primary only,Government,0
+district,474,Upper primary with sec./h.sec,Government,1
+district,474,Primary with upper primary sec,Government,12
+district,474,Upper primary with  sec.,Government,5
+district,474,Primary only,Private,3088
+district,474,Primary with upper primary,Private,577
+district,474,Primary with upper primary sec/h.sec,Private,9
+district,474,Upper primary only,Private,0
+district,474,Upper primary with sec./h.sec,Private,1
+district,474,Primary with upper primary sec,Private,12
+district,474,Upper primary with  sec.,Private,5
 district,522,Primary only,Government,3088
 district,522,Primary with upper primary,Government,577
 district,522,Primary with upper primary sec/h.sec,Government,9
@@ -369,20 +369,20 @@ district,260,Upper primary only,Private,0
 district,260,Upper primary with sec./h.sec,Private,0
 district,260,Primary with upper primary sec,Private,1
 district,260,Upper primary with  sec.,Private,0
-district,384,Primary only,Government,725
-district,384,Primary with upper primary,Government,329
+district,384,Primary only,Government,1189
+district,384,Primary with upper primary,Government,0
 district,384,Primary with upper primary sec/h.sec,Government,0
-district,384,Upper primary only,Government,59
+district,384,Upper primary only,Government,392
 district,384,Upper primary with sec./h.sec,Government,1
-district,384,Primary with upper primary sec,Government,32
-district,384,Upper primary with  sec.,Government,91
-district,384,Primary only,Private,35
-district,384,Primary with upper primary,Private,42
+district,384,Primary with upper primary sec,Government,0
+district,384,Upper primary with  sec.,Government,0
+district,384,Primary only,Private,1189
+district,384,Primary with upper primary,Private,0
 district,384,Primary with upper primary sec/h.sec,Private,0
-district,384,Upper primary only,Private,45
-district,384,Upper primary with sec./h.sec,Private,0
-district,384,Primary with upper primary sec,Private,10
-district,384,Upper primary with  sec.,Private,70
+district,384,Upper primary only,Private,392
+district,384,Upper primary with sec./h.sec,Private,1
+district,384,Primary with upper primary sec,Private,0
+district,384,Upper primary with  sec.,Private,0
 district,461,Primary only,Government,1189
 district,461,Primary with upper primary,Government,0
 district,461,Primary with upper primary sec/h.sec,Government,0
@@ -411,20 +411,20 @@ district,209,Upper primary only,Private,0
 district,209,Upper primary with sec./h.sec,Private,1
 district,209,Primary with upper primary sec,Private,1
 district,209,Upper primary with  sec.,Private,1
-district,616,Primary only,Government,917
-district,616,Primary with upper primary,Government,292
-district,616,Primary with upper primary sec/h.sec,Government,3
-district,616,Upper primary only,Government,3
-district,616,Upper primary with sec./h.sec,Government,108
-district,616,Primary with upper primary sec,Government,7
-district,616,Upper primary with  sec.,Government,127
-district,616,Primary only,Private,448
-district,616,Primary with upper primary,Private,78
-district,616,Primary with upper primary sec/h.sec,Private,63
-district,616,Upper primary only,Private,2
-district,616,Upper primary with sec./h.sec,Private,31
-district,616,Primary with upper primary sec,Private,55
-district,616,Upper primary with  sec.,Private,24
+district,616,Primary only,Government,334
+district,616,Primary with upper primary,Government,181
+district,616,Primary with upper primary sec/h.sec,Government,0
+district,616,Upper primary only,Government,4
+district,616,Upper primary with sec./h.sec,Government,0
+district,616,Primary with upper primary sec,Government,10
+district,616,Upper primary with  sec.,Government,1
+district,616,Primary only,Private,334
+district,616,Primary with upper primary,Private,181
+district,616,Primary with upper primary sec/h.sec,Private,0
+district,616,Upper primary only,Private,4
+district,616,Upper primary with sec./h.sec,Private,0
+district,616,Primary with upper primary sec,Private,10
+district,616,Upper primary with  sec.,Private,1
 district,240,Primary only,Government,334
 district,240,Primary with upper primary,Government,181
 district,240,Primary with upper primary sec/h.sec,Government,0
@@ -467,34 +467,34 @@ district,162,Upper primary only,Private,320
 district,162,Upper primary with sec./h.sec,Private,75
 district,162,Primary with upper primary sec,Private,2
 district,162,Upper primary with  sec.,Private,23
-district,235,Primary only,Government,1699
-district,515,Primary only,Government,2715
-district,235,Primary with upper primary,Government,1317
-district,515,Primary with upper primary,Government,878
-district,235,Primary with upper primary sec/h.sec,Government,42
-district,515,Primary with upper primary sec/h.sec,Government,18
-district,235,Upper primary only,Government,9
-district,515,Upper primary only,Government,6
-district,235,Upper primary with sec./h.sec,Government,2
-district,515,Upper primary with sec./h.sec,Government,2
-district,235,Primary with upper primary sec,Government,50
-district,515,Primary with upper primary sec,Government,60
-district,235,Upper primary with  sec.,Government,4
-district,515,Upper primary with  sec.,Government,10
-district,235,Primary only,Private,3
-district,515,Primary only,Private,350
-district,235,Primary with upper primary,Private,26
-district,515,Primary with upper primary,Private,343
-district,235,Primary with upper primary sec/h.sec,Private,6
-district,515,Primary with upper primary sec/h.sec,Private,12
-district,235,Upper primary only,Private,0
-district,515,Upper primary only,Private,6
-district,235,Upper primary with sec./h.sec,Private,0
-district,515,Upper primary with sec./h.sec,Private,193
-district,235,Primary with upper primary sec,Private,2
-district,515,Primary with upper primary sec,Private,54
-district,235,Upper primary with  sec.,Private,2
-district,515,Upper primary with  sec.,Private,322
+district,235,Primary only,Government,2350
+district,515,Primary only,Government,2350
+district,235,Primary with upper primary,Government,1
+district,515,Primary with upper primary,Government,1
+district,235,Primary with upper primary sec/h.sec,Government,2
+district,515,Primary with upper primary sec/h.sec,Government,2
+district,235,Upper primary only,Government,1003
+district,515,Upper primary only,Government,1003
+district,235,Upper primary with sec./h.sec,Government,1
+district,515,Upper primary with sec./h.sec,Government,1
+district,235,Primary with upper primary sec,Government,1
+district,515,Primary with upper primary sec,Government,1
+district,235,Upper primary with  sec.,Government,1
+district,515,Upper primary with  sec.,Government,1
+district,235,Primary only,Private,2350
+district,515,Primary only,Private,2350
+district,235,Primary with upper primary,Private,1
+district,515,Primary with upper primary,Private,1
+district,235,Primary with upper primary sec/h.sec,Private,2
+district,515,Primary with upper primary sec/h.sec,Private,2
+district,235,Upper primary only,Private,1003
+district,515,Upper primary only,Private,1003
+district,235,Upper primary with sec./h.sec,Private,1
+district,515,Upper primary with sec./h.sec,Private,1
+district,235,Primary with upper primary sec,Private,1
+district,515,Primary with upper primary sec,Private,1
+district,235,Upper primary with  sec.,Private,1
+district,515,Upper primary with  sec.,Private,1
 district,191,Primary only,Government,2350
 district,191,Primary with upper primary,Government,1
 district,191,Primary with upper primary sec/h.sec,Government,2
@@ -607,34 +607,34 @@ district,457,Upper primary only,Private,4
 district,457,Upper primary with sec./h.sec,Private,6
 district,457,Primary with upper primary sec,Private,38
 district,457,Upper primary with  sec.,Private,0
-district,393,Primary only,Government,584
-district,393,Primary with upper primary,Government,395
-district,393,Primary with upper primary sec/h.sec,Government,0
-district,393,Upper primary only,Government,27
-district,393,Upper primary with sec./h.sec,Government,2
-district,393,Primary with upper primary sec,Government,33
-district,393,Upper primary with  sec.,Government,36
-district,393,Primary only,Private,4
-district,393,Primary with upper primary,Private,13
+district,393,Primary only,Government,2076
+district,393,Primary with upper primary,Government,0
+district,393,Primary with upper primary sec/h.sec,Government,1
+district,393,Upper primary only,Government,648
+district,393,Upper primary with sec./h.sec,Government,8
+district,393,Primary with upper primary sec,Government,0
+district,393,Upper primary with  sec.,Government,0
+district,393,Primary only,Private,2076
+district,393,Primary with upper primary,Private,0
 district,393,Primary with upper primary sec/h.sec,Private,1
-district,393,Upper primary only,Private,31
-district,393,Upper primary with sec./h.sec,Private,0
-district,393,Primary with upper primary sec,Private,5
-district,393,Upper primary with  sec.,Private,72
-district,377,Primary only,Government,1077
-district,377,Primary with upper primary,Government,536
-district,377,Primary with upper primary sec/h.sec,Government,0
-district,377,Upper primary only,Government,80
-district,377,Upper primary with sec./h.sec,Government,1
-district,377,Primary with upper primary sec,Government,12
-district,377,Upper primary with  sec.,Government,170
-district,377,Primary only,Private,44
-district,377,Primary with upper primary,Private,46
-district,377,Primary with upper primary sec/h.sec,Private,0
-district,377,Upper primary only,Private,100
-district,377,Upper primary with sec./h.sec,Private,0
-district,377,Primary with upper primary sec,Private,15
-district,377,Upper primary with  sec.,Private,150
+district,393,Upper primary only,Private,648
+district,393,Upper primary with sec./h.sec,Private,8
+district,393,Primary with upper primary sec,Private,0
+district,393,Upper primary with  sec.,Private,0
+district,377,Primary only,Government,2076
+district,377,Primary with upper primary,Government,0
+district,377,Primary with upper primary sec/h.sec,Government,1
+district,377,Upper primary only,Government,648
+district,377,Upper primary with sec./h.sec,Government,8
+district,377,Primary with upper primary sec,Government,0
+district,377,Upper primary with  sec.,Government,0
+district,377,Primary only,Private,2076
+district,377,Primary with upper primary,Private,0
+district,377,Primary with upper primary sec/h.sec,Private,1
+district,377,Upper primary only,Private,648
+district,377,Upper primary with sec./h.sec,Private,8
+district,377,Primary with upper primary sec,Private,0
+district,377,Upper primary with  sec.,Private,0
 district,193,Primary only,Government,2076
 district,193,Primary with upper primary,Government,0
 district,193,Primary with upper primary sec/h.sec,Government,1
@@ -691,34 +691,34 @@ district,170,Upper primary only,Private,65
 district,170,Upper primary with sec./h.sec,Private,41
 district,170,Primary with upper primary sec,Private,11
 district,170,Upper primary with  sec.,Private,7
-district,9,Primary only,Government,203
-district,9,Primary with upper primary,Government,209
-district,9,Primary with upper primary sec/h.sec,Government,1
-district,9,Upper primary only,Government,2
-district,9,Upper primary with sec./h.sec,Government,0
-district,9,Primary with upper primary sec,Government,65
-district,9,Upper primary with  sec.,Government,9
-district,9,Primary only,Private,55
-district,9,Primary with upper primary,Private,208
-district,9,Primary with upper primary sec/h.sec,Private,35
-district,9,Upper primary only,Private,0
-district,9,Upper primary with sec./h.sec,Private,0
-district,9,Primary with upper primary sec,Private,198
-district,9,Upper primary with  sec.,Private,0
-district,572,Primary only,Government,917
-district,572,Primary with upper primary,Government,813
+district,9,Primary only,Government,692
+district,9,Primary with upper primary,Government,432
+district,9,Primary with upper primary sec/h.sec,Government,0
+district,9,Upper primary only,Government,3
+district,9,Upper primary with sec./h.sec,Government,1
+district,9,Primary with upper primary sec,Government,6
+district,9,Upper primary with  sec.,Government,5
+district,9,Primary only,Private,692
+district,9,Primary with upper primary,Private,432
+district,9,Primary with upper primary sec/h.sec,Private,0
+district,9,Upper primary only,Private,3
+district,9,Upper primary with sec./h.sec,Private,1
+district,9,Primary with upper primary sec,Private,6
+district,9,Upper primary with  sec.,Private,5
+district,572,Primary only,Government,692
+district,572,Primary with upper primary,Government,432
 district,572,Primary with upper primary sec/h.sec,Government,0
-district,572,Upper primary only,Government,8
+district,572,Upper primary only,Government,3
 district,572,Upper primary with sec./h.sec,Government,1
-district,572,Primary with upper primary sec,Government,3
-district,572,Upper primary with  sec.,Government,26
-district,572,Primary only,Private,66
-district,572,Primary with upper primary,Private,239
-district,572,Primary with upper primary sec/h.sec,Private,3
-district,572,Upper primary only,Private,5
-district,572,Upper primary with sec./h.sec,Private,0
-district,572,Primary with upper primary sec,Private,40
-district,572,Upper primary with  sec.,Private,4
+district,572,Primary with upper primary sec,Government,6
+district,572,Upper primary with  sec.,Government,5
+district,572,Primary only,Private,692
+district,572,Primary with upper primary,Private,432
+district,572,Primary with upper primary sec/h.sec,Private,0
+district,572,Upper primary only,Private,3
+district,572,Upper primary with sec./h.sec,Private,1
+district,572,Primary with upper primary sec,Private,6
+district,572,Upper primary with  sec.,Private,5
 district,583,Primary only,Government,692
 district,583,Primary with upper primary,Government,432
 district,583,Primary with upper primary sec/h.sec,Government,0
@@ -775,20 +775,20 @@ district,125,Upper primary only,Private,0
 district,125,Upper primary with sec./h.sec,Private,1
 district,125,Primary with upper primary sec,Private,55
 district,125,Upper primary with  sec.,Private,4
-district,176,Primary only,Government,1531
-district,176,Primary with upper primary,Government,4
-district,176,Primary with upper primary sec/h.sec,Government,4
-district,176,Upper primary only,Government,577
-district,176,Upper primary with sec./h.sec,Government,7
-district,176,Primary with upper primary sec,Government,0
-district,176,Upper primary with  sec.,Government,0
-district,176,Primary only,Private,710
-district,176,Primary with upper primary,Private,65
-district,176,Primary with upper primary sec/h.sec,Private,16
-district,176,Upper primary only,Private,455
-district,176,Upper primary with sec./h.sec,Private,111
-district,176,Primary with upper primary sec,Private,3
-district,176,Upper primary with  sec.,Private,21
+district,176,Primary only,Government,1108
+district,176,Primary with upper primary,Government,639
+district,176,Primary with upper primary sec/h.sec,Government,1
+district,176,Upper primary only,Government,11
+district,176,Upper primary with sec./h.sec,Government,5
+district,176,Primary with upper primary sec,Government,96
+district,176,Upper primary with  sec.,Government,69
+district,176,Primary only,Private,1108
+district,176,Primary with upper primary,Private,639
+district,176,Primary with upper primary sec/h.sec,Private,1
+district,176,Upper primary only,Private,11
+district,176,Upper primary with sec./h.sec,Private,5
+district,176,Primary with upper primary sec,Private,96
+district,176,Upper primary with  sec.,Private,69
 district,8,Primary only,Government,1108
 district,8,Primary with upper primary,Government,639
 district,8,Primary with upper primary sec/h.sec,Government,1
@@ -915,19 +915,19 @@ district,441,Upper primary only,Private,1
 district,441,Upper primary with sec./h.sec,Private,0
 district,441,Primary with upper primary sec,Private,19
 district,441,Upper primary with  sec.,Private,1
-district,414,Primary only,Government,428
-district,414,Primary with upper primary,Government,2
-district,414,Primary with upper primary sec/h.sec,Government,0
-district,414,Upper primary only,Government,125
-district,414,Upper primary with sec./h.sec,Government,5
+district,414,Primary only,Government,1749
+district,414,Primary with upper primary,Government,0
+district,414,Primary with upper primary sec/h.sec,Government,1
+district,414,Upper primary only,Government,653
+district,414,Upper primary with sec./h.sec,Government,2
 district,414,Primary with upper primary sec,Government,0
-district,414,Upper primary with  sec.,Government,3
-district,414,Primary only,Private,7
-district,414,Primary with upper primary,Private,15
-district,414,Primary with upper primary sec/h.sec,Private,2
-district,414,Upper primary only,Private,0
-district,414,Upper primary with sec./h.sec,Private,0
-district,414,Primary with upper primary sec,Private,4
+district,414,Upper primary with  sec.,Government,0
+district,414,Primary only,Private,1749
+district,414,Primary with upper primary,Private,0
+district,414,Primary with upper primary sec/h.sec,Private,1
+district,414,Upper primary only,Private,653
+district,414,Upper primary with sec./h.sec,Private,2
+district,414,Primary with upper primary sec,Private,0
 district,414,Upper primary with  sec.,Private,0
 district,185,Primary only,Government,1749
 district,185,Primary with upper primary,Government,0
@@ -957,20 +957,20 @@ district,46,Upper primary only,Private,0
 district,46,Upper primary with sec./h.sec,Private,1
 district,46,Primary with upper primary sec,Private,92
 district,46,Upper primary with  sec.,Private,0
-district,391,Primary only,Government,584
-district,391,Primary with upper primary,Government,395
-district,391,Primary with upper primary sec/h.sec,Government,0
-district,391,Upper primary only,Government,27
+district,391,Primary only,Government,804
+district,391,Primary with upper primary,Government,673
+district,391,Primary with upper primary sec/h.sec,Government,5
+district,391,Upper primary only,Government,2
 district,391,Upper primary with sec./h.sec,Government,2
-district,391,Primary with upper primary sec,Government,33
-district,391,Upper primary with  sec.,Government,36
-district,391,Primary only,Private,4
-district,391,Primary with upper primary,Private,13
-district,391,Primary with upper primary sec/h.sec,Private,1
-district,391,Upper primary only,Private,31
-district,391,Upper primary with sec./h.sec,Private,0
-district,391,Primary with upper primary sec,Private,5
-district,391,Upper primary with  sec.,Private,72
+district,391,Primary with upper primary sec,Government,68
+district,391,Upper primary with  sec.,Government,3
+district,391,Primary only,Private,804
+district,391,Primary with upper primary,Private,673
+district,391,Primary with upper primary sec/h.sec,Private,5
+district,391,Upper primary only,Private,2
+district,391,Upper primary with sec./h.sec,Private,2
+district,391,Primary with upper primary sec,Private,68
+district,391,Upper primary with  sec.,Private,3
 district,222,Primary only,Government,804
 district,222,Primary with upper primary,Government,673
 district,222,Primary with upper primary sec/h.sec,Government,5
@@ -1265,34 +1265,34 @@ district,101,Upper primary only,Private,2
 district,101,Upper primary with sec./h.sec,Private,16
 district,101,Primary with upper primary sec,Private,223
 district,101,Upper primary with  sec.,Private,9
-district,30,Primary only,Government,766
-district,406,Primary only,Government,1845
-district,30,Primary with upper primary,Government,1
-district,406,Primary with upper primary,Government,11
-district,30,Primary with upper primary sec/h.sec,Government,3
-district,406,Primary with upper primary sec/h.sec,Government,2
-district,30,Upper primary only,Government,148
-district,406,Upper primary only,Government,693
-district,30,Upper primary with sec./h.sec,Government,106
-district,406,Upper primary with sec./h.sec,Government,15
-district,30,Primary with upper primary sec,Government,0
-district,406,Primary with upper primary sec,Government,1
-district,30,Upper primary with  sec.,Government,58
-district,406,Upper primary with  sec.,Government,70
-district,30,Primary only,Private,67
-district,406,Primary only,Private,74
-district,30,Primary with upper primary,Private,62
-district,406,Primary with upper primary,Private,131
-district,30,Primary with upper primary sec/h.sec,Private,53
-district,406,Primary with upper primary sec/h.sec,Private,47
-district,30,Upper primary only,Private,0
-district,406,Upper primary only,Private,2
-district,30,Upper primary with sec./h.sec,Private,1
-district,406,Upper primary with sec./h.sec,Private,2
-district,30,Primary with upper primary sec,Private,40
-district,406,Primary with upper primary sec,Private,46
-district,30,Upper primary with  sec.,Private,0
-district,406,Upper primary with  sec.,Private,0
+district,30,Primary only,Government,3064
+district,406,Primary only,Government,3064
+district,30,Primary with upper primary,Government,6
+district,406,Primary with upper primary,Government,6
+district,30,Primary with upper primary sec/h.sec,Government,4
+district,406,Primary with upper primary sec/h.sec,Government,4
+district,30,Upper primary only,Government,374
+district,406,Upper primary only,Government,374
+district,30,Upper primary with sec./h.sec,Government,213
+district,406,Upper primary with sec./h.sec,Government,213
+district,30,Primary with upper primary sec,Government,2
+district,406,Primary with upper primary sec,Government,2
+district,30,Upper primary with  sec.,Government,150
+district,406,Upper primary with  sec.,Government,150
+district,30,Primary only,Private,3064
+district,406,Primary only,Private,3064
+district,30,Primary with upper primary,Private,6
+district,406,Primary with upper primary,Private,6
+district,30,Primary with upper primary sec/h.sec,Private,4
+district,406,Primary with upper primary sec/h.sec,Private,4
+district,30,Upper primary only,Private,374
+district,406,Upper primary only,Private,374
+district,30,Upper primary with sec./h.sec,Private,213
+district,406,Upper primary with sec./h.sec,Private,213
+district,30,Primary with upper primary sec,Private,2
+district,406,Primary with upper primary sec,Private,2
+district,30,Upper primary with  sec.,Private,150
+district,406,Upper primary with  sec.,Private,150
 district,334,Primary only,Government,3064
 district,334,Primary with upper primary,Government,6
 district,334,Primary with upper primary sec/h.sec,Government,4
@@ -1447,34 +1447,34 @@ district,316,Upper primary only,Private,128
 district,316,Upper primary with sec./h.sec,Private,2
 district,316,Primary with upper primary sec,Private,49
 district,316,Upper primary with  sec.,Private,3
-district,95,Primary only,Government,995
-district,95,Primary with upper primary,Government,631
-district,95,Primary with upper primary sec/h.sec,Government,284
-district,95,Upper primary only,Government,2
-district,95,Upper primary with sec./h.sec,Government,32
-district,95,Primary with upper primary sec,Government,125
-district,95,Upper primary with  sec.,Government,10
-district,95,Primary only,Private,130
-district,95,Primary with upper primary,Private,552
-district,95,Primary with upper primary sec/h.sec,Private,226
-district,95,Upper primary only,Private,0
-district,95,Upper primary with sec./h.sec,Private,34
-district,95,Primary with upper primary sec,Private,200
-district,95,Upper primary with  sec.,Private,13
-district,578,Primary only,Government,800
-district,578,Primary with upper primary,Government,945
-district,578,Primary with upper primary sec/h.sec,Government,0
-district,578,Upper primary only,Government,8
-district,578,Upper primary with sec./h.sec,Government,1
-district,578,Primary with upper primary sec,Government,47
-district,578,Upper primary with  sec.,Government,33
-district,578,Primary only,Private,430
-district,578,Primary with upper primary,Private,512
+district,95,Primary only,Government,1166
+district,95,Primary with upper primary,Government,1
+district,95,Primary with upper primary sec/h.sec,Government,5
+district,95,Upper primary only,Government,260
+district,95,Upper primary with sec./h.sec,Government,125
+district,95,Primary with upper primary sec,Government,0
+district,95,Upper primary with  sec.,Government,80
+district,95,Primary only,Private,1166
+district,95,Primary with upper primary,Private,1
+district,95,Primary with upper primary sec/h.sec,Private,5
+district,95,Upper primary only,Private,260
+district,95,Upper primary with sec./h.sec,Private,125
+district,95,Primary with upper primary sec,Private,0
+district,95,Upper primary with  sec.,Private,80
+district,578,Primary only,Government,1166
+district,578,Primary with upper primary,Government,1
+district,578,Primary with upper primary sec/h.sec,Government,5
+district,578,Upper primary only,Government,260
+district,578,Upper primary with sec./h.sec,Government,125
+district,578,Primary with upper primary sec,Government,0
+district,578,Upper primary with  sec.,Government,80
+district,578,Primary only,Private,1166
+district,578,Primary with upper primary,Private,1
 district,578,Primary with upper primary sec/h.sec,Private,5
-district,578,Upper primary only,Private,19
-district,578,Upper primary with sec./h.sec,Private,0
-district,578,Primary with upper primary sec,Private,79
-district,578,Upper primary with  sec.,Private,13
+district,578,Upper primary only,Private,260
+district,578,Upper primary with sec./h.sec,Private,125
+district,578,Primary with upper primary sec,Private,0
+district,578,Upper primary with  sec.,Private,80
 district,23,Primary only,Government,1166
 district,23,Primary with upper primary,Government,1
 district,23,Primary with upper primary sec/h.sec,Government,5
@@ -1671,20 +1671,20 @@ district,582,Upper primary only,Private,4
 district,582,Upper primary with sec./h.sec,Private,0
 district,582,Primary with upper primary sec,Private,44
 district,582,Upper primary with  sec.,Private,3
-district,570,Primary only,Government,1401
-district,570,Primary with upper primary,Government,743
+district,570,Primary only,Government,839
+district,570,Primary with upper primary,Government,7
 district,570,Primary with upper primary sec/h.sec,Government,0
-district,570,Upper primary only,Government,3
-district,570,Upper primary with sec./h.sec,Government,1
-district,570,Primary with upper primary sec,Government,5
-district,570,Upper primary with  sec.,Government,13
-district,570,Primary only,Private,63
-district,570,Primary with upper primary,Private,210
+district,570,Upper primary only,Government,116
+district,570,Upper primary with sec./h.sec,Government,10
+district,570,Primary with upper primary sec,Government,0
+district,570,Upper primary with  sec.,Government,3
+district,570,Primary only,Private,839
+district,570,Primary with upper primary,Private,7
 district,570,Primary with upper primary sec/h.sec,Private,0
-district,570,Upper primary only,Private,15
-district,570,Upper primary with sec./h.sec,Private,0
-district,570,Primary with upper primary sec,Private,37
-district,570,Upper primary with  sec.,Private,1
+district,570,Upper primary only,Private,116
+district,570,Upper primary with sec./h.sec,Private,10
+district,570,Primary with upper primary sec,Private,0
+district,570,Upper primary with  sec.,Private,3
 district,320,Primary only,Government,839
 district,320,Primary with upper primary,Government,7
 district,320,Primary with upper primary sec/h.sec,Government,0
@@ -1825,34 +1825,34 @@ district,381,Upper primary only,Private,90
 district,381,Upper primary with sec./h.sec,Private,0
 district,381,Primary with upper primary sec,Private,26
 district,381,Upper primary with  sec.,Private,172
-district,496,Primary only,Government,1253
-district,496,Primary with upper primary,Government,189
-district,496,Primary with upper primary sec/h.sec,Government,16
-district,496,Upper primary only,Government,0
-district,496,Upper primary with sec./h.sec,Government,2
-district,496,Primary with upper primary sec,Government,40
-district,496,Upper primary with  sec.,Government,9
-district,496,Primary only,Private,96
-district,496,Primary with upper primary,Private,94
-district,496,Primary with upper primary sec/h.sec,Private,27
-district,496,Upper primary only,Private,0
-district,496,Upper primary with sec./h.sec,Private,53
-district,496,Primary with upper primary sec,Private,66
-district,496,Upper primary with  sec.,Private,141
-district,416,Primary only,Government,778
-district,416,Primary with upper primary,Government,55
-district,416,Primary with upper primary sec/h.sec,Government,0
-district,416,Upper primary only,Government,166
-district,416,Upper primary with sec./h.sec,Government,7
-district,416,Primary with upper primary sec,Government,0
-district,416,Upper primary with  sec.,Government,6
-district,416,Primary only,Private,15
-district,416,Primary with upper primary,Private,22
-district,416,Primary with upper primary sec/h.sec,Private,0
-district,416,Upper primary only,Private,0
-district,416,Upper primary with sec./h.sec,Private,0
-district,416,Primary with upper primary sec,Private,4
-district,416,Upper primary with  sec.,Private,0
+district,496,Primary only,Government,1732
+district,496,Primary with upper primary,Government,0
+district,496,Primary with upper primary sec/h.sec,Government,1
+district,496,Upper primary only,Government,212
+district,496,Upper primary with sec./h.sec,Government,106
+district,496,Primary with upper primary sec,Government,1
+district,496,Upper primary with  sec.,Government,45
+district,496,Primary only,Private,1732
+district,496,Primary with upper primary,Private,0
+district,496,Primary with upper primary sec/h.sec,Private,1
+district,496,Upper primary only,Private,212
+district,496,Upper primary with sec./h.sec,Private,106
+district,496,Primary with upper primary sec,Private,1
+district,496,Upper primary with  sec.,Private,45
+district,416,Primary only,Government,1732
+district,416,Primary with upper primary,Government,0
+district,416,Primary with upper primary sec/h.sec,Government,1
+district,416,Upper primary only,Government,212
+district,416,Upper primary with sec./h.sec,Government,106
+district,416,Primary with upper primary sec,Government,1
+district,416,Upper primary with  sec.,Government,45
+district,416,Primary only,Private,1732
+district,416,Primary with upper primary,Private,0
+district,416,Primary with upper primary sec/h.sec,Private,1
+district,416,Upper primary only,Private,212
+district,416,Upper primary with sec./h.sec,Private,106
+district,416,Primary with upper primary sec,Private,1
+district,416,Upper primary with  sec.,Private,45
 district,331,Primary only,Government,1732
 district,331,Primary with upper primary,Government,0
 district,331,Primary with upper primary sec/h.sec,Government,1
@@ -1993,20 +1993,20 @@ district,567,Upper primary only,Private,31
 district,567,Upper primary with sec./h.sec,Private,0
 district,567,Primary with upper primary sec,Private,33
 district,567,Upper primary with  sec.,Private,1
-district,373,Primary only,Government,2791
-district,373,Primary with upper primary,Government,1087
-district,373,Primary with upper primary sec/h.sec,Government,1
-district,373,Upper primary only,Government,190
-district,373,Upper primary with sec./h.sec,Government,3
-district,373,Primary with upper primary sec,Government,54
-district,373,Upper primary with  sec.,Government,286
-district,373,Primary only,Private,71
-district,373,Primary with upper primary,Private,112
-district,373,Primary with upper primary sec/h.sec,Private,0
-district,373,Upper primary only,Private,81
-district,373,Upper primary with sec./h.sec,Private,0
-district,373,Primary with upper primary sec,Private,19
-district,373,Upper primary with  sec.,Private,272
+district,373,Primary only,Government,962
+district,373,Primary with upper primary,Government,1
+district,373,Primary with upper primary sec/h.sec,Government,18
+district,373,Upper primary only,Government,275
+district,373,Upper primary with sec./h.sec,Government,73
+district,373,Primary with upper primary sec,Government,2
+district,373,Upper primary with  sec.,Government,50
+district,373,Primary only,Private,962
+district,373,Primary with upper primary,Private,1
+district,373,Primary with upper primary sec/h.sec,Private,18
+district,373,Upper primary only,Private,275
+district,373,Upper primary with sec./h.sec,Private,73
+district,373,Primary with upper primary sec,Private,2
+district,373,Upper primary with  sec.,Private,50
 district,60,Primary only,Government,962
 district,60,Primary with upper primary,Government,1
 district,60,Primary with upper primary sec/h.sec,Government,18
@@ -2385,34 +2385,34 @@ district,409,Upper primary only,Private,5
 district,409,Upper primary with sec./h.sec,Private,13
 district,409,Primary with upper primary sec,Private,36
 district,409,Upper primary with  sec.,Private,1
-district,93,Primary only,Government,995
-district,93,Primary with upper primary,Government,631
-district,93,Primary with upper primary sec/h.sec,Government,284
-district,93,Upper primary only,Government,2
-district,93,Upper primary with sec./h.sec,Government,32
-district,93,Primary with upper primary sec,Government,125
-district,93,Upper primary with  sec.,Government,10
-district,93,Primary only,Private,130
-district,93,Primary with upper primary,Private,552
-district,93,Primary with upper primary sec/h.sec,Private,226
-district,93,Upper primary only,Private,0
-district,93,Upper primary with sec./h.sec,Private,34
-district,93,Primary with upper primary sec,Private,200
-district,93,Upper primary with  sec.,Private,13
-district,244,Primary only,Government,85
-district,244,Primary with upper primary,Government,36
-district,244,Primary with upper primary sec/h.sec,Government,3
-district,244,Upper primary only,Government,2
-district,244,Upper primary with sec./h.sec,Government,1
-district,244,Primary with upper primary sec,Government,6
-district,244,Upper primary with  sec.,Government,2
-district,244,Primary only,Private,2
-district,244,Primary with upper primary,Private,13
+district,93,Primary only,Government,439
+district,93,Primary with upper primary,Government,0
+district,93,Primary with upper primary sec/h.sec,Government,0
+district,93,Upper primary only,Government,147
+district,93,Upper primary with sec./h.sec,Government,2
+district,93,Primary with upper primary sec,Government,0
+district,93,Upper primary with  sec.,Government,1
+district,93,Primary only,Private,439
+district,93,Primary with upper primary,Private,0
+district,93,Primary with upper primary sec/h.sec,Private,0
+district,93,Upper primary only,Private,147
+district,93,Upper primary with sec./h.sec,Private,2
+district,93,Primary with upper primary sec,Private,0
+district,93,Upper primary with  sec.,Private,1
+district,244,Primary only,Government,439
+district,244,Primary with upper primary,Government,0
+district,244,Primary with upper primary sec/h.sec,Government,0
+district,244,Upper primary only,Government,147
+district,244,Upper primary with sec./h.sec,Government,2
+district,244,Primary with upper primary sec,Government,0
+district,244,Upper primary with  sec.,Government,1
+district,244,Primary only,Private,439
+district,244,Primary with upper primary,Private,0
 district,244,Primary with upper primary sec/h.sec,Private,0
-district,244,Upper primary only,Private,0
-district,244,Upper primary with sec./h.sec,Private,0
-district,244,Primary with upper primary sec,Private,1
-district,244,Upper primary with  sec.,Private,0
+district,244,Upper primary only,Private,147
+district,244,Upper primary with sec./h.sec,Private,2
+district,244,Primary with upper primary sec,Private,0
+district,244,Upper primary with  sec.,Private,1
 district,294,Primary only,Government,439
 district,294,Primary with upper primary,Government,0
 district,294,Primary with upper primary sec/h.sec,Government,0
@@ -3071,34 +3071,34 @@ district,318,Upper primary only,Private,221
 district,318,Upper primary with sec./h.sec,Private,1
 district,318,Primary with upper primary sec,Private,49
 district,318,Upper primary with  sec.,Private,11
-district,28,Primary only,Government,500
-district,168,Primary only,Government,674
-district,28,Primary with upper primary,Government,0
-district,168,Primary with upper primary,Government,4
-district,28,Primary with upper primary sec/h.sec,Government,0
-district,168,Primary with upper primary sec/h.sec,Government,0
-district,28,Upper primary only,Government,95
-district,168,Upper primary only,Government,355
-district,28,Upper primary with sec./h.sec,Government,120
-district,168,Upper primary with sec./h.sec,Government,10
-district,28,Primary with upper primary sec,Government,1
-district,168,Primary with upper primary sec,Government,0
-district,28,Upper primary with  sec.,Government,48
-district,168,Upper primary with  sec.,Government,0
-district,28,Primary only,Private,18
-district,168,Primary only,Private,157
-district,28,Primary with upper primary,Private,42
-district,168,Primary with upper primary,Private,93
-district,28,Primary with upper primary sec/h.sec,Private,48
-district,168,Primary with upper primary sec/h.sec,Private,4
-district,28,Upper primary only,Private,0
-district,168,Upper primary only,Private,48
-district,28,Upper primary with sec./h.sec,Private,2
-district,168,Upper primary with sec./h.sec,Private,25
-district,28,Primary with upper primary sec,Private,30
-district,168,Primary with upper primary sec,Private,1
-district,28,Upper primary with  sec.,Private,1
-district,168,Upper primary with  sec.,Private,4
+district,28,Primary only,Government,351
+district,168,Primary only,Government,351
+district,28,Primary with upper primary,Government,475
+district,168,Primary with upper primary,Government,475
+district,28,Primary with upper primary sec/h.sec,Government,172
+district,168,Primary with upper primary sec/h.sec,Government,172
+district,28,Upper primary only,Government,1
+district,168,Upper primary only,Government,1
+district,28,Upper primary with sec./h.sec,Government,13
+district,168,Upper primary with sec./h.sec,Government,13
+district,28,Primary with upper primary sec,Government,142
+district,168,Primary with upper primary sec,Government,142
+district,28,Upper primary with  sec.,Government,5
+district,168,Upper primary with  sec.,Government,5
+district,28,Primary only,Private,351
+district,168,Primary only,Private,351
+district,28,Primary with upper primary,Private,475
+district,168,Primary with upper primary,Private,475
+district,28,Primary with upper primary sec/h.sec,Private,172
+district,168,Primary with upper primary sec/h.sec,Private,172
+district,28,Upper primary only,Private,1
+district,168,Upper primary only,Private,1
+district,28,Upper primary with sec./h.sec,Private,13
+district,168,Upper primary with sec./h.sec,Private,13
+district,28,Primary with upper primary sec,Private,142
+district,168,Primary with upper primary sec,Private,142
+district,28,Upper primary with  sec.,Private,5
+district,168,Upper primary with  sec.,Private,5
 district,100,Primary only,Government,351
 district,100,Primary with upper primary,Government,475
 district,100,Primary with upper primary sec/h.sec,Government,172
@@ -3197,20 +3197,20 @@ district,564,Upper primary only,Private,6
 district,564,Upper primary with sec./h.sec,Private,0
 district,564,Primary with upper primary sec,Private,43
 district,564,Upper primary with  sec.,Private,5
-district,360,Primary only,Government,460
-district,360,Primary with upper primary,Government,206
-district,360,Primary with upper primary sec/h.sec,Government,3
-district,360,Upper primary only,Government,0
-district,360,Upper primary with sec./h.sec,Government,4
-district,360,Primary with upper primary sec,Government,50
-district,360,Upper primary with  sec.,Government,0
-district,360,Primary only,Private,3
-district,360,Primary with upper primary,Private,2
-district,360,Primary with upper primary sec/h.sec,Private,20
-district,360,Upper primary only,Private,0
-district,360,Upper primary with sec./h.sec,Private,2
-district,360,Primary with upper primary sec,Private,10
-district,360,Upper primary with  sec.,Private,16
+district,360,Primary only,Government,527
+district,360,Primary with upper primary,Government,341
+district,360,Primary with upper primary sec/h.sec,Government,2
+district,360,Upper primary only,Government,3
+district,360,Upper primary with sec./h.sec,Government,1
+district,360,Primary with upper primary sec,Government,4
+district,360,Upper primary with  sec.,Government,30
+district,360,Primary only,Private,527
+district,360,Primary with upper primary,Private,341
+district,360,Primary with upper primary sec/h.sec,Private,2
+district,360,Upper primary only,Private,3
+district,360,Upper primary with sec./h.sec,Private,1
+district,360,Primary with upper primary sec,Private,4
+district,360,Upper primary with  sec.,Private,30
 district,512,Primary only,Government,527
 district,512,Primary with upper primary,Government,341
 district,512,Primary with upper primary sec/h.sec,Government,2
@@ -3365,20 +3365,20 @@ district,451,Upper primary only,Private,12
 district,451,Upper primary with sec./h.sec,Private,28
 district,451,Primary with upper primary sec,Private,75
 district,451,Upper primary with  sec.,Private,3
-district,380,Primary only,Government,1408
-district,380,Primary with upper primary,Government,635
-district,380,Primary with upper primary sec/h.sec,Government,2
-district,380,Upper primary only,Government,115
-district,380,Upper primary with sec./h.sec,Government,1
-district,380,Primary with upper primary sec,Government,43
-district,380,Upper primary with  sec.,Government,256
-district,380,Primary only,Private,31
-district,380,Primary with upper primary,Private,59
-district,380,Primary with upper primary sec/h.sec,Private,5
-district,380,Upper primary only,Private,90
-district,380,Upper primary with sec./h.sec,Private,0
-district,380,Primary with upper primary sec,Private,26
-district,380,Upper primary with  sec.,Private,172
+district,380,Primary only,Government,521
+district,380,Primary with upper primary,Government,0
+district,380,Primary with upper primary sec/h.sec,Government,0
+district,380,Upper primary only,Government,170
+district,380,Upper primary with sec./h.sec,Government,4
+district,380,Primary with upper primary sec,Government,3
+district,380,Upper primary with  sec.,Government,3
+district,380,Primary only,Private,521
+district,380,Primary with upper primary,Private,0
+district,380,Primary with upper primary sec/h.sec,Private,0
+district,380,Upper primary only,Private,170
+district,380,Upper primary with sec./h.sec,Private,4
+district,380,Primary with upper primary sec,Private,3
+district,380,Upper primary with  sec.,Private,3
 district,299,Primary only,Government,521
 district,299,Primary with upper primary,Government,0
 district,299,Primary with upper primary sec/h.sec,Government,0
@@ -3421,20 +3421,20 @@ district,114,Upper primary only,Private,0
 district,114,Upper primary with sec./h.sec,Private,3
 district,114,Primary with upper primary sec,Private,25
 district,114,Upper primary with  sec.,Private,9
-district,382,Primary only,Government,837
-district,382,Primary with upper primary,Government,511
-district,382,Primary with upper primary sec/h.sec,Government,1
-district,382,Upper primary only,Government,76
-district,382,Upper primary with sec./h.sec,Government,1
-district,382,Primary with upper primary sec,Government,14
-district,382,Upper primary with  sec.,Government,134
-district,382,Primary only,Private,14
-district,382,Primary with upper primary,Private,54
-district,382,Primary with upper primary sec/h.sec,Private,0
-district,382,Upper primary only,Private,65
-district,382,Upper primary with sec./h.sec,Private,0
-district,382,Primary with upper primary sec,Private,3
-district,382,Upper primary with  sec.,Private,121
+district,382,Primary only,Government,992
+district,382,Primary with upper primary,Government,1
+district,382,Primary with upper primary sec/h.sec,Government,17
+district,382,Upper primary only,Government,176
+district,382,Upper primary with sec./h.sec,Government,147
+district,382,Primary with upper primary sec,Government,2
+district,382,Upper primary with  sec.,Government,116
+district,382,Primary only,Private,992
+district,382,Primary with upper primary,Private,1
+district,382,Primary with upper primary sec/h.sec,Private,17
+district,382,Upper primary only,Private,176
+district,382,Upper primary with sec./h.sec,Private,147
+district,382,Primary with upper primary sec,Private,2
+district,382,Upper primary with  sec.,Private,116
 district,37,Primary only,Government,992
 district,37,Primary with upper primary,Government,1
 district,37,Primary with upper primary sec/h.sec,Government,17
@@ -3785,20 +3785,20 @@ district,137,Upper primary only,Private,300
 district,137,Upper primary with sec./h.sec,Private,92
 district,137,Primary with upper primary sec,Private,19
 district,137,Upper primary with  sec.,Private,22
-district,407,Primary only,Government,1845
-district,407,Primary with upper primary,Government,11
-district,407,Primary with upper primary sec/h.sec,Government,2
-district,407,Upper primary only,Government,693
-district,407,Upper primary with sec./h.sec,Government,15
-district,407,Primary with upper primary sec,Government,1
-district,407,Upper primary with  sec.,Government,70
-district,407,Primary only,Private,74
-district,407,Primary with upper primary,Private,131
-district,407,Primary with upper primary sec/h.sec,Private,47
-district,407,Upper primary only,Private,2
-district,407,Upper primary with sec./h.sec,Private,2
-district,407,Primary with upper primary sec,Private,46
-district,407,Upper primary with  sec.,Private,0
+district,407,Primary only,Government,118
+district,407,Primary with upper primary,Government,1607
+district,407,Primary with upper primary sec/h.sec,Government,5
+district,407,Upper primary only,Government,9
+district,407,Upper primary with sec./h.sec,Government,3
+district,407,Primary with upper primary sec,Government,0
+district,407,Upper primary with  sec.,Government,6
+district,407,Primary only,Private,118
+district,407,Primary with upper primary,Private,1607
+district,407,Primary with upper primary sec/h.sec,Private,5
+district,407,Upper primary only,Private,9
+district,407,Upper primary with sec./h.sec,Private,3
+district,407,Primary with upper primary sec,Private,0
+district,407,Upper primary with  sec.,Private,6
 district,468,Primary only,Government,118
 district,468,Primary with upper primary,Government,1607
 district,468,Primary with upper primary sec/h.sec,Government,5
@@ -3855,34 +3855,34 @@ district,395,Upper primary only,Private,36
 district,395,Upper primary with sec./h.sec,Private,1
 district,395,Primary with upper primary sec,Private,9
 district,395,Upper primary with  sec.,Private,127
-district,321,Primary only,Government,998
-district,321,Primary with upper primary,Government,39
-district,321,Primary with upper primary sec/h.sec,Government,0
-district,321,Upper primary only,Government,187
-district,321,Upper primary with sec./h.sec,Government,24
-district,321,Primary with upper primary sec,Government,1
-district,321,Upper primary with  sec.,Government,54
-district,321,Primary only,Private,35
-district,321,Primary with upper primary,Private,28
-district,321,Primary with upper primary sec/h.sec,Private,4
-district,321,Upper primary only,Private,77
-district,321,Upper primary with sec./h.sec,Private,5
-district,321,Primary with upper primary sec,Private,35
-district,321,Upper primary with  sec.,Private,0
-district,322,Primary only,Government,998
-district,322,Primary with upper primary,Government,39
-district,322,Primary with upper primary sec/h.sec,Government,0
-district,322,Upper primary only,Government,187
-district,322,Upper primary with sec./h.sec,Government,24
-district,322,Primary with upper primary sec,Government,1
-district,322,Upper primary with  sec.,Government,54
-district,322,Primary only,Private,35
-district,322,Primary with upper primary,Private,28
-district,322,Primary with upper primary sec/h.sec,Private,4
-district,322,Upper primary only,Private,77
-district,322,Upper primary with sec./h.sec,Private,5
-district,322,Primary with upper primary sec,Private,35
-district,322,Upper primary with  sec.,Private,0
+district,321,Primary only,Government,868
+district,321,Primary with upper primary,Government,345
+district,321,Primary with upper primary sec/h.sec,Government,39
+district,321,Upper primary only,Government,1
+district,321,Upper primary with sec./h.sec,Government,126
+district,321,Primary with upper primary sec,Government,23
+district,321,Upper primary with  sec.,Government,120
+district,321,Primary only,Private,868
+district,321,Primary with upper primary,Private,345
+district,321,Primary with upper primary sec/h.sec,Private,39
+district,321,Upper primary only,Private,1
+district,321,Upper primary with sec./h.sec,Private,126
+district,321,Primary with upper primary sec,Private,23
+district,321,Upper primary with  sec.,Private,120
+district,322,Primary only,Government,868
+district,322,Primary with upper primary,Government,345
+district,322,Primary with upper primary sec/h.sec,Government,39
+district,322,Upper primary only,Government,1
+district,322,Upper primary with sec./h.sec,Government,126
+district,322,Primary with upper primary sec,Government,23
+district,322,Upper primary with  sec.,Government,120
+district,322,Primary only,Private,868
+district,322,Primary with upper primary,Private,345
+district,322,Primary with upper primary sec/h.sec,Private,39
+district,322,Upper primary only,Private,1
+district,322,Upper primary with sec./h.sec,Private,126
+district,322,Primary with upper primary sec,Private,23
+district,322,Upper primary with  sec.,Private,120
 district,604,Primary only,Government,868
 district,604,Primary with upper primary,Government,345
 district,604,Primary with upper primary sec/h.sec,Government,39
@@ -4219,20 +4219,20 @@ district,379,Upper primary only,Private,104
 district,379,Upper primary with sec./h.sec,Private,0
 district,379,Primary with upper primary sec,Private,9
 district,379,Upper primary with  sec.,Private,164
-district,375,Primary only,Government,2791
-district,375,Primary with upper primary,Government,1087
-district,375,Primary with upper primary sec/h.sec,Government,1
-district,375,Upper primary only,Government,190
-district,375,Upper primary with sec./h.sec,Government,3
-district,375,Primary with upper primary sec,Government,54
-district,375,Upper primary with  sec.,Government,286
-district,375,Primary only,Private,71
-district,375,Primary with upper primary,Private,112
-district,375,Primary with upper primary sec/h.sec,Private,0
-district,375,Upper primary only,Private,81
+district,375,Primary only,Government,545
+district,375,Primary with upper primary,Government,476
+district,375,Primary with upper primary sec/h.sec,Government,2
+district,375,Upper primary only,Government,7
+district,375,Upper primary with sec./h.sec,Government,0
+district,375,Primary with upper primary sec,Government,28
+district,375,Upper primary with  sec.,Government,3
+district,375,Primary only,Private,545
+district,375,Primary with upper primary,Private,476
+district,375,Primary with upper primary sec/h.sec,Private,2
+district,375,Upper primary only,Private,7
 district,375,Upper primary with sec./h.sec,Private,0
-district,375,Primary with upper primary sec,Private,19
-district,375,Upper primary with  sec.,Private,272
+district,375,Primary with upper primary sec,Private,28
+district,375,Upper primary with  sec.,Private,3
 district,223,Primary only,Government,545
 district,223,Primary with upper primary,Government,476
 district,223,Primary with upper primary sec/h.sec,Government,2
@@ -4261,34 +4261,34 @@ district,541,Upper primary only,Private,0
 district,541,Upper primary with sec./h.sec,Private,0
 district,541,Primary with upper primary sec,Private,249
 district,541,Upper primary with  sec.,Private,34
-district,466,Primary only,Government,521
-district,466,Primary with upper primary,Government,1
-district,466,Primary with upper primary sec/h.sec,Government,1
-district,466,Upper primary only,Government,214
+district,466,Primary only,Government,622
+district,466,Primary with upper primary,Government,785
+district,466,Primary with upper primary sec/h.sec,Government,0
+district,466,Upper primary only,Government,0
 district,466,Upper primary with sec./h.sec,Government,1
 district,466,Primary with upper primary sec,Government,0
 district,466,Upper primary with  sec.,Government,0
-district,466,Primary only,Private,28
-district,466,Primary with upper primary,Private,61
-district,466,Primary with upper primary sec/h.sec,Private,25
-district,466,Upper primary only,Private,1
-district,466,Upper primary with sec./h.sec,Private,10
-district,466,Primary with upper primary sec,Private,23
+district,466,Primary only,Private,622
+district,466,Primary with upper primary,Private,785
+district,466,Primary with upper primary sec/h.sec,Private,0
+district,466,Upper primary only,Private,0
+district,466,Upper primary with sec./h.sec,Private,1
+district,466,Primary with upper primary sec,Private,0
 district,466,Upper primary with  sec.,Private,0
-district,440,Primary only,Government,2365
-district,440,Primary with upper primary,Government,0
+district,440,Primary only,Government,622
+district,440,Primary with upper primary,Government,785
 district,440,Primary with upper primary sec/h.sec,Government,0
-district,440,Upper primary only,Government,680
+district,440,Upper primary only,Government,0
 district,440,Upper primary with sec./h.sec,Government,1
-district,440,Primary with upper primary sec,Government,1
+district,440,Primary with upper primary sec,Government,0
 district,440,Upper primary with  sec.,Government,0
-district,440,Primary only,Private,106
-district,440,Primary with upper primary,Private,107
-district,440,Primary with upper primary sec/h.sec,Private,34
-district,440,Upper primary only,Private,1
-district,440,Upper primary with sec./h.sec,Private,0
-district,440,Primary with upper primary sec,Private,19
-district,440,Upper primary with  sec.,Private,1
+district,440,Primary only,Private,622
+district,440,Primary with upper primary,Private,785
+district,440,Primary with upper primary sec/h.sec,Private,0
+district,440,Upper primary only,Private,0
+district,440,Upper primary with sec./h.sec,Private,1
+district,440,Primary with upper primary sec,Private,0
+district,440,Upper primary with  sec.,Private,0
 district,483,Primary only,Government,622
 district,483,Primary with upper primary,Government,785
 district,483,Primary with upper primary sec/h.sec,Government,0
@@ -4653,20 +4653,20 @@ district,547,Upper primary only,Private,1
 district,547,Upper primary with sec./h.sec,Private,0
 district,547,Primary with upper primary sec,Private,154
 district,547,Upper primary with  sec.,Private,409
-district,631,Primary only,Government,1279
-district,631,Primary with upper primary,Government,455
-district,631,Primary with upper primary sec/h.sec,Government,33
-district,631,Upper primary only,Government,1
-district,631,Upper primary with sec./h.sec,Government,145
-district,631,Primary with upper primary sec,Government,39
-district,631,Upper primary with  sec.,Government,132
-district,631,Primary only,Private,475
-district,631,Primary with upper primary,Private,62
-district,631,Primary with upper primary sec/h.sec,Private,266
-district,631,Upper primary only,Private,1
-district,631,Upper primary with sec./h.sec,Private,64
-district,631,Primary with upper primary sec,Private,107
-district,631,Upper primary with  sec.,Private,33
+district,631,Primary only,Government,356
+district,631,Primary with upper primary,Government,354
+district,631,Primary with upper primary sec/h.sec,Government,0
+district,631,Upper primary only,Government,5
+district,631,Upper primary with sec./h.sec,Government,1
+district,631,Primary with upper primary sec,Government,25
+district,631,Upper primary with  sec.,Government,24
+district,631,Primary only,Private,356
+district,631,Primary with upper primary,Private,354
+district,631,Primary with upper primary sec/h.sec,Private,0
+district,631,Upper primary only,Private,5
+district,631,Upper primary with sec./h.sec,Private,1
+district,631,Primary with upper primary sec,Private,25
+district,631,Upper primary with  sec.,Private,24
 district,15,Primary only,Government,356
 district,15,Primary with upper primary,Government,354
 district,15,Primary with upper primary sec/h.sec,Government,0
@@ -4765,20 +4765,20 @@ district,189,Upper primary only,Private,174
 district,189,Upper primary with sec./h.sec,Private,99
 district,189,Primary with upper primary sec,Private,14
 district,189,Upper primary with  sec.,Private,26
-district,25,Primary only,Government,754
-district,25,Primary with upper primary,Government,0
+district,25,Primary only,Government,1837
+district,25,Primary with upper primary,Government,49
 district,25,Primary with upper primary sec/h.sec,Government,1
-district,25,Upper primary only,Government,129
-district,25,Upper primary with sec./h.sec,Government,76
+district,25,Upper primary only,Government,459
+district,25,Upper primary with sec./h.sec,Government,29
 district,25,Primary with upper primary sec,Government,0
-district,25,Upper primary with  sec.,Government,50
-district,25,Primary only,Private,32
-district,25,Primary with upper primary,Private,73
-district,25,Primary with upper primary sec/h.sec,Private,17
-district,25,Upper primary only,Private,0
-district,25,Upper primary with sec./h.sec,Private,2
-district,25,Primary with upper primary sec,Private,51
-district,25,Upper primary with  sec.,Private,0
+district,25,Upper primary with  sec.,Government,93
+district,25,Primary only,Private,1837
+district,25,Primary with upper primary,Private,49
+district,25,Primary with upper primary sec/h.sec,Private,1
+district,25,Upper primary only,Private,459
+district,25,Upper primary with sec./h.sec,Private,29
+district,25,Primary with upper primary sec,Private,0
+district,25,Upper primary with  sec.,Private,93
 district,307,Primary only,Government,1837
 district,307,Primary with upper primary,Government,49
 district,307,Primary with upper primary sec/h.sec,Government,1
@@ -4877,20 +4877,20 @@ district,287,Upper primary only,Private,11
 district,287,Upper primary with sec./h.sec,Private,0
 district,287,Primary with upper primary sec,Private,0
 district,287,Upper primary with  sec.,Private,0
-district,3,Primary only,Government,213
-district,3,Primary with upper primary,Government,260
-district,3,Primary with upper primary sec/h.sec,Government,1
-district,3,Upper primary only,Government,6
-district,3,Upper primary with sec./h.sec,Government,1
-district,3,Primary with upper primary sec,Government,18
-district,3,Upper primary with  sec.,Government,27
-district,3,Primary only,Private,16
-district,3,Primary with upper primary,Private,29
-district,3,Primary with upper primary sec/h.sec,Private,5
-district,3,Upper primary only,Private,0
-district,3,Upper primary with sec./h.sec,Private,0
-district,3,Primary with upper primary sec,Private,9
-district,3,Upper primary with  sec.,Private,1
+district,3,Primary only,Government,421
+district,3,Primary with upper primary,Government,194
+district,3,Primary with upper primary sec/h.sec,Government,0
+district,3,Upper primary only,Government,2
+district,3,Upper primary with sec./h.sec,Government,8
+district,3,Primary with upper primary sec,Government,23
+district,3,Upper primary with  sec.,Government,4
+district,3,Primary only,Private,421
+district,3,Primary with upper primary,Private,194
+district,3,Primary with upper primary sec/h.sec,Private,0
+district,3,Upper primary only,Private,2
+district,3,Upper primary with sec./h.sec,Private,8
+district,3,Primary with upper primary sec,Private,23
+district,3,Upper primary with  sec.,Private,4
 district,356,Primary only,Government,421
 district,356,Primary with upper primary,Government,194
 district,356,Primary with upper primary sec/h.sec,Government,0
@@ -5045,20 +5045,20 @@ district,623,Upper primary only,Private,2
 district,623,Upper primary with sec./h.sec,Private,69
 district,623,Primary with upper primary sec,Private,50
 district,623,Upper primary with  sec.,Private,27
-district,144,Primary only,Government,1364
-district,144,Primary with upper primary,Government,5
-district,144,Primary with upper primary sec/h.sec,Government,4
-district,144,Upper primary only,Government,598
+district,144,Primary only,Government,1280
+district,144,Primary with upper primary,Government,2
+district,144,Primary with upper primary sec/h.sec,Government,1
+district,144,Upper primary only,Government,440
 district,144,Upper primary with sec./h.sec,Government,8
-district,144,Primary with upper primary sec,Government,1
-district,144,Upper primary with  sec.,Government,0
-district,144,Primary only,Private,731
-district,144,Primary with upper primary,Private,164
-district,144,Primary with upper primary sec/h.sec,Private,14
-district,144,Upper primary only,Private,186
-district,144,Upper primary with sec./h.sec,Private,114
-district,144,Primary with upper primary sec,Private,18
-district,144,Upper primary with  sec.,Private,42
+district,144,Primary with upper primary sec,Government,0
+district,144,Upper primary with  sec.,Government,41
+district,144,Primary only,Private,1280
+district,144,Primary with upper primary,Private,2
+district,144,Primary with upper primary sec/h.sec,Private,1
+district,144,Upper primary only,Private,440
+district,144,Upper primary with sec./h.sec,Private,8
+district,144,Primary with upper primary sec,Private,0
+district,144,Upper primary with  sec.,Private,41
 district,411,Primary only,Government,1280
 district,411,Primary with upper primary,Government,2
 district,411,Primary with upper primary sec/h.sec,Government,1
@@ -5142,20 +5142,20 @@ district,169,Upper primary only,Private,48
 district,169,Upper primary with sec./h.sec,Private,25
 district,169,Primary with upper primary sec,Private,1
 district,169,Upper primary with  sec.,Private,4
-district,187,Primary only,Government,2164
-district,187,Primary with upper primary,Government,3
-district,187,Primary with upper primary sec/h.sec,Government,15
-district,187,Upper primary only,Government,854
+district,187,Primary only,Government,1608
+district,187,Primary with upper primary,Government,0
+district,187,Primary with upper primary sec/h.sec,Government,4
+district,187,Upper primary only,Government,551
 district,187,Upper primary with sec./h.sec,Government,5
-district,187,Primary with upper primary sec,Government,3
+district,187,Primary with upper primary sec,Government,0
 district,187,Upper primary with  sec.,Government,0
-district,187,Primary only,Private,609
-district,187,Primary with upper primary,Private,170
-district,187,Primary with upper primary sec/h.sec,Private,30
-district,187,Upper primary only,Private,370
-district,187,Upper primary with sec./h.sec,Private,111
-district,187,Primary with upper primary sec,Private,9
-district,187,Upper primary with  sec.,Private,25
+district,187,Primary only,Private,1608
+district,187,Primary with upper primary,Private,0
+district,187,Primary with upper primary sec/h.sec,Private,4
+district,187,Upper primary only,Private,551
+district,187,Upper primary with sec./h.sec,Private,5
+district,187,Primary with upper primary sec,Private,0
+district,187,Upper primary with  sec.,Private,0
 district,148,Primary only,Government,1608
 district,148,Primary with upper primary,Government,0
 district,148,Primary with upper primary sec/h.sec,Government,4
@@ -5492,34 +5492,34 @@ district,44,Upper primary only,Private,0
 district,44,Upper primary with sec./h.sec,Private,3
 district,44,Primary with upper primary sec,Private,50
 district,44,Upper primary with  sec.,Private,0
-district,519,Primary only,Government,3004
-district,519,Primary with upper primary,Government,1220
-district,519,Primary with upper primary sec/h.sec,Government,18
-district,519,Upper primary only,Government,6
-district,519,Upper primary with sec./h.sec,Government,5
-district,519,Primary with upper primary sec,Government,19
-district,519,Upper primary with  sec.,Government,13
-district,519,Primary only,Private,507
-district,519,Primary with upper primary,Private,664
-district,519,Primary with upper primary sec/h.sec,Private,72
-district,519,Upper primary only,Private,3
-district,519,Upper primary with sec./h.sec,Private,280
-district,519,Primary with upper primary sec,Private,163
-district,519,Upper primary with  sec.,Private,429
-district,518,Primary only,Government,3004
-district,518,Primary with upper primary,Government,1220
-district,518,Primary with upper primary sec/h.sec,Government,18
-district,518,Upper primary only,Government,6
-district,518,Upper primary with sec./h.sec,Government,5
-district,518,Primary with upper primary sec,Government,19
-district,518,Upper primary with  sec.,Government,13
-district,518,Primary only,Private,507
-district,518,Primary with upper primary,Private,664
-district,518,Primary with upper primary sec/h.sec,Private,72
-district,518,Upper primary only,Private,3
-district,518,Upper primary with sec./h.sec,Private,280
-district,518,Primary with upper primary sec,Private,163
-district,518,Upper primary with  sec.,Private,429
+district,519,Primary only,Government,633
+district,519,Primary with upper primary,Government,433
+district,519,Primary with upper primary sec/h.sec,Government,0
+district,519,Upper primary only,Government,4
+district,519,Upper primary with sec./h.sec,Government,0
+district,519,Primary with upper primary sec,Government,41
+district,519,Upper primary with  sec.,Government,1
+district,519,Primary only,Private,633
+district,519,Primary with upper primary,Private,433
+district,519,Primary with upper primary sec/h.sec,Private,0
+district,519,Upper primary only,Private,4
+district,519,Upper primary with sec./h.sec,Private,0
+district,519,Primary with upper primary sec,Private,41
+district,519,Upper primary with  sec.,Private,1
+district,518,Primary only,Government,633
+district,518,Primary with upper primary,Government,433
+district,518,Primary with upper primary sec/h.sec,Government,0
+district,518,Upper primary only,Government,4
+district,518,Upper primary with sec./h.sec,Government,0
+district,518,Primary with upper primary sec,Government,41
+district,518,Upper primary with  sec.,Government,1
+district,518,Primary only,Private,633
+district,518,Primary with upper primary,Private,433
+district,518,Primary with upper primary sec/h.sec,Private,0
+district,518,Upper primary only,Private,4
+district,518,Upper primary with sec./h.sec,Private,0
+district,518,Primary with upper primary sec,Private,41
+district,518,Upper primary with  sec.,Private,1
 district,226,Primary only,Government,633
 district,226,Primary with upper primary,Government,433
 district,226,Primary with upper primary sec/h.sec,Government,0
@@ -5590,20 +5590,20 @@ district,577,Upper primary only,Private,11
 district,577,Upper primary with sec./h.sec,Private,2
 district,577,Primary with upper primary sec,Private,104
 district,577,Upper primary with  sec.,Private,5
-district,397,Primary only,Government,1653
-district,397,Primary with upper primary,Government,777
+district,397,Primary only,Government,3241
+district,397,Primary with upper primary,Government,4
 district,397,Primary with upper primary sec/h.sec,Government,2
-district,397,Upper primary only,Government,27
-district,397,Upper primary with sec./h.sec,Government,2
-district,397,Primary with upper primary sec,Government,142
-district,397,Upper primary with  sec.,Government,87
-district,397,Primary only,Private,41
-district,397,Primary with upper primary,Private,30
-district,397,Primary with upper primary sec/h.sec,Private,4
-district,397,Upper primary only,Private,5
-district,397,Upper primary with sec./h.sec,Private,0
-district,397,Primary with upper primary sec,Private,20
-district,397,Upper primary with  sec.,Private,40
+district,397,Upper primary only,Government,300
+district,397,Upper primary with sec./h.sec,Government,342
+district,397,Primary with upper primary sec,Government,2
+district,397,Upper primary with  sec.,Government,89
+district,397,Primary only,Private,3241
+district,397,Primary with upper primary,Private,4
+district,397,Primary with upper primary sec/h.sec,Private,2
+district,397,Upper primary only,Private,300
+district,397,Upper primary with sec./h.sec,Private,342
+district,397,Primary with upper primary sec,Private,2
+district,397,Upper primary with  sec.,Private,89
 district,336,Primary only,Government,3241
 district,336,Primary with upper primary,Government,4
 district,336,Primary with upper primary sec/h.sec,Government,2
@@ -5884,20 +5884,20 @@ district,432,Upper primary only,Private,1
 district,432,Upper primary with sec./h.sec,Private,1
 district,432,Primary with upper primary sec,Private,40
 district,432,Upper primary with  sec.,Private,1
-district,94,Primary only,Government,995
-district,94,Primary with upper primary,Government,631
-district,94,Primary with upper primary sec/h.sec,Government,284
-district,94,Upper primary only,Government,2
-district,94,Upper primary with sec./h.sec,Government,32
-district,94,Primary with upper primary sec,Government,125
-district,94,Upper primary with  sec.,Government,10
-district,94,Primary only,Private,130
-district,94,Primary with upper primary,Private,552
-district,94,Primary with upper primary sec/h.sec,Private,226
+district,94,Primary only,Government,30
+district,94,Primary with upper primary,Government,9
+district,94,Primary with upper primary sec/h.sec,Government,3
+district,94,Upper primary only,Government,0
+district,94,Upper primary with sec./h.sec,Government,6
+district,94,Primary with upper primary sec,Government,9
+district,94,Upper primary with  sec.,Government,0
+district,94,Primary only,Private,30
+district,94,Primary with upper primary,Private,9
+district,94,Primary with upper primary sec/h.sec,Private,3
 district,94,Upper primary only,Private,0
-district,94,Upper primary with sec./h.sec,Private,34
-district,94,Primary with upper primary sec,Private,200
-district,94,Upper primary with  sec.,Private,13
+district,94,Upper primary with sec./h.sec,Private,6
+district,94,Primary with upper primary sec,Private,9
+district,94,Upper primary with  sec.,Private,0
 district,638,Primary only,Government,30
 district,638,Primary with upper primary,Government,9
 district,638,Primary with upper primary sec/h.sec,Government,3
@@ -5926,20 +5926,20 @@ district,533,Upper primary only,Private,0
 district,533,Upper primary with sec./h.sec,Private,0
 district,533,Primary with upper primary sec,Private,287
 district,533,Upper primary with  sec.,Private,30
-district,91,Primary only,Government,995
-district,91,Primary with upper primary,Government,631
-district,91,Primary with upper primary sec/h.sec,Government,284
-district,91,Upper primary only,Government,2
-district,91,Upper primary with sec./h.sec,Government,32
-district,91,Primary with upper primary sec,Government,125
-district,91,Upper primary with  sec.,Government,10
-district,91,Primary only,Private,130
-district,91,Primary with upper primary,Private,552
-district,91,Primary with upper primary sec/h.sec,Private,226
+district,91,Primary only,Government,99
+district,91,Primary with upper primary,Government,26
+district,91,Primary with upper primary sec/h.sec,Government,9
+district,91,Upper primary only,Government,0
+district,91,Upper primary with sec./h.sec,Government,8
+district,91,Primary with upper primary sec,Government,21
+district,91,Upper primary with  sec.,Government,0
+district,91,Primary only,Private,99
+district,91,Primary with upper primary,Private,26
+district,91,Primary with upper primary sec/h.sec,Private,9
 district,91,Upper primary only,Private,0
-district,91,Upper primary with sec./h.sec,Private,34
-district,91,Primary with upper primary sec,Private,200
-district,91,Upper primary with  sec.,Private,13
+district,91,Upper primary with sec./h.sec,Private,8
+district,91,Primary with upper primary sec,Private,21
+district,91,Upper primary with  sec.,Private,0
 district,639,Primary only,Government,99
 district,639,Primary with upper primary,Government,26
 district,639,Primary with upper primary sec/h.sec,Government,9
@@ -5954,34 +5954,34 @@ district,639,Upper primary only,Private,0
 district,639,Upper primary with sec./h.sec,Private,0
 district,639,Primary with upper primary sec,Private,1
 district,639,Upper primary with  sec.,Private,0
-district,241,Primary only,Government,85
-district,241,Primary with upper primary,Government,36
+district,241,Primary only,Government,466
+district,241,Primary with upper primary,Government,27
 district,241,Primary with upper primary sec/h.sec,Government,3
-district,241,Upper primary only,Government,2
-district,241,Upper primary with sec./h.sec,Government,1
-district,241,Primary with upper primary sec,Government,6
-district,241,Upper primary with  sec.,Government,2
-district,241,Primary only,Private,2
-district,241,Primary with upper primary,Private,13
-district,241,Primary with upper primary sec/h.sec,Private,0
+district,241,Upper primary only,Government,0
+district,241,Upper primary with sec./h.sec,Government,2
+district,241,Primary with upper primary sec,Government,0
+district,241,Upper primary with  sec.,Government,44
+district,241,Primary only,Private,466
+district,241,Primary with upper primary,Private,27
+district,241,Primary with upper primary sec/h.sec,Private,3
 district,241,Upper primary only,Private,0
-district,241,Upper primary with sec./h.sec,Private,0
-district,241,Primary with upper primary sec,Private,1
-district,241,Upper primary with  sec.,Private,0
-district,92,Primary only,Government,995
-district,92,Primary with upper primary,Government,631
-district,92,Primary with upper primary sec/h.sec,Government,284
-district,92,Upper primary only,Government,2
-district,92,Upper primary with sec./h.sec,Government,32
-district,92,Primary with upper primary sec,Government,125
-district,92,Upper primary with  sec.,Government,10
-district,92,Primary only,Private,130
-district,92,Primary with upper primary,Private,552
-district,92,Primary with upper primary sec/h.sec,Private,226
+district,241,Upper primary with sec./h.sec,Private,2
+district,241,Primary with upper primary sec,Private,0
+district,241,Upper primary with  sec.,Private,44
+district,92,Primary only,Government,466
+district,92,Primary with upper primary,Government,27
+district,92,Primary with upper primary sec/h.sec,Government,3
+district,92,Upper primary only,Government,0
+district,92,Upper primary with sec./h.sec,Government,2
+district,92,Primary with upper primary sec,Government,0
+district,92,Upper primary with  sec.,Government,44
+district,92,Primary only,Private,466
+district,92,Primary with upper primary,Private,27
+district,92,Primary with upper primary sec/h.sec,Private,3
 district,92,Upper primary only,Private,0
-district,92,Upper primary with sec./h.sec,Private,34
-district,92,Primary with upper primary sec,Private,200
-district,92,Upper primary with  sec.,Private,13
+district,92,Upper primary with sec./h.sec,Private,2
+district,92,Primary with upper primary sec,Private,0
+district,92,Upper primary with  sec.,Private,44
 district,585,Primary only,Government,466
 district,585,Primary with upper primary,Government,27
 district,585,Primary with upper primary sec/h.sec,Government,3
@@ -6024,20 +6024,20 @@ district,337,Upper primary only,Private,30
 district,337,Upper primary with sec./h.sec,Private,6
 district,337,Primary with upper primary sec,Private,26
 district,337,Upper primary with  sec.,Private,9
-district,90,Primary only,Government,995
-district,90,Primary with upper primary,Government,631
-district,90,Primary with upper primary sec/h.sec,Government,284
-district,90,Upper primary only,Government,2
-district,90,Upper primary with sec./h.sec,Government,32
-district,90,Primary with upper primary sec,Government,125
-district,90,Upper primary with  sec.,Government,10
-district,90,Primary only,Private,130
-district,90,Primary with upper primary,Private,552
-district,90,Primary with upper primary sec/h.sec,Private,226
-district,90,Upper primary only,Private,0
-district,90,Upper primary with sec./h.sec,Private,34
-district,90,Primary with upper primary sec,Private,200
-district,90,Upper primary with  sec.,Private,13
+district,90,Primary only,Government,584
+district,90,Primary with upper primary,Government,395
+district,90,Primary with upper primary sec/h.sec,Government,0
+district,90,Upper primary only,Government,27
+district,90,Upper primary with sec./h.sec,Government,2
+district,90,Primary with upper primary sec,Government,33
+district,90,Upper primary with  sec.,Government,36
+district,90,Primary only,Private,584
+district,90,Primary with upper primary,Private,395
+district,90,Primary with upper primary sec/h.sec,Private,0
+district,90,Upper primary only,Private,27
+district,90,Upper primary with sec./h.sec,Private,2
+district,90,Primary with upper primary sec,Private,33
+district,90,Upper primary with  sec.,Private,36
 district,394,Primary only,Government,584
 district,394,Primary with upper primary,Government,395
 district,394,Primary with upper primary sec/h.sec,Government,0
@@ -6066,20 +6066,20 @@ district,525,Upper primary only,Private,4
 district,525,Upper primary with sec./h.sec,Private,62
 district,525,Primary with upper primary sec,Private,10
 district,525,Upper primary with  sec.,Private,129
-district,353,Primary only,Government,1250
-district,353,Primary with upper primary,Government,546
-district,353,Primary with upper primary sec/h.sec,Government,3
+district,353,Primary only,Government,197
+district,353,Primary with upper primary,Government,42
+district,353,Primary with upper primary sec/h.sec,Government,22
 district,353,Upper primary only,Government,2
-district,353,Upper primary with sec./h.sec,Government,10
-district,353,Primary with upper primary sec,Government,58
-district,353,Upper primary with  sec.,Government,0
-district,353,Primary only,Private,1
-district,353,Primary with upper primary,Private,27
-district,353,Primary with upper primary sec/h.sec,Private,41
-district,353,Upper primary only,Private,1
-district,353,Upper primary with sec./h.sec,Private,3
-district,353,Primary with upper primary sec,Private,29
-district,353,Upper primary with  sec.,Private,15
+district,353,Upper primary with sec./h.sec,Government,37
+district,353,Primary with upper primary sec,Government,21
+district,353,Upper primary with  sec.,Government,3
+district,353,Primary only,Private,197
+district,353,Primary with upper primary,Private,42
+district,353,Primary with upper primary sec/h.sec,Private,22
+district,353,Upper primary only,Private,2
+district,353,Upper primary with sec./h.sec,Private,37
+district,353,Primary with upper primary sec,Private,21
+district,353,Upper primary with  sec.,Private,3
 district,593,Primary only,Government,197
 district,593,Primary with upper primary,Government,42
 district,593,Primary with upper primary sec/h.sec,Government,22
@@ -6626,34 +6626,34 @@ district,559,Upper primary only,Private,6
 district,559,Upper primary with sec./h.sec,Private,0
 district,559,Primary with upper primary sec,Private,69
 district,559,Upper primary with  sec.,Private,9
-district,403,Primary only,Government,1478
-district,520,Primary only,Government,3004
-district,403,Primary with upper primary,Government,10
-district,520,Primary with upper primary,Government,1220
+district,403,Primary only,Government,764
+district,520,Primary only,Government,764
+district,403,Primary with upper primary,Government,1
+district,520,Primary with upper primary,Government,1
 district,403,Primary with upper primary sec/h.sec,Government,3
-district,520,Primary with upper primary sec/h.sec,Government,18
-district,403,Upper primary only,Government,442
-district,520,Upper primary only,Government,6
-district,403,Upper primary with sec./h.sec,Government,7
-district,520,Upper primary with sec./h.sec,Government,5
-district,403,Primary with upper primary sec,Government,1
-district,520,Primary with upper primary sec,Government,19
-district,403,Upper primary with  sec.,Government,65
-district,520,Upper primary with  sec.,Government,13
-district,403,Primary only,Private,63
-district,520,Primary only,Private,507
-district,403,Primary with upper primary,Private,95
-district,520,Primary with upper primary,Private,664
-district,403,Primary with upper primary sec/h.sec,Private,68
-district,520,Primary with upper primary sec/h.sec,Private,72
-district,403,Upper primary only,Private,1
-district,520,Upper primary only,Private,3
-district,403,Upper primary with sec./h.sec,Private,2
-district,520,Upper primary with sec./h.sec,Private,280
-district,403,Primary with upper primary sec,Private,26
-district,520,Primary with upper primary sec,Private,163
-district,403,Upper primary with  sec.,Private,0
-district,520,Upper primary with  sec.,Private,429
+district,520,Primary with upper primary sec/h.sec,Government,3
+district,403,Upper primary only,Government,418
+district,520,Upper primary only,Government,418
+district,403,Upper primary with sec./h.sec,Government,12
+district,520,Upper primary with sec./h.sec,Government,12
+district,403,Primary with upper primary sec,Government,0
+district,520,Primary with upper primary sec,Government,0
+district,403,Upper primary with  sec.,Government,32
+district,520,Upper primary with  sec.,Government,32
+district,403,Primary only,Private,764
+district,520,Primary only,Private,764
+district,403,Primary with upper primary,Private,1
+district,520,Primary with upper primary,Private,1
+district,403,Primary with upper primary sec/h.sec,Private,3
+district,520,Primary with upper primary sec/h.sec,Private,3
+district,403,Upper primary only,Private,418
+district,520,Upper primary only,Private,418
+district,403,Upper primary with sec./h.sec,Private,12
+district,520,Upper primary with sec./h.sec,Private,12
+district,403,Primary with upper primary sec,Private,0
+district,520,Primary with upper primary sec,Private,0
+district,403,Upper primary with  sec.,Private,32
+district,520,Upper primary with  sec.,Private,32
 district,410,Primary only,Government,764
 district,410,Primary with upper primary,Government,1
 district,410,Primary with upper primary sec/h.sec,Government,3
@@ -6724,20 +6724,20 @@ district,408,Upper primary only,Private,2
 district,408,Upper primary with sec./h.sec,Private,2
 district,408,Primary with upper primary sec,Private,46
 district,408,Upper primary with  sec.,Private,0
-district,6,Primary only,Government,900
-district,6,Primary with upper primary,Government,386
-district,6,Primary with upper primary sec/h.sec,Government,13
-district,6,Upper primary only,Government,4
-district,6,Upper primary with sec./h.sec,Government,9
-district,6,Primary with upper primary sec,Government,107
+district,6,Primary only,Government,924
+district,6,Primary with upper primary,Government,573
+district,6,Primary with upper primary sec/h.sec,Government,201
+district,6,Upper primary only,Government,5
+district,6,Upper primary with sec./h.sec,Government,21
+district,6,Primary with upper primary sec,Government,53
 district,6,Upper primary with  sec.,Government,4
-district,6,Primary only,Private,89
-district,6,Primary with upper primary,Private,115
-district,6,Primary with upper primary sec/h.sec,Private,53
-district,6,Upper primary only,Private,0
-district,6,Upper primary with sec./h.sec,Private,0
-district,6,Primary with upper primary sec,Private,78
-district,6,Upper primary with  sec.,Private,0
+district,6,Primary only,Private,924
+district,6,Primary with upper primary,Private,573
+district,6,Primary with upper primary sec/h.sec,Private,201
+district,6,Upper primary only,Private,5
+district,6,Upper primary with sec./h.sec,Private,21
+district,6,Primary with upper primary sec,Private,53
+district,6,Upper primary with  sec.,Private,4
 district,123,Primary only,Government,924
 district,123,Primary with upper primary,Government,573
 district,123,Primary with upper primary sec/h.sec,Government,201
@@ -6836,20 +6836,20 @@ district,364,Upper primary only,Private,38
 district,364,Upper primary with sec./h.sec,Private,11
 district,364,Primary with upper primary sec,Private,140
 district,364,Upper primary with  sec.,Private,68
-district,537,Primary only,Government,2608
-district,537,Primary with upper primary,Government,570
-district,537,Primary with upper primary sec/h.sec,Government,13
-district,537,Upper primary only,Government,0
-district,537,Upper primary with sec./h.sec,Government,8
-district,537,Primary with upper primary sec,Government,32
-district,537,Upper primary with  sec.,Government,632
-district,537,Primary only,Private,164
-district,537,Primary with upper primary,Private,404
-district,537,Primary with upper primary sec/h.sec,Private,2
-district,537,Upper primary only,Private,0
-district,537,Upper primary with sec./h.sec,Private,0
-district,537,Primary with upper primary sec,Private,352
-district,537,Upper primary with  sec.,Private,69
+district,537,Primary only,Government,1623
+district,537,Primary with upper primary,Government,0
+district,537,Primary with upper primary sec/h.sec,Government,1
+district,537,Upper primary only,Government,561
+district,537,Upper primary with sec./h.sec,Government,1
+district,537,Primary with upper primary sec,Government,0
+district,537,Upper primary with  sec.,Government,0
+district,537,Primary only,Private,1623
+district,537,Primary with upper primary,Private,0
+district,537,Primary with upper primary sec/h.sec,Private,1
+district,537,Upper primary only,Private,561
+district,537,Upper primary with sec./h.sec,Private,1
+district,537,Primary with upper primary sec,Private,0
+district,537,Upper primary with  sec.,Private,0
 district,434,Primary only,Government,1623
 district,434,Primary with upper primary,Government,0
 district,434,Primary with upper primary sec/h.sec,Government,1
@@ -6934,20 +6934,20 @@ district,85,Upper primary only,Private,0
 district,85,Upper primary with sec./h.sec,Private,6
 district,85,Primary with upper primary sec,Private,71
 district,85,Upper primary with  sec.,Private,2
-district,297,Primary only,Government,585
-district,297,Primary with upper primary,Government,4
-district,297,Primary with upper primary sec/h.sec,Government,8
-district,297,Upper primary only,Government,436
-district,297,Upper primary with sec./h.sec,Government,0
-district,297,Primary with upper primary sec,Government,3
-district,297,Upper primary with  sec.,Government,5
-district,297,Primary only,Private,947
-district,297,Primary with upper primary,Private,41
-district,297,Primary with upper primary sec/h.sec,Private,11
-district,297,Upper primary only,Private,246
-district,297,Upper primary with sec./h.sec,Private,3
-district,297,Primary with upper primary sec,Private,44
-district,297,Upper primary with  sec.,Private,48
+district,297,Primary only,Government,230
+district,297,Primary with upper primary,Government,0
+district,297,Primary with upper primary sec/h.sec,Government,1
+district,297,Upper primary only,Government,36
+district,297,Upper primary with sec./h.sec,Government,118
+district,297,Primary with upper primary sec,Government,0
+district,297,Upper primary with  sec.,Government,45
+district,297,Primary only,Private,230
+district,297,Primary with upper primary,Private,0
+district,297,Primary with upper primary sec/h.sec,Private,1
+district,297,Upper primary only,Private,36
+district,297,Upper primary with sec./h.sec,Private,118
+district,297,Primary with upper primary sec,Private,0
+district,297,Upper primary with  sec.,Private,45
 district,82,Primary only,Government,230
 district,82,Primary with upper primary,Government,0
 district,82,Primary with upper primary sec/h.sec,Government,1
@@ -7074,19 +7074,19 @@ district,352,Upper primary only,Private,1
 district,352,Upper primary with sec./h.sec,Private,1
 district,352,Primary with upper primary sec,Private,4
 district,352,Upper primary with  sec.,Private,12
-district,52,Primary only,Government,668
+district,52,Primary only,Government,107
 district,52,Primary with upper primary,Government,0
-district,52,Primary with upper primary sec/h.sec,Government,2
-district,52,Upper primary only,Government,153
-district,52,Upper primary with sec./h.sec,Government,105
-district,52,Primary with upper primary sec,Government,3
-district,52,Upper primary with  sec.,Government,106
-district,52,Primary only,Private,69
-district,52,Primary with upper primary,Private,110
-district,52,Primary with upper primary sec/h.sec,Private,174
-district,52,Upper primary only,Private,0
-district,52,Upper primary with sec./h.sec,Private,3
-district,52,Primary with upper primary sec,Private,151
+district,52,Primary with upper primary sec/h.sec,Government,0
+district,52,Upper primary only,Government,76
+district,52,Upper primary with sec./h.sec,Government,0
+district,52,Primary with upper primary sec,Government,0
+district,52,Upper primary with  sec.,Government,0
+district,52,Primary only,Private,107
+district,52,Primary with upper primary,Private,0
+district,52,Primary with upper primary sec/h.sec,Private,0
+district,52,Upper primary only,Private,76
+district,52,Upper primary with sec./h.sec,Private,0
+district,52,Primary with upper primary sec,Private,0
 district,52,Upper primary with  sec.,Private,0
 district,288,Primary only,Government,107
 district,288,Primary with upper primary,Government,0
@@ -7200,20 +7200,20 @@ district,186,Upper primary only,Private,89
 district,186,Upper primary with sec./h.sec,Private,74
 district,186,Primary with upper primary sec,Private,0
 district,186,Upper primary with  sec.,Private,26
-district,198,Primary only,Government,1613
-district,198,Primary with upper primary,Government,1
-district,198,Primary with upper primary sec/h.sec,Government,7
-district,198,Upper primary only,Government,610
-district,198,Upper primary with sec./h.sec,Government,2
-district,198,Primary with upper primary sec,Government,0
-district,198,Upper primary with  sec.,Government,0
-district,198,Primary only,Private,403
-district,198,Primary with upper primary,Private,70
-district,198,Primary with upper primary sec/h.sec,Private,22
-district,198,Upper primary only,Private,177
-district,198,Upper primary with sec./h.sec,Private,79
-district,198,Primary with upper primary sec,Private,13
-district,198,Upper primary with  sec.,Private,27
+district,198,Primary only,Government,1125
+district,198,Primary with upper primary,Government,556
+district,198,Primary with upper primary sec/h.sec,Government,0
+district,198,Upper primary only,Government,4
+district,198,Upper primary with sec./h.sec,Government,15
+district,198,Primary with upper primary sec,Government,49
+district,198,Upper primary with  sec.,Government,3
+district,198,Primary only,Private,1125
+district,198,Primary with upper primary,Private,556
+district,198,Primary with upper primary sec/h.sec,Private,0
+district,198,Upper primary only,Private,4
+district,198,Upper primary with sec./h.sec,Private,15
+district,198,Primary with upper primary sec,Private,49
+district,198,Upper primary with  sec.,Private,3
 district,369,Primary only,Government,1125
 district,369,Primary with upper primary,Government,556
 district,369,Primary with upper primary sec/h.sec,Government,0
@@ -7354,19 +7354,19 @@ district,460,Upper primary only,Private,1
 district,460,Upper primary with sec./h.sec,Private,2
 district,460,Primary with upper primary sec,Private,23
 district,460,Upper primary with  sec.,Private,0
-district,39,Primary only,Government,448
+district,39,Primary only,Government,2292
 district,39,Primary with upper primary,Government,0
-district,39,Primary with upper primary sec/h.sec,Government,1
-district,39,Upper primary only,Government,137
-district,39,Upper primary with sec./h.sec,Government,38
+district,39,Primary with upper primary sec/h.sec,Government,4
+district,39,Upper primary only,Government,913
+district,39,Upper primary with sec./h.sec,Government,6
 district,39,Primary with upper primary sec,Government,1
-district,39,Upper primary with  sec.,Government,44
-district,39,Primary only,Private,2
-district,39,Primary with upper primary,Private,4
-district,39,Primary with upper primary sec/h.sec,Private,5
-district,39,Upper primary only,Private,0
-district,39,Upper primary with sec./h.sec,Private,3
-district,39,Primary with upper primary sec,Private,2
+district,39,Upper primary with  sec.,Government,0
+district,39,Primary only,Private,2292
+district,39,Primary with upper primary,Private,0
+district,39,Primary with upper primary sec/h.sec,Private,4
+district,39,Upper primary only,Private,913
+district,39,Upper primary with sec./h.sec,Private,6
+district,39,Primary with upper primary sec,Private,1
 district,39,Upper primary with  sec.,Private,0
 district,152,Primary only,Government,2292
 district,152,Primary with upper primary,Government,0
@@ -7494,19 +7494,19 @@ district,181,Upper primary only,Private,43
 district,181,Upper primary with sec./h.sec,Private,50
 district,181,Primary with upper primary sec,Private,0
 district,181,Upper primary with  sec.,Private,18
-district,13,Primary only,Government,691
-district,13,Primary with upper primary,Government,682
-district,13,Primary with upper primary sec/h.sec,Government,2
-district,13,Upper primary only,Government,14
+district,13,Primary only,Government,1889
+district,13,Primary with upper primary,Government,0
+district,13,Primary with upper primary sec/h.sec,Government,0
+district,13,Upper primary only,Government,754
 district,13,Upper primary with sec./h.sec,Government,5
-district,13,Primary with upper primary sec,Government,72
-district,13,Upper primary with  sec.,Government,48
-district,13,Primary only,Private,88
-district,13,Primary with upper primary,Private,187
-district,13,Primary with upper primary sec/h.sec,Private,8
-district,13,Upper primary only,Private,0
-district,13,Upper primary with sec./h.sec,Private,0
-district,13,Primary with upper primary sec,Private,88
+district,13,Primary with upper primary sec,Government,0
+district,13,Upper primary with  sec.,Government,0
+district,13,Primary only,Private,1889
+district,13,Primary with upper primary,Private,0
+district,13,Primary with upper primary sec/h.sec,Private,0
+district,13,Upper primary only,Private,754
+district,13,Upper primary with sec./h.sec,Private,5
+district,13,Primary with upper primary sec,Private,0
 district,13,Upper primary with  sec.,Private,0
 district,184,Primary only,Government,1889
 district,184,Primary with upper primary,Government,0
@@ -7676,20 +7676,20 @@ district,622,Upper primary only,Private,0
 district,622,Upper primary with sec./h.sec,Private,40
 district,622,Primary with upper primary sec,Private,25
 district,622,Upper primary with  sec.,Private,30
-district,311,Primary only,Government,1760
-district,311,Primary with upper primary,Government,47
-district,311,Primary with upper primary sec/h.sec,Government,5
-district,311,Upper primary only,Government,299
-district,311,Upper primary with sec./h.sec,Government,29
-district,311,Primary with upper primary sec,Government,2
-district,311,Upper primary with  sec.,Government,62
-district,311,Primary only,Private,17
-district,311,Primary with upper primary,Private,26
+district,311,Primary only,Government,1235
+district,311,Primary with upper primary,Government,794
+district,311,Primary with upper primary sec/h.sec,Government,4
+district,311,Upper primary only,Government,18
+district,311,Upper primary with sec./h.sec,Government,1
+district,311,Primary with upper primary sec,Government,55
+district,311,Upper primary with  sec.,Government,3
+district,311,Primary only,Private,1235
+district,311,Primary with upper primary,Private,794
 district,311,Primary with upper primary sec/h.sec,Private,4
-district,311,Upper primary only,Private,130
+district,311,Upper primary only,Private,18
 district,311,Upper primary with sec./h.sec,Private,1
-district,311,Primary with upper primary sec,Private,80
-district,311,Upper primary with  sec.,Private,16
+district,311,Primary with upper primary sec,Private,55
+district,311,Upper primary with  sec.,Private,3
 district,218,Primary only,Government,1235
 district,218,Primary with upper primary,Government,794
 district,218,Primary with upper primary sec/h.sec,Government,4
@@ -7774,47 +7774,47 @@ district,306,Upper primary only,Private,172
 district,306,Upper primary with sec./h.sec,Private,0
 district,306,Primary with upper primary sec,Private,69
 district,306,Upper primary with  sec.,Private,5
-district,98,Primary only,Government,995
-district,98,Primary with upper primary,Government,631
-district,98,Primary with upper primary sec/h.sec,Government,284
-district,98,Upper primary only,Government,2
-district,98,Upper primary with sec./h.sec,Government,32
-district,98,Primary with upper primary sec,Government,125
-district,98,Upper primary with  sec.,Government,10
-district,98,Primary only,Private,130
-district,98,Primary with upper primary,Private,552
-district,98,Primary with upper primary sec/h.sec,Private,226
-district,98,Upper primary only,Private,0
-district,98,Upper primary with sec./h.sec,Private,34
-district,98,Primary with upper primary sec,Private,200
-district,98,Upper primary with  sec.,Private,13
-district,640,Primary only,Government,110739
-district,640,Primary with upper primary,Government,97216
-district,640,Primary with upper primary sec/h.sec,Government,27723
-district,640,Upper primary only,Government,26703
-district,640,Upper primary with sec./h.sec,Government,15917
-district,640,Primary with upper primary sec,Government,33866
-district,640,Upper primary with  sec.,Government,22304
-district,640,Primary only,Private,0
+district,98,Primary only,Government,540
+district,98,Primary with upper primary,Government,0
+district,98,Primary with upper primary sec/h.sec,Government,0
+district,98,Upper primary only,Government,236
+district,98,Upper primary with sec./h.sec,Government,0
+district,98,Primary with upper primary sec,Government,0
+district,98,Upper primary with  sec.,Government,0
+district,98,Primary only,Private,540
+district,98,Primary with upper primary,Private,0
+district,98,Primary with upper primary sec/h.sec,Private,0
+district,98,Upper primary only,Private,236
+district,98,Upper primary with sec./h.sec,Private,0
+district,98,Primary with upper primary sec,Private,0
+district,98,Upper primary with  sec.,Private,0
+district,640,Primary only,Government,540
+district,640,Primary with upper primary,Government,0
+district,640,Primary with upper primary sec/h.sec,Government,0
+district,640,Upper primary only,Government,236
+district,640,Upper primary with sec./h.sec,Government,0
+district,640,Primary with upper primary sec,Government,0
+district,640,Upper primary with  sec.,Government,0
+district,640,Primary only,Private,540
 district,640,Primary with upper primary,Private,0
 district,640,Primary with upper primary sec/h.sec,Private,0
-district,640,Upper primary only,Private,0
+district,640,Upper primary only,Private,236
 district,640,Upper primary with sec./h.sec,Private,0
 district,640,Primary with upper primary sec,Private,0
 district,640,Upper primary with  sec.,Private,0
-district,243,Primary only,Government,85
-district,243,Primary with upper primary,Government,36
-district,243,Primary with upper primary sec/h.sec,Government,3
-district,243,Upper primary only,Government,2
-district,243,Upper primary with sec./h.sec,Government,1
-district,243,Primary with upper primary sec,Government,6
-district,243,Upper primary with  sec.,Government,2
-district,243,Primary only,Private,2
-district,243,Primary with upper primary,Private,13
+district,243,Primary only,Government,540
+district,243,Primary with upper primary,Government,0
+district,243,Primary with upper primary sec/h.sec,Government,0
+district,243,Upper primary only,Government,236
+district,243,Upper primary with sec./h.sec,Government,0
+district,243,Primary with upper primary sec,Government,0
+district,243,Upper primary with  sec.,Government,0
+district,243,Primary only,Private,540
+district,243,Primary with upper primary,Private,0
 district,243,Primary with upper primary sec/h.sec,Private,0
-district,243,Upper primary only,Private,0
+district,243,Upper primary only,Private,236
 district,243,Upper primary with sec./h.sec,Private,0
-district,243,Primary with upper primary sec,Private,1
+district,243,Primary with upper primary sec,Private,0
 district,243,Upper primary with  sec.,Private,0
 district,295,Primary only,Government,540
 district,295,Primary with upper primary,Government,0
@@ -7858,48 +7858,48 @@ district,290,Upper primary only,Private,0
 district,290,Upper primary with sec./h.sec,Private,2
 district,290,Primary with upper primary sec,Private,6
 district,290,Upper primary with  sec.,Private,0
-district,343,Primary only,Government,7254
-district,343,Primary with upper primary,Government,6
-district,343,Primary with upper primary sec/h.sec,Government,10
-district,343,Upper primary only,Government,769
-district,343,Upper primary with sec./h.sec,Government,547
-district,343,Primary with upper primary sec,Government,2
-district,343,Upper primary with  sec.,Government,179
-district,343,Primary only,Private,562
-district,343,Primary with upper primary,Private,24
-district,343,Primary with upper primary sec/h.sec,Private,7
-district,343,Upper primary only,Private,13
-district,343,Upper primary with sec./h.sec,Private,1
-district,343,Primary with upper primary sec,Private,14
-district,343,Upper primary with  sec.,Private,2
-district,97,Primary only,Government,995
-district,97,Primary with upper primary,Government,631
-district,97,Primary with upper primary sec/h.sec,Government,284
-district,97,Upper primary only,Government,2
-district,97,Upper primary with sec./h.sec,Government,32
-district,97,Primary with upper primary sec,Government,125
-district,97,Upper primary with  sec.,Government,10
-district,97,Primary only,Private,130
-district,97,Primary with upper primary,Private,552
-district,97,Primary with upper primary sec/h.sec,Private,226
+district,343,Primary only,Government,2249
+district,343,Primary with upper primary,Government,565
+district,343,Primary with upper primary sec/h.sec,Government,11
+district,343,Upper primary only,Government,0
+district,343,Upper primary with sec./h.sec,Government,15
+district,343,Primary with upper primary sec,Government,50
+district,343,Upper primary with  sec.,Government,395
+district,343,Primary only,Private,2249
+district,343,Primary with upper primary,Private,565
+district,343,Primary with upper primary sec/h.sec,Private,11
+district,343,Upper primary only,Private,0
+district,343,Upper primary with sec./h.sec,Private,15
+district,343,Primary with upper primary sec,Private,50
+district,343,Upper primary with  sec.,Private,395
+district,97,Primary only,Government,2249
+district,97,Primary with upper primary,Government,565
+district,97,Primary with upper primary sec/h.sec,Government,11
+district,97,Upper primary only,Government,0
+district,97,Upper primary with sec./h.sec,Government,15
+district,97,Primary with upper primary sec,Government,50
+district,97,Upper primary with  sec.,Government,395
+district,97,Primary only,Private,2249
+district,97,Primary with upper primary,Private,565
+district,97,Primary with upper primary sec/h.sec,Private,11
 district,97,Upper primary only,Private,0
-district,97,Upper primary with sec./h.sec,Private,34
-district,97,Primary with upper primary sec,Private,200
-district,97,Upper primary with  sec.,Private,13
-district,550,Primary only,Government,1808
-district,550,Primary with upper primary,Government,455
+district,97,Upper primary with sec./h.sec,Private,15
+district,97,Primary with upper primary sec,Private,50
+district,97,Upper primary with  sec.,Private,395
+district,550,Primary only,Government,2249
+district,550,Primary with upper primary,Government,565
 district,550,Primary with upper primary sec/h.sec,Government,11
 district,550,Upper primary only,Government,0
-district,550,Upper primary with sec./h.sec,Government,35
-district,550,Primary with upper primary sec,Government,24
-district,550,Upper primary with  sec.,Government,429
-district,550,Primary only,Private,476
-district,550,Primary with upper primary,Private,480
-district,550,Primary with upper primary sec/h.sec,Private,1
+district,550,Upper primary with sec./h.sec,Government,15
+district,550,Primary with upper primary sec,Government,50
+district,550,Upper primary with  sec.,Government,395
+district,550,Primary only,Private,2249
+district,550,Primary with upper primary,Private,565
+district,550,Primary with upper primary sec/h.sec,Private,11
 district,550,Upper primary only,Private,0
-district,550,Upper primary with sec./h.sec,Private,0
-district,550,Primary with upper primary sec,Private,9
-district,550,Upper primary with  sec.,Private,389
+district,550,Upper primary with sec./h.sec,Private,15
+district,550,Primary with upper primary sec,Private,50
+district,550,Upper primary with  sec.,Private,395
 district,542,Primary only,Government,2249
 district,542,Primary with upper primary,Government,565
 district,542,Primary with upper primary sec/h.sec,Government,11
@@ -7928,20 +7928,20 @@ district,10,Upper primary only,Private,0
 district,10,Upper primary with sec./h.sec,Private,0
 district,10,Primary with upper primary sec,Private,198
 district,10,Upper primary with  sec.,Private,0
-district,392,Primary only,Government,584
-district,392,Primary with upper primary,Government,395
-district,392,Primary with upper primary sec/h.sec,Government,0
-district,392,Upper primary only,Government,27
-district,392,Upper primary with sec./h.sec,Government,2
-district,392,Primary with upper primary sec,Government,33
-district,392,Upper primary with  sec.,Government,36
-district,392,Primary only,Private,4
-district,392,Primary with upper primary,Private,13
-district,392,Primary with upper primary sec/h.sec,Private,1
-district,392,Upper primary only,Private,31
-district,392,Upper primary with sec./h.sec,Private,0
-district,392,Primary with upper primary sec,Private,5
-district,392,Upper primary with  sec.,Private,72
+district,392,Primary only,Government,1726
+district,392,Primary with upper primary,Government,1
+district,392,Primary with upper primary sec/h.sec,Government,3
+district,392,Upper primary only,Government,623
+district,392,Upper primary with sec./h.sec,Government,5
+district,392,Primary with upper primary sec,Government,0
+district,392,Upper primary with  sec.,Government,0
+district,392,Primary only,Private,1726
+district,392,Primary with upper primary,Private,1
+district,392,Primary with upper primary sec/h.sec,Private,3
+district,392,Upper primary only,Private,623
+district,392,Upper primary with sec./h.sec,Private,5
+district,392,Primary with upper primary sec,Private,0
+district,392,Upper primary with  sec.,Private,0
 district,179,Primary only,Government,1726
 district,179,Primary with upper primary,Government,1
 district,179,Primary with upper primary sec/h.sec,Government,3
@@ -7956,20 +7956,20 @@ district,179,Upper primary only,Private,279
 district,179,Upper primary with sec./h.sec,Private,123
 district,179,Primary with upper primary sec,Private,10
 district,179,Upper primary with  sec.,Private,27
-district,374,Primary only,Government,2791
-district,374,Primary with upper primary,Government,1087
-district,374,Primary with upper primary sec/h.sec,Government,1
-district,374,Upper primary only,Government,190
-district,374,Upper primary with sec./h.sec,Government,3
-district,374,Primary with upper primary sec,Government,54
-district,374,Upper primary with  sec.,Government,286
-district,374,Primary only,Private,71
-district,374,Primary with upper primary,Private,112
-district,374,Primary with upper primary sec/h.sec,Private,0
-district,374,Upper primary only,Private,81
-district,374,Upper primary with sec./h.sec,Private,0
-district,374,Primary with upper primary sec,Private,19
-district,374,Upper primary with  sec.,Private,272
+district,374,Primary only,Government,1089
+district,374,Primary with upper primary,Government,613
+district,374,Primary with upper primary sec/h.sec,Government,52
+district,374,Upper primary only,Government,11
+district,374,Upper primary with sec./h.sec,Government,2
+district,374,Primary with upper primary sec,Government,8
+district,374,Upper primary with  sec.,Government,3
+district,374,Primary only,Private,1089
+district,374,Primary with upper primary,Private,613
+district,374,Primary with upper primary sec/h.sec,Private,52
+district,374,Upper primary only,Private,11
+district,374,Upper primary with sec./h.sec,Private,2
+district,374,Primary with upper primary sec,Private,8
+district,374,Upper primary with  sec.,Private,3
 district,208,Primary only,Government,1089
 district,208,Primary with upper primary,Government,613
 district,208,Primary with upper primary sec/h.sec,Government,52
@@ -8054,20 +8054,20 @@ district,493,Upper primary only,Private,3
 district,493,Upper primary with sec./h.sec,Private,0
 district,493,Primary with upper primary sec,Private,5
 district,493,Upper primary with  sec.,Private,2
-district,50,Primary only,Government,559
-district,50,Primary with upper primary,Government,2
-district,50,Primary with upper primary sec/h.sec,Government,2
-district,50,Upper primary only,Government,169
-district,50,Upper primary with sec./h.sec,Government,45
-district,50,Primary with upper primary sec,Government,0
-district,50,Upper primary with  sec.,Government,61
-district,50,Primary only,Private,4
-district,50,Primary with upper primary,Private,5
-district,50,Primary with upper primary sec/h.sec,Private,4
-district,50,Upper primary only,Private,0
-district,50,Upper primary with sec./h.sec,Private,5
-district,50,Primary with upper primary sec,Private,2
-district,50,Upper primary with  sec.,Private,3
+district,50,Primary only,Government,85
+district,50,Primary with upper primary,Government,36
+district,50,Primary with upper primary sec/h.sec,Government,3
+district,50,Upper primary only,Government,2
+district,50,Upper primary with sec./h.sec,Government,1
+district,50,Primary with upper primary sec,Government,6
+district,50,Upper primary with  sec.,Government,2
+district,50,Primary only,Private,85
+district,50,Primary with upper primary,Private,36
+district,50,Primary with upper primary sec/h.sec,Private,3
+district,50,Upper primary only,Private,2
+district,50,Upper primary with sec./h.sec,Private,1
+district,50,Primary with upper primary sec,Private,6
+district,50,Upper primary with  sec.,Private,2
 district,245,Primary only,Government,85
 district,245,Primary with upper primary,Government,36
 district,245,Primary with upper primary sec/h.sec,Government,3
@@ -8320,20 +8320,20 @@ district,628,Upper primary only,Private,3
 district,628,Upper primary with sec./h.sec,Private,99
 district,628,Primary with upper primary sec,Private,43
 district,628,Upper primary with  sec.,Private,69
-district,633,Primary only,Government,15
-district,633,Primary with upper primary,Government,0
-district,633,Primary with upper primary sec/h.sec,Government,0
-district,633,Upper primary only,Government,0
-district,633,Upper primary with sec./h.sec,Government,1
-district,633,Primary with upper primary sec,Government,2
-district,633,Upper primary with  sec.,Government,6
-district,633,Primary only,Private,0
-district,633,Primary with upper primary,Private,0
-district,633,Primary with upper primary sec/h.sec,Private,0
-district,633,Upper primary only,Private,0
-district,633,Upper primary with sec./h.sec,Private,0
-district,633,Primary with upper primary sec,Private,8
-district,633,Upper primary with  sec.,Private,0
+district,633,Primary only,Government,1301
+district,633,Primary with upper primary,Government,354
+district,633,Primary with upper primary sec/h.sec,Government,3
+district,633,Upper primary only,Government,5
+district,633,Upper primary with sec./h.sec,Government,132
+district,633,Primary with upper primary sec,Government,4
+district,633,Upper primary with  sec.,Government,197
+district,633,Primary only,Private,1301
+district,633,Primary with upper primary,Private,354
+district,633,Primary with upper primary sec/h.sec,Private,3
+district,633,Upper primary only,Private,5
+district,633,Upper primary with sec./h.sec,Private,132
+district,633,Primary with upper primary sec,Private,4
+district,633,Upper primary with  sec.,Private,197
 district,606,Primary only,Government,1301
 district,606,Primary with upper primary,Government,354
 district,606,Primary with upper primary sec/h.sec,Government,3
@@ -8558,20 +8558,20 @@ district,249,Upper primary only,Private,0
 district,249,Upper primary with sec./h.sec,Private,1
 district,249,Primary with upper primary sec,Private,3
 district,249,Upper primary with  sec.,Private,0
-district,413,Primary only,Government,428
+district,413,Primary only,Government,2469
 district,413,Primary with upper primary,Government,2
-district,413,Primary with upper primary sec/h.sec,Government,0
-district,413,Upper primary only,Government,125
-district,413,Upper primary with sec./h.sec,Government,5
+district,413,Primary with upper primary sec/h.sec,Government,2
+district,413,Upper primary only,Government,325
+district,413,Upper primary with sec./h.sec,Government,149
 district,413,Primary with upper primary sec,Government,0
-district,413,Upper primary with  sec.,Government,3
-district,413,Primary only,Private,7
-district,413,Primary with upper primary,Private,15
+district,413,Upper primary with  sec.,Government,19
+district,413,Primary only,Private,2469
+district,413,Primary with upper primary,Private,2
 district,413,Primary with upper primary sec/h.sec,Private,2
-district,413,Upper primary only,Private,0
-district,413,Upper primary with sec./h.sec,Private,0
-district,413,Primary with upper primary sec,Private,4
-district,413,Upper primary with  sec.,Private,0
+district,413,Upper primary only,Private,325
+district,413,Upper primary with sec./h.sec,Private,149
+district,413,Primary with upper primary sec,Private,0
+district,413,Upper primary with  sec.,Private,19
 district,330,Primary only,Government,2469
 district,330,Primary with upper primary,Government,2
 district,330,Primary with upper primary sec/h.sec,Government,2
@@ -8810,34 +8810,34 @@ district,590,Upper primary only,Private,5
 district,590,Upper primary with sec./h.sec,Private,5
 district,590,Primary with upper primary sec,Private,24
 district,590,Upper primary with  sec.,Private,1
-district,96,Primary only,Government,995
-district,96,Primary with upper primary,Government,631
-district,96,Primary with upper primary sec/h.sec,Government,284
-district,96,Upper primary only,Government,2
-district,96,Upper primary with sec./h.sec,Government,32
-district,96,Primary with upper primary sec,Government,125
-district,96,Upper primary with  sec.,Government,10
-district,96,Primary only,Private,130
-district,96,Primary with upper primary,Private,552
-district,96,Primary with upper primary sec/h.sec,Private,226
-district,96,Upper primary only,Private,0
-district,96,Upper primary with sec./h.sec,Private,34
-district,96,Primary with upper primary sec,Private,200
-district,96,Upper primary with  sec.,Private,13
-district,242,Primary only,Government,85
-district,242,Primary with upper primary,Government,36
-district,242,Primary with upper primary sec/h.sec,Government,3
-district,242,Upper primary only,Government,2
-district,242,Upper primary with sec./h.sec,Government,1
-district,242,Primary with upper primary sec,Government,6
-district,242,Upper primary with  sec.,Government,2
-district,242,Primary only,Private,2
-district,242,Primary with upper primary,Private,13
-district,242,Primary with upper primary sec/h.sec,Private,0
-district,242,Upper primary only,Private,0
-district,242,Upper primary with sec./h.sec,Private,0
+district,96,Primary only,Government,1054
+district,96,Primary with upper primary,Government,0
+district,96,Primary with upper primary sec/h.sec,Government,1
+district,96,Upper primary only,Government,301
+district,96,Upper primary with sec./h.sec,Government,4
+district,96,Primary with upper primary sec,Government,1
+district,96,Upper primary with  sec.,Government,3
+district,96,Primary only,Private,1054
+district,96,Primary with upper primary,Private,0
+district,96,Primary with upper primary sec/h.sec,Private,1
+district,96,Upper primary only,Private,301
+district,96,Upper primary with sec./h.sec,Private,4
+district,96,Primary with upper primary sec,Private,1
+district,96,Upper primary with  sec.,Private,3
+district,242,Primary only,Government,1054
+district,242,Primary with upper primary,Government,0
+district,242,Primary with upper primary sec/h.sec,Government,1
+district,242,Upper primary only,Government,301
+district,242,Upper primary with sec./h.sec,Government,4
+district,242,Primary with upper primary sec,Government,1
+district,242,Upper primary with  sec.,Government,3
+district,242,Primary only,Private,1054
+district,242,Primary with upper primary,Private,0
+district,242,Primary with upper primary sec/h.sec,Private,1
+district,242,Upper primary only,Private,301
+district,242,Upper primary with sec./h.sec,Private,4
 district,242,Primary with upper primary sec,Private,1
-district,242,Upper primary with  sec.,Private,0
+district,242,Upper primary with  sec.,Private,3
 district,293,Primary only,Government,1054
 district,293,Primary with upper primary,Government,0
 district,293,Primary with upper primary sec/h.sec,Government,1
@@ -8936,34 +8936,34 @@ district,264,Upper primary only,Private,0
 district,264,Upper primary with sec./h.sec,Private,0
 district,264,Primary with upper primary sec,Private,20
 district,264,Upper primary with  sec.,Private,0
-district,551,Primary only,Government,1808
-district,551,Primary with upper primary,Government,455
-district,551,Primary with upper primary sec/h.sec,Government,11
-district,551,Upper primary only,Government,0
-district,551,Upper primary with sec./h.sec,Government,35
-district,551,Primary with upper primary sec,Government,24
-district,551,Upper primary with  sec.,Government,429
-district,551,Primary only,Private,476
-district,551,Primary with upper primary,Private,480
-district,551,Primary with upper primary sec/h.sec,Private,1
-district,551,Upper primary only,Private,0
-district,551,Upper primary with sec./h.sec,Private,0
-district,551,Primary with upper primary sec,Private,9
-district,551,Upper primary with  sec.,Private,389
-district,580,Primary only,Government,1219
-district,580,Primary with upper primary,Government,609
-district,580,Primary with upper primary sec/h.sec,Government,1
-district,580,Upper primary only,Government,8
-district,580,Upper primary with sec./h.sec,Government,0
-district,580,Primary with upper primary sec,Government,10
-district,580,Upper primary with  sec.,Government,20
-district,580,Primary only,Private,69
-district,580,Primary with upper primary,Private,195
-district,580,Primary with upper primary sec/h.sec,Private,3
-district,580,Upper primary only,Private,2
-district,580,Upper primary with sec./h.sec,Private,0
-district,580,Primary with upper primary sec,Private,81
-district,580,Upper primary with  sec.,Private,0
+district,551,Primary only,Government,611
+district,551,Primary with upper primary,Government,0
+district,551,Primary with upper primary sec/h.sec,Government,0
+district,551,Upper primary only,Government,238
+district,551,Upper primary with sec./h.sec,Government,54
+district,551,Primary with upper primary sec,Government,0
+district,551,Upper primary with  sec.,Government,58
+district,551,Primary only,Private,611
+district,551,Primary with upper primary,Private,0
+district,551,Primary with upper primary sec/h.sec,Private,0
+district,551,Upper primary only,Private,238
+district,551,Upper primary with sec./h.sec,Private,54
+district,551,Primary with upper primary sec,Private,0
+district,551,Upper primary with  sec.,Private,58
+district,580,Primary only,Government,611
+district,580,Primary with upper primary,Government,0
+district,580,Primary with upper primary sec/h.sec,Government,0
+district,580,Upper primary only,Government,238
+district,580,Upper primary with sec./h.sec,Government,54
+district,580,Primary with upper primary sec,Government,0
+district,580,Upper primary with  sec.,Government,58
+district,580,Primary only,Private,611
+district,580,Primary with upper primary,Private,0
+district,580,Primary with upper primary sec/h.sec,Private,0
+district,580,Upper primary only,Private,238
+district,580,Upper primary with sec./h.sec,Private,54
+district,580,Primary with upper primary sec,Private,0
+district,580,Upper primary with  sec.,Private,58
 district,71,Primary only,Government,611
 district,71,Primary with upper primary,Government,0
 district,71,Primary with upper primary sec/h.sec,Government,0

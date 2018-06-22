@@ -28,3 +28,12 @@ FieldTable(['household'] , universe='Household')
 FieldTable(['drinkingsource'], universe='Drinkingsource')
 
 FieldTable(['schools','type'], universe='Schools Type')
+
+FieldTable(['students','type'], universe='Students Type')
+
+FieldTable(['teachers','type'], universe='Teachers Type')
+
+FieldTable(['toilets','type'], universe='Toilets Type')
+
+FieldTable(['facilities'], universe='Schools Facilities')
+
