@@ -20,6 +20,10 @@ PROFILE_SECTIONS = (
     'workers',
     'age',
     'schools',
+    'students',
+    'teachers',
+    'toilets',
+    'schoolsfacilities',
     'gdp',
     'caste',
     'household',
@@ -522,36 +526,6 @@ def get_workers_profile(geo, session):
 
     return final_data
 
-# Added schools data
-def get_schools_profile(geo,session):
-
-    schools_by_category,_ = get_stat_data(
-        ['schools'],geo,session,
-        table_fields=['schools','type'],
-    )
-    
-    schools_by_category2,_= get_stat_data(
-        ['type'],geo,session,
-        table_fields=['schools','type'],
-    )
-
-    schools_by_type,t_lit = get_stat_data(
-        ['schools','type'],geo,session,
-        table_fields=['schools','type'],
-        percent_grouping=['type'],
-    )
-
-    final_data = {
-        'schools_by_category_distribution': schools_by_category,
-        'schools_by_category2_distribution': schools_by_category2,
-        'schools_by_type_distribution':schools_by_type,
-        'total_schools': {
-            "name": "Total Schools",
-            "values": {"this": t_lit}
-        }
-    }
-    return final_data
-
 # Added gdp data
 def get_gdp_profile(geo,session):
 
@@ -629,4 +603,142 @@ def get_drinkingsource_profile(geo,session):
         }
     }
 
+    return final_data
+
+# Added schools profile
+def get_schools_profile(geo,session):
+
+    schools_by_category,_ = get_stat_data(
+        ['schools'],geo,session,
+        table_fields=['schools','type'],
+    )
+    
+    schools_by_category2,_= get_stat_data(
+        ['type'],geo,session,
+        table_fields=['schools','type'],
+    )
+
+    schools_by_type,t_lit = get_stat_data(
+        ['schools','type'],geo,session,
+        table_fields=['schools','type'],
+        percent_grouping=['type'],
+    )
+
+    final_data = {
+        'schools_by_category_distribution': schools_by_category,
+        'schools_by_category2_distribution': schools_by_category2,
+        'schools_by_type_distribution':schools_by_type,
+        'total_schools': {
+            "name": "Total Schools",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+
+# Added students profile
+def get_students_profile(geo,session):
+
+    students_by_type,_ = get_stat_data(
+        ['type'],geo,session,
+        table_fields=['students','type'],
+    )
+    
+    students_by_schools,_= get_stat_data(
+        ['students'],geo,session,
+        table_fields=['students','type'],
+    )
+
+    students_by_schools_type,t_lit = get_stat_data(
+        ['students','type'],geo,session,
+        table_fields=['students','type'],
+        percent_grouping=['type'],
+    )
+
+    final_data = {
+        'students_by_type_distribution': students_by_type,
+        'students_by_schools_distribution': students_by_schools,
+        'students_by_schools_type_distribution':students_by_schools_type,
+        'total_students': {
+            "name": "Total students",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added teachers profile
+def get_teachers_profile(geo,session):
+
+    teachers_by_type,_ = get_stat_data(
+        ['type'],geo,session,
+        table_fields=['teachers','type'],
+    )
+    
+    teachers_by_schools,_= get_stat_data(
+        ['teachers'],geo,session,
+        table_fields=['teachers','type'],
+    )
+
+    teachers_by_schools_type,t_lit = get_stat_data(
+        ['teachers','type'],geo,session,
+        table_fields=['teachers','type'],
+        percent_grouping=['type'],
+    )
+
+    final_data = {
+        'teachers_by_type_distribution': teachers_by_type,
+        'teachers_by_schools_distribution': teachers_by_schools,
+        'teachers_by_schools_type_distribution':teachers_by_schools_type,
+        'total_teachers': {
+            "name": "Total Teachers",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added toilets profile
+def get_toilets_profile(geo,session):
+
+    toilets_by_type,_ = get_stat_data(
+        ['type'],geo,session,
+        table_fields=['toilets','type'],
+    )
+    
+    toilets_by_schools,_= get_stat_data(
+        ['toilets'],geo,session,
+        table_fields=['toilets','type'],
+    )
+
+    toilets_by_schools_type,t_lit = get_stat_data(
+        ['toilets','type'],geo,session,
+        table_fields=['toilets','type'],
+        percent_grouping=['type'],
+    )
+
+    final_data = {
+        'toilets_by_type_distribution': toilets_by_type,
+        'toilets_by_schools_distribution': toilets_by_schools,
+        'toilets_by_schools_type_distribution':toilets_by_schools_type,
+        'total_toilets': {
+            "name": "Total toilets",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added schools facilities profile
+def get_schoolsfacilities_profile(geo,session):
+
+    schools_by_facilities,t_lit = get_stat_data(
+        ['facilities'],geo,session,
+        table_fields=['facilities'],
+    )
+
+    final_data = {
+        'schools_by_facilities_distribution': schools_by_facilities,
+        'total_facilities': {
+            "name": "Total basic facilities",
+            "values": {"this": t_lit}
+        }
+    }
     return final_data

@@ -97,3 +97,6 @@ data/pandas-refrence
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 guni_config.py
+
+# Ignore the settings.py file
+janaganana/settings.py
