@@ -58,7 +58,9 @@ a.action-button,
 #schools .action-links, #teachers .action-links, #students .action-links, #toilets .action-links  {
     padding-top: 35px;
 }
-
+#classrooms .action-links {
+    padding-top: 55px;
+}
 #household .action-links,#drinkingsource .action-links {
     padding-top: 15px;
 }

@@ -31,9 +31,18 @@ FieldTable(['schools','type'], universe='Schools Type')
 
 FieldTable(['students','type'], universe='Students Type')
 
+FieldTable(['girlsenrolment'], universe='Students Girls')
+
 FieldTable(['teachers','type'], universe='Teachers Type')
 
 FieldTable(['toilets','type'], universe='Toilets Type')
 
 FieldTable(['facilities'], universe='Schools Facilities')
 
+FieldTable(['teachers','gender'], universe='Teachers')
+
+FieldTable(['schools','gender'], universe='Schools')
+
+FieldTable(['classrooms','conditions'], universe='Classrooms')
+
+FieldTable(['teachers','qualification'], universe='Teachers')

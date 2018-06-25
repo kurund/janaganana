@@ -20,14 +20,19 @@ PROFILE_SECTIONS = (
     'workers',
     'age',
     'schools',
+    'schoolsgender',
     'students',
+    'girlsenrolment',
     'teachers',
+    'teachersgender',
+    'teachersqualification',
     'toilets',
     'schoolsfacilities',
     'gdp',
     'caste',
     'household',
     'drinkingsource',
+    'classrooms',
 )
 
 def sort_stats_result(ip,key=None):
@@ -537,7 +542,7 @@ def get_gdp_profile(geo,session):
     final_data = {
         'gdp_by_year_distribution': gdp_by_year,
         'total_gdp':{
-            "name": "Total GDP in Crore",
+            "name": "Total GDP in crore",
             "values": {"this":t_lit}
         }
     }
@@ -636,6 +641,26 @@ def get_schools_profile(geo,session):
     return final_data
 
 
+# Added techersgender profile
+def get_schoolsgender_profile(geo,session):
+
+    schools_by_gender,t_lit = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['schools','gender'],
+    )
+    
+    schools_by_gender_school,t_lit = get_stat_data(
+       ['schools','gender'],geo,session,
+        table_fields=['schools','gender'],
+        percent_grouping=['gender'],
+    )
+
+    final_data = {
+        'schools_by_gender_distribution': schools_by_gender,
+        'schools_by_gender_school_distribution':schools_by_gender_school,
+    }
+    return final_data
+
 # Added students profile
 def get_students_profile(geo,session):
 
@@ -663,6 +688,19 @@ def get_students_profile(geo,session):
             "name": "Total students",
             "values": {"this": t_lit}
         }
+    }
+    return final_data
+
+# Added girlsenrolment profile
+def get_girlsenrolment_profile(geo,session):
+
+    girlsenrolment_by_school,t_lit = get_stat_data(
+       ['girlsenrolment'],geo,session,
+        table_fields=['girlsenrolment'],
+    )
+
+    final_data = {
+        'girlsenrolment_by_school_distribution': girlsenrolment_by_school,
     }
     return final_data
 
@@ -695,6 +733,46 @@ def get_teachers_profile(geo,session):
         }
     }
     return final_data
+
+# Added techersgender profile
+def get_teachersgender_profile(geo,session):
+
+    teachers_by_gender,t_lit = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['teachers','gender'],
+    )
+    
+    teachers_by_gender_school,t_lit = get_stat_data(
+       ['teachers','gender'],geo,session,
+        table_fields=['teachers','gender'],
+        percent_grouping=['gender'],
+    )
+
+    final_data = {
+        'teachers_by_gender_distribution': teachers_by_gender,
+        'teachers_by_gender_school_distribution':teachers_by_gender_school,
+    }
+    return final_data
+
+# Added taechersqualifications profile
+def get_teachersqualification_profile(geo,session):
+    teachers_by_qualification,t_lit = get_stat_data(
+        ['qualification'],geo,session,
+        table_fields=['teachers','qualification'],
+    )
+    
+    teachers_by_qualification_school,t_lit = get_stat_data(
+       ['teachers','qualification'],geo,session,
+        table_fields=['teachers','qualification'],
+        percent_grouping=['qualification'],
+    )
+
+    final_data = {
+        'teachers_by_qualification_distribution': teachers_by_qualification,
+        'teachers_by_qualification_school_distribution':teachers_by_qualification_school,
+    }
+    return final_data
+
 
 # Added toilets profile
 def get_toilets_profile(geo,session):
@@ -738,6 +816,36 @@ def get_schoolsfacilities_profile(geo,session):
         'schools_by_facilities_distribution': schools_by_facilities,
         'total_facilities': {
             "name": "Total basic facilities",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added classrooms profile
+def get_classrooms_profile(geo,session):
+
+    classrooms_by_conditions,_ = get_stat_data(
+        ['conditions'],geo,session,
+        table_fields=['classrooms','conditions'],
+    )
+    
+    classrooms_by_schools,_= get_stat_data(
+        ['classrooms'],geo,session,
+        table_fields=['classrooms','conditions'],
+    )
+
+    classrooms_by_schools_condistions,t_lit = get_stat_data(
+        ['classrooms','conditions'],geo,session,
+        table_fields=['classrooms','conditions'],
+        percent_grouping=['conditions'],
+    )
+
+    final_data = {
+        'classrooms_by_conditions_distribution': classrooms_by_conditions,
+        'classrooms_by_schools_distribution': classrooms_by_schools,
+        'classrooms_by_schools_conditions_distribution':classrooms_by_schools_condistions,
+        'total_classrooms': {
+            "name": "Total classrooms",
             "values": {"this": t_lit}
         }
     }
