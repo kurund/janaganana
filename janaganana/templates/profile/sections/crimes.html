@@ -1,0 +1,64 @@
+<article id="crimes" class="clearfix wrapper mdl-card mdl-shadow--2dp mdl-cell--12-col profile-section">
+    <div class="mdl-card__title">
+        <i class="material-icons">people</i>
+        <h2 class="mdl-card__title-text">Crimes by year</h2>
+    </div>
+    <div class="mdl-card__supporting-text wrapper" >
+        <div class="section-container">
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                  {% include 'profile/_blocks/_stat_list.html' with stat=crimes.total_crimes stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-crimes-crimes_by_year_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--6-col" id="chart-column-crimes-crimes_by_year_distribution" data-stat-type="scaled-percentage" data-chart-title="Crimes by year"></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Rape</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=rapes.total_rapes stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-rapes-rapes_by_age_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--6-col" id="chart-column-rapes-rapes_by_age_distribution" data-stat-type="scaled-percentage" data-chart-title="Rapes by age"></div>
+            </section>
+            <h2 class="section-secondary-heading">Cyber crimes</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=cybercrimes.total_cybercrimes stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-cybercrimes-cybercrimes_by_year_distribution" data-stat-type="percentage" data-chart-title="Cyber crimes"></div>
+                <div class="mdl-cell--6-col" id="chart-column-cybercrimes-cybercrimes_by_year_distribution" data-stat-type="scaled-percentage" data-chart-title="Cyber crimes by year"></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Kidnapping</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=kidnapping.total_kidnapped stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-kidnapping-kidnapping_by_gender_distribution" data-stat-type="percentage" data-chart-title="Kidnapped"></div>
+                <div class="mdl-cell--2-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=kidnappedrecovery.total_recovered stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-kidnappedrecovery-recovery_by_gender_distribution" data-stat-type="percentage" data-chart-title="Recovered"></div>
+            </section>
+
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--6-col" id="chart-pie-kidnappedrecovery-recovery_by_type_distribution" data-stat-type="percentage" data-chart-title="Recovery Alive/Dead"></div>
+                <div class="mdl-cell--6-col" id="chart-grouped_column-kidnappedrecovery-recovery_by_gender_type_distribution" data-stat-type="scaled-percentage" data-chart-title="Kidnapped recovery by gender"></div>
+            </section>
+           
+            <h2 class="section-secondary-heading">Trafficing</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=trafficing.total_trafficed stat_type='number' %}
+                </div>
+                <div class="mdl-cell--5-col" id="chart-pie-trafficing-trafficing_by_gender_distribution" data-stat-type="percentage" data-chart-title="Trafficing by gender"></div>
+                <div class="mdl-cell--5-col" id="chart-pie-trafficing-trafficing_by_age_distribution" data-stat-type="percentage" data-chart-title="Trafficing by age"></div>
+            </section>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--8-col" id="chart-pie-trafficingmotives-trafficingmotives_distribution" data-stat-type="percentage" data-chart-title="Trafficing motives"></div>
+                <div class="mdl-cell--4-col" id="chart-grouped_column-trafficing-trafficing_by_gender_age_distribution" data-stat-type="scaled-percentage" data-chart-title="Trafficing by gender and age"></div>
+            </section>
+        </div>
+    </div>
+</article>
