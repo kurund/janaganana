@@ -1,3 +1,50 @@
+--
+-- PostgreSQL database dump
+--
+
+-- Dumped from database version 9.5.13
+-- Dumped by pg_dump version 9.5.13
+
+-- Started on 2018-06-26 12:14:59 IST
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET client_min_messages = warning;
+SET row_security = off;
+
+ALTER TABLE IF EXISTS ONLY public.crimes DROP CONSTRAINT IF EXISTS pk_crimes;
+DROP TABLE IF EXISTS public.crimes;
+SET default_tablespace = '';
+
+SET default_with_oids = false;
+
+--
+-- TOC entry 225 (class 1259 OID 21722)
+-- Name: crimes; Type: TABLE; Schema: public; Owner: wazimap
+--
+
+CREATE TABLE public.crimes (
+    geo_level character varying(15) NOT NULL,
+    geo_code character varying(10) NOT NULL,
+    geo_version character varying(100) DEFAULT ''::character varying NOT NULL,
+    crimes character varying(128) NOT NULL,
+    total integer
+);
+
+
+ALTER TABLE public.crimes OWNER TO wazimap;
+
+--
+-- TOC entry 2256 (class 0 OID 21722)
+-- Dependencies: 225
+-- Data for Name: crimes; Type: TABLE DATA; Schema: public; Owner: wazimap
+--
+
+COPY public.crimes (geo_level, geo_code, crimes, total) FROM stdin WITH DELIMITER ',';
 country,IN,2014,2851563
 country,IN,2015,2949400
 country,IN,2016,2975711
@@ -2029,3 +2076,20 @@ state,5,2016,10867
 state,19,2014,185672
 state,19,2015,179501
 state,19,2016,176569
+\.
+
+
+--
+-- TOC entry 2141 (class 2606 OID 21727)
+-- Name: pk_crimes; Type: CONSTRAINT; Schema: public; Owner: wazimap
+--
+
+ALTER TABLE ONLY public.crimes
+    ADD CONSTRAINT pk_crimes PRIMARY KEY (geo_level, geo_code, geo_version, crimes);
+
+
+-- Completed on 2018-06-26 12:14:59 IST
+
+--
+-- PostgreSQL database dump complete
+--

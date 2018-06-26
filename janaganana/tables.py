@@ -46,3 +46,17 @@ FieldTable(['schools','gender'], universe='Schools')
 FieldTable(['classrooms','conditions'], universe='Classrooms')
 
 FieldTable(['teachers','qualification'], universe='Teachers')
+
+FieldTable(['crimes'], universe='Crimes')
+
+FieldTable(['rape'], universe='Crimes')
+
+FieldTable(['cybercrime'], universe='Crimes')
+
+FieldTable(['kidnapping'], universe='Crimes')
+
+FieldTable(['recovery','gender'], universe='Crimes')
+
+FieldTable(['trafficing','gender'], universe='Crimes')
+
+FieldTable(['trafficingmotives'], universe='Crimes')
