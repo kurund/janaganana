@@ -33,6 +33,13 @@ PROFILE_SECTIONS = (
     'household',
     'drinkingsource',
     'classrooms',
+    'crimes',
+    'rapes',
+    'cybercrimes',
+    'kidnapping',
+    'kidnappedrecovery',
+    'trafficing',
+    'trafficingmotives',
 )
 
 def sort_stats_result(ip,key=None):
@@ -848,5 +855,146 @@ def get_classrooms_profile(geo,session):
             "name": "Total classrooms",
             "values": {"this": t_lit}
         }
+    }
+    return final_data
+
+# Added crimes profile
+def get_crimes_profile(geo,session):
+
+    crimes_by_year,t_lit = get_stat_data(
+        ['crimes'],geo,session,
+        table_fields=['crimes'],
+    )
+
+    final_data = {
+        'crimes_by_year_distribution':  crimes_by_year,
+        'total_crimes': {
+            "name": "Total crimes",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added rapes profile
+def get_rapes_profile(geo,session):
+
+    rapes_by_age,t_lit = get_stat_data(
+        ['rape'],geo,session,
+        table_fields=['rape'],
+    )
+
+    final_data = {
+        'rapes_by_age_distribution': rapes_by_age,
+        'total_rapes': {
+            "name": "Total rapes",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added cybercrimes profile
+def get_cybercrimes_profile(geo,session):
+
+    cybercrimes_by_year,t_lit = get_stat_data(
+        ['cybercrime'],geo,session,
+        table_fields=['cybercrime'],
+    )
+
+    final_data = {
+        'cybercrimes_by_year_distribution':  cybercrimes_by_year,
+        'total_cybercrimes': {
+            "name": "Total cybercrimes",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added kidnapping profile
+def get_kidnapping_profile(geo,session):
+
+    kidnapping_by_gender,t_lit = get_stat_data(
+        ['kidnapping'],geo,session,
+        table_fields=['kidnapping'],
+    )
+
+    final_data = {
+        'kidnapping_by_gender_distribution':  kidnapping_by_gender,
+        'total_kidnapped': {
+            "name": "Total kidnapped",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added kidnappedrecovery profile
+def get_kidnappedrecovery_profile(geo,session):
+
+    recovery_by_gender,_ = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['recovery','gender'],
+    )
+
+    recovery_by_type,_ = get_stat_data(
+        ['recovery'],geo,session,
+        table_fields=['recovery','gender'],
+    )
+
+    recovery_by_gender_type,t_lit = get_stat_data(
+         ['recovery','gender'],geo,session,
+         table_fields=['recovery','gender'],
+         percent_grouping=['gender'],
+    )
+
+    final_data = {
+        'recovery_by_gender_distribution':  recovery_by_gender,
+        'recovery_by_type_distribution':  recovery_by_type,
+        'recovery_by_gender_type_distribution':  recovery_by_gender_type,
+        'total_recovered': {
+            "name": "Total recovered",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added trafficing profile
+def get_trafficing_profile(geo,session):
+
+    trafficing_by_gender,_ = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['trafficing','gender'],
+    )
+
+    trafficing_by_age,_ = get_stat_data(
+        ['trafficing'],geo,session,
+        table_fields=['trafficing','gender'],
+    )
+
+    trafficing_by_gender_age,t_lit = get_stat_data(
+         ['trafficing','gender'],geo,session,
+         table_fields=['trafficing','gender'],
+         percent_grouping=['gender'],
+    )
+
+    final_data = {
+        'trafficing_by_gender_distribution':  trafficing_by_gender,
+        'trafficing_by_age_distribution':  trafficing_by_age,
+        'trafficing_by_gender_age_distribution':  trafficing_by_gender_age,
+        'total_trafficed': {
+            "name": "Total trafficed",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added trafficingmotives profile
+def get_trafficingmotives_profile(geo,session):
+
+    trafficingmotives_dis_data,t_lit = get_stat_data (
+        ['trafficingmotives'],geo,session,
+        table_fields=['trafficingmotives'],
+    )
+
+    final_data = {
+        'trafficingmotives_distribution':  trafficingmotives_dis_data,
     }
     return final_data

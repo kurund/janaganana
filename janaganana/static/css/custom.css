@@ -49,7 +49,7 @@ a.action-button,
     color: #E00015;
 }
 
-#schools .action-links, #teachers .action-links, #students .action-links, #toilets .action-links  {
+#schools .action-links, #teachers .action-links, #students .action-links, #toilets .action-links ,#crimes .action-links  {
     padding-top: 35px;
 }
 #classrooms .action-links {
