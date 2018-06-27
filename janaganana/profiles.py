@@ -34,12 +34,20 @@ PROFILE_SECTIONS = (
     'drinkingsource',
     'classrooms',
     'crimes',
+    'violentcrimes',
     'rapes',
     'cybercrimes',
     'kidnapping',
     'kidnappedrecovery',
     'trafficing',
     'trafficingmotives',
+    'childcrimes',
+    'juvenilecrimes',
+    'juvenileducations',
+    'juvenilefamilybg',
+    'murdervictims',
+    'murdermotives',
+    'corruptioncases',
 )
 
 def sort_stats_result(ip,key=None):
@@ -875,6 +883,23 @@ def get_crimes_profile(geo,session):
     }
     return final_data
 
+# Added violentcrimes profile
+def get_violentcrimes_profile(geo,session):
+
+    violentcrimes_dis_data,t_lit = get_stat_data (
+        ['violentcrimes'],geo,session,
+        table_fields=['violentcrimes'],
+    )
+
+    final_data = {
+        'violentcrimes_distribution':  violentcrimes_dis_data,
+        'total_violentcrimes': {
+            "name": "Total violent crimes",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
 # Added rapes profile
 def get_rapes_profile(geo,session):
 
@@ -996,5 +1021,135 @@ def get_trafficingmotives_profile(geo,session):
 
     final_data = {
         'trafficingmotives_distribution':  trafficingmotives_dis_data,
+    }
+    return final_data
+
+# Added childcrimes profile
+def get_childcrimes_profile(geo,session):
+
+    childcrimes_by_year,t_lit = get_stat_data(
+        ['childcrime'],geo,session,
+        table_fields=['childcrime'],
+    )
+
+    final_data = {
+        'childcrimes_by_year_distribution':  childcrimes_by_year,
+        'total_childcrimes': {
+            "name": "Total childcrimes",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added juvenilecrimes profile
+def get_juvenilecrimes_profile(geo,session):
+
+    juvenilecrimes_by_year,t_lit = get_stat_data(
+        ['juvenilecrime'],geo,session,
+        table_fields=['juvenilecrime'],
+    )
+
+    final_data = {
+        'juvenilecrimes_by_year_distribution':  juvenilecrimes_by_year,
+        'total_juvenilecrimes': {
+            "name": "Total Juvenile crimes",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+#Added juvenileducations profile
+
+def get_juvenileducations_profile(geo,session):
+
+    juveniledu_dis_data,t_lit = get_stat_data(
+        ['juveniledu'],geo,session,
+        table_fields=['juveniledu'],
+    )
+
+    final_data = {
+        'juveniledu_distribution':  juveniledu_dis_data,
+        'total_juveniledu': {
+            "name": "Total Juvenile arrested",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added juvenilefamilybg profile
+def get_juvenilefamilybg_profile(geo,session):
+
+    juvenilefamilybg_dis_data,t_lit = get_stat_data(
+        ['juvenilefamily'],geo,session,
+        table_fields=['juvenilefamily'],
+    )
+
+    final_data = {
+        'juvenilefamilybg_distribution':  juvenilefamilybg_dis_data,
+    }
+    return final_data
+
+# Added murdervictims profile
+def get_murdervictims_profile(geo,session):
+
+    murdervictims_by_gender,_ = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['murder','gender'],
+    )
+
+    murdervictims_by_type,_ = get_stat_data(
+        ['murder'],geo,session,
+        table_fields=['murder','gender'],
+    )
+
+    murdervictims_by_gender_type,t_lit = get_stat_data(
+         ['murder','gender'],geo,session,
+         table_fields=['murder','gender'],
+         percent_grouping=['gender'],
+    )
+
+    final_data = {
+        'murdervictims_by_gender_distribution':  murdervictims_by_gender,
+        'murdervictims_by_type_distribution':  murdervictims_by_type,
+        'murdervictims_by_gender_type_distribution':  murdervictims_by_gender_type,
+        'total_murder': {
+            "name": "Total murder",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added murder motives profile
+
+def get_murdermotives_profile(geo,session):
+
+    murdermotives_dis_data,t_lit = get_stat_data(
+        ['murdermotive'],geo,session,
+        table_fields=['murdermotive'],
+    )
+
+    final_data = {
+        'murdermotives_dis_data_distribution': murdermotives_dis_data,
+        'total_motives': {
+            "name": "Total motives",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added corruptioncases profile
+def get_corruptioncases_profile(geo,session):
+
+    corruptioncases_dis_data,t_lit = get_stat_data(
+        ['corruptioncase'],geo,session,
+        table_fields=['corruptioncase'],
+    )
+
+    final_data = {
+        'corruptioncases_dis_data_distribution': corruptioncases_dis_data,
+        'total_corruptioncase': {
+            "name": "Total Corruption case",
+            "values": {"this": t_lit}
+        }
     }
     return final_data
