@@ -12,6 +12,16 @@
                 <div class="mdl-cell--4-col" id="chart-pie-crimes-crimes_by_year_distribution" data-stat-type="percentage" data-chart-title=""></div>
                 <div class="mdl-cell--6-col" id="chart-column-crimes-crimes_by_year_distribution" data-stat-type="scaled-percentage" data-chart-title="Crimes by year"></div>
             </section>
+          
+            <h2 class="section-secondary-heading">Violent crimes</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--3-col">
+                  {% include 'profile/_blocks/_stat_list.html' with stat=violentcrimes.total_violentcrimes stat_type='number' %}
+                </div>
+            </section>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-column-violentcrimes-violentcrimes_distribution" data-stat-type="scaled-percentage" data-chart-title=""></div>
+            </section>
 
             <h2 class="section-secondary-heading">Rape</h2>
             <section class="clearfix stat-row mdl-grid">
@@ -21,6 +31,7 @@
                 <div class="mdl-cell--4-col" id="chart-pie-rapes-rapes_by_age_distribution" data-stat-type="percentage" data-chart-title=""></div>
                 <div class="mdl-cell--6-col" id="chart-column-rapes-rapes_by_age_distribution" data-stat-type="scaled-percentage" data-chart-title="Rapes by age"></div>
             </section>
+
             <h2 class="section-secondary-heading">Cyber crimes</h2>
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--2-col">
@@ -55,9 +66,60 @@
                 <div class="mdl-cell--5-col" id="chart-pie-trafficing-trafficing_by_gender_distribution" data-stat-type="percentage" data-chart-title="Trafficing by gender"></div>
                 <div class="mdl-cell--5-col" id="chart-pie-trafficing-trafficing_by_age_distribution" data-stat-type="percentage" data-chart-title="Trafficing by age"></div>
             </section>
+
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--8-col" id="chart-pie-trafficingmotives-trafficingmotives_distribution" data-stat-type="percentage" data-chart-title="Trafficing motives"></div>
                 <div class="mdl-cell--4-col" id="chart-grouped_column-trafficing-trafficing_by_gender_age_distribution" data-stat-type="scaled-percentage" data-chart-title="Trafficing by gender and age"></div>
+            </section>
+            
+            <h2 class="section-secondary-heading">Crimes against children</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=childcrimes.total_childcrimes stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-childcrimes-childcrimes_by_year_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--6-col" id="chart-column-childcrimes-childcrimes_by_year_distribution" data-stat-type="scaled-percentage" data-chart-title="Childcrimes by year"></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Juvenile crimes</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--3-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=juvenilecrimes.total_juvenilecrimes stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-juvenilecrimes-juvenilecrimes_by_year_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--5-col" id="chart-column-juvenilecrimes-juvenilecrimes_by_year_distribution" data-stat-type="scaled-percentage" data-chart-title="Juvenile crimes by year"></div>
+            </section>
+
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--3-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=juvenileducations.total_juveniledu stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-juvenileducations-juveniledu_distribution" data-stat-type="percentage" data-chart-title="Juvenile educational background"></div>
+                <div class="mdl-cell--5-col" id="chart-pie-juvenilefamilybg-juvenilefamilybg_distribution" data-stat-type="percentage" data-chart-title="Juvenile family background"></div>
+            </section>
+            
+            <h2 class="section-secondary-heading">Murder</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=murdervictims.total_murder stat_type='number' %}
+                </div>
+                <div class="mdl-cell--5-col" id="chart-pie-murdervictims-murdervictims_by_gender_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--5-col" id="chart-pie-murdervictims-murdervictims_by_type_distribution" data-stat-type="percentage" data-chart-title=""></div>
+            </section>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-murdervictims-murdervictims_by_gender_type_distribution" data-stat-type="scaled-percentage" data-chart-title="Murder by gender and age"></div>
+            </section>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-column-murdermotives-murdermotives_dis_data_distribution" data-stat-type="scaled-percentage" data-chart-title="Murder motives"></div>
+            </section>
+            
+            <h2 class="section-secondary-heading">Corruption</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--3-col">
+                {% include 'profile/_blocks/_stat_list.html' with stat=corruptioncases.total_corruptioncase stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-corruptioncases-corruptioncases_dis_data_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--5-col" id="chart-column-corruptioncases-corruptioncases_dis_data_distribution" data-stat-type="scaled-percentage" data-chart-title=""></div>
             </section>
         </div>
     </div>

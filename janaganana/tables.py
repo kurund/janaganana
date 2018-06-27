@@ -49,6 +49,8 @@ FieldTable(['teachers','qualification'], universe='Teachers')
 
 FieldTable(['crimes'], universe='Crimes')
 
+FieldTable(['violentcrimes'], universe='Crimes')
+
 FieldTable(['rape'], universe='Crimes')
 
 FieldTable(['cybercrime'], universe='Crimes')
@@ -60,3 +62,17 @@ FieldTable(['recovery','gender'], universe='Crimes')
 FieldTable(['trafficing','gender'], universe='Crimes')
 
 FieldTable(['trafficingmotives'], universe='Crimes')
+
+FieldTable(['childcrime'], universe='Crimes')
+
+FieldTable(['juvenilecrime'], universe='Crimes')
+
+FieldTable(['juveniledu'], universe='Crimes')
+
+FieldTable(['juvenilefamily'], universe='Crimes')
+
+FieldTable(['murder','gender'], universe='Crimes')
+
+FieldTable(['murdermotive'], universe='Crimes')
+
+FieldTable(['corruptioncase'], universe='Crimes')
