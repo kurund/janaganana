@@ -656,7 +656,7 @@ def get_schools_profile(geo,session):
     return final_data
 
 
-# Added techersgender profile
+# Added schoolsgender profile
 def get_schoolsgender_profile(geo,session):
 
     schools_by_gender,t_lit = get_stat_data(
@@ -749,7 +749,7 @@ def get_teachers_profile(geo,session):
     }
     return final_data
 
-# Added techersgender profile
+# Added teachersgender profile
 def get_teachersgender_profile(geo,session):
 
     teachers_by_gender,t_lit = get_stat_data(
@@ -769,7 +769,7 @@ def get_teachersgender_profile(geo,session):
     }
     return final_data
 
-# Added taechersqualifications profile
+# Added teachersqualifications profile
 def get_teachersqualification_profile(geo,session):
     teachers_by_qualification,t_lit = get_stat_data(
         ['qualification'],geo,session,
@@ -911,7 +911,7 @@ def get_rapes_profile(geo,session):
     final_data = {
         'rapes_by_age_distribution': rapes_by_age,
         'total_rapes': {
-            "name": "Total rapes",
+            "name": "Total rape victims",
             "values": {"this": t_lit}
         }
     }
@@ -1059,7 +1059,6 @@ def get_juvenilecrimes_profile(geo,session):
     return final_data
 
 #Added juvenileducations profile
-
 def get_juvenileducations_profile(geo,session):
 
     juveniledu_dis_data,t_lit = get_stat_data(
@@ -1113,7 +1112,7 @@ def get_murdervictims_profile(geo,session):
         'murdervictims_by_type_distribution':  murdervictims_by_type,
         'murdervictims_by_gender_type_distribution':  murdervictims_by_gender_type,
         'total_murder': {
-            "name": "Total murder",
+            "name": "Total murder victims",
             "values": {"this": t_lit}
         }
     }
@@ -1148,7 +1147,7 @@ def get_corruptioncases_profile(geo,session):
     final_data = {
         'corruptioncases_dis_data_distribution': corruptioncases_dis_data,
         'total_corruptioncase': {
-            "name": "Total Corruption case",
+            "name": "Total Corruption cases",
             "values": {"this": t_lit}
         }
     }
