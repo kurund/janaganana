@@ -48,6 +48,14 @@ PROFILE_SECTIONS = (
     'murdervictims',
     'murdermotives',
     'corruptioncases',
+    'phcsfunctioning',
+    'chcsfunctioning',
+    'subcenfunctioning',
+    'villagescovered',
+    'ruralpopcovered',
+    'allopathicdocphcs',
+    'doctorsdissubhospital',
+    'physicianchcs',
 )
 
 def sort_stats_result(ip,key=None):
@@ -1148,6 +1156,140 @@ def get_corruptioncases_profile(geo,session):
         'corruptioncases_dis_data_distribution': corruptioncases_dis_data,
         'total_corruptioncase': {
             "name": "Total Corruption cases",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added phcsfunctioning profile
+def get_phcsfunctioning_profile(geo,session):
+    phcsfunctioning_dis_data,t_lit = get_stat_data(
+        ['phcsfunctioning'],geo,session,
+        table_fields=['phcsfunctioning'],
+    )
+
+    final_data = {
+        'phcsfunctioning_dis_data_distribution': phcsfunctioning_dis_data,
+        'total_phcs': {
+            "name": "Total primary health care centres",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added chcsfunctioning profile
+def get_chcsfunctioning_profile(geo,session):
+    chcsfunctioning_dis_data,t_lit = get_stat_data(
+        ['chcsfunctioning'],geo,session,
+        table_fields=['chcsfunctioning'],
+    )
+
+    final_data = {
+        'chcsfunctioning_dis_data_distribution': chcsfunctioning_dis_data,
+        'total_chcs': {
+            "name": "Total community health care centres",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added subcenfunctioning profile
+def get_subcenfunctioning_profile(geo,session):
+    subcenfunctioning_dis_data,t_lit = get_stat_data(
+        ['subcenfunctioning'],geo,session,
+        table_fields=['subcenfunctioning'],
+    )
+
+    final_data = {
+        'subcenfunctioning_dis_data_distribution': subcenfunctioning_dis_data,
+        'total_subcen': {
+            "name": "Total sub centres",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added villagescovered profile
+def get_villagescovered_profile(geo,session):
+
+    villagescovered_dis_data,t_lit = get_stat_data(
+        ['villagescovered'],geo,session,
+        table_fields=['villagescovered'],
+    )
+
+    final_data = {
+        'villagescovered_dis_data_distribution':  villagescovered_dis_data,
+        'total_villages': {
+            "name": "Total villages covered",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added ruralpopcovered profile
+def get_ruralpopcovered_profile(geo,session):
+
+    ruralpopcovered_dis_data,t_lit = get_stat_data(
+        ['ruralpopcovered'],geo,session,
+        table_fields=['ruralpopcovered'],
+    )
+
+    final_data = {
+        'ruralpopcovered_dis_data_distribution':  ruralpopcovered_dis_data,
+        'total_population': {
+            "name": "Total rural population covered",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+
+# Added allopathicdocphcs profile
+def get_allopathicdocphcs_profile(geo,session):
+
+    allopathicdocphcs_dis_data,t_lit = get_stat_data(
+        ['allopathicdocphcs'],geo,session,
+        table_fields=['allopathicdocphcs'],
+    )
+
+    final_data = {
+        'allopathicdocphcs_dis_data_distribution':  allopathicdocphcs_dis_data,
+        'total_allodoc': {
+            "name": "Total allopathic doctors in PHCS",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added doctorsdissubhospital profile
+def get_doctorsdissubhospital_profile(geo,session):
+
+    doctorsdissubhospital_dis_data,t_lit = get_stat_data(
+        ['doctorsdissubhospital'],geo,session,
+        table_fields=['doctorsdissubhospital'],
+    )
+
+    final_data = {
+        'doctorsdissubhospital_dis_data_distribution':  doctorsdissubhospital_dis_data,
+        'total_disdoctor': {
+            "name": "Total doctors",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added physicianchcs profile
+def get_physicianchcs_profile(geo,session):
+
+    physicianchcs_dis_data,t_lit = get_stat_data(
+        ['physicianchcs'],geo,session,
+        table_fields=['physicianchcs'],
+    )
+
+    final_data = {
+        'physicianchcs_dis_data_distribution':  physicianchcs_dis_data,
+        'total_physicianchcs': {
+            "name": "Total physicians in CHCS",
             "values": {"this": t_lit}
         }
     }
