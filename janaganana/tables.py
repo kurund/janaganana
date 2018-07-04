@@ -76,3 +76,19 @@ FieldTable(['murder','gender'], universe='Crimes')
 FieldTable(['murdermotive'], universe='Crimes')
 
 FieldTable(['corruptioncase'], universe='Crimes')
+
+FieldTable(['phcsfunctioning'], universe='Health')
+
+FieldTable(['chcsfunctioning'], universe='Health')
+
+FieldTable(['subcenfunctioning'], universe='Health')
+
+FieldTable(['villagescovered'], universe='Health')
+
+FieldTable(['ruralpopcovered'], universe='Health')
+
+FieldTable(['allopathicdocphcs'], universe='Health')
+
+FieldTable(['doctorsdissubhospital'], universe='Health')
+
+FieldTable(['physicianchcs'], universe='Health')
