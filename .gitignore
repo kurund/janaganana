@@ -100,3 +100,6 @@ guni_config.py
 
 # Ignore the settings.py file
 janaganana/settings.py
+
+# Ignore vscode
+.vscode/
