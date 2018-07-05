@@ -62,6 +62,10 @@ DATABASES = {
 }
 
 INSTALLED_APPS = ['janaganana'] + INSTALLED_APPS
+#DATABASE_URL = config(
+#    'DATABASE_URL', default='postgresql://factlyin:factlyin@ci-db/factlyin')
+#DATABASES['default'] = dj_database_url.parse(DATABASE_URL)
+#DATABASES['default']['ATOMIC_REQUESTS'] = True
 
 # Localise this instance of Wazimap
 WAZIMAP['name'] = 'Counting India'
@@ -106,7 +110,8 @@ try:
 except ImportError:
     HAS_GDAL = False
 
-#WAZIMAP['ga_tracking_id'] = 'UA-88773672-1'
+#WAZIMAP['ga_tracking_id'] = 'UA-91398887-1'
+WAZIMAP['twitter'] = '@factlydotin'
 WAZIMAP['cache_secs'] = 0
 WAZIMAP['embed_cache_secs'] = 0
 WAZIMAP['map_centre'] = [20.5937, 78.9629]
