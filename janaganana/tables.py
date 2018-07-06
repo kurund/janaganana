@@ -77,6 +77,8 @@ FieldTable(['murdermotive'], universe='Crimes')
 
 FieldTable(['corruptioncase'], universe='Crimes')
 
+FieldTable(['healthcarecentre'], universe='Health')
+
 FieldTable(['phcsfunctioning'], universe='Health')
 
 FieldTable(['chcsfunctioning'], universe='Health')
@@ -92,3 +94,19 @@ FieldTable(['allopathicdocphcs'], universe='Health')
 FieldTable(['doctorsdissubhospital'], universe='Health')
 
 FieldTable(['physicianchcs'], universe='Health')
+
+FieldTable(['surgeonchcs'], universe='Health')
+
+FieldTable(['radiographerchcs'], universe='Health')
+
+FieldTable(['workersubcentre','gender'], universe='Health')
+
+FieldTable(['assistantphcs','gender'], universe='Health')
+
+FieldTable(['nursestaffphcschcs'], universe='Health')
+
+FieldTable(['facilitieschcs'], universe='Health')
+
+FieldTable(['facilitiesphcs'], universe='Health')
+
+FieldTable(['pharmacistphcschcs'], universe='Health')

@@ -6,14 +6,7 @@
     <div class="mdl-card__supporting-text wrapper" >
         <div class="section-container">
             <section class="clearfix stat-row mdl-grid">
-               <!-- <div class="mdl-cell--4-col"> -->
-                  {% include 'profile/_blocks/_stat_list.html' with stat=gdp.total_gdp stat_type='number' %}
-               <!-- </div>
-               <div class="mdl-cell--8-col" id="chart-pie-gdp-gdp_by_year_distribution" data-stat-type="percentage" data-chart-title=""></div>
-               -->
-            </section>
-           <h2 class="section-secondary-heading">GDP by year</h2>
-            <section class="clearfix stat-row mdl-grid section-second-row">
+                {% include 'profile/_blocks/_stat_list.html' with stat=gdp.total_gdp stat_type='number' %}
                 <div class="mdl-cell--12-col" id="chart-column-gdp-gdp_by_year_distribution" data-stat-type="scaled-percentage"></div>
             </section>
         </div>
