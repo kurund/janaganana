@@ -7,33 +7,63 @@
         <div class="section-container">
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--2-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=healthcarecentre.total_healthcarecentre stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-healthcarecentre-healthcarecentre_dis_data_distribution" data-stat-type="percentage" data-chart-title="Health care centres"></div>
+                <div class="mdl-cell--2-col">
                     {% include 'profile/_blocks/_stat_list.html' with stat=villagescovered.total_villages stat_type='number' %}
                 </div>
-                <div class="mdl-cell--4-col" id="chart-pie-villagescovered-villagescovered_dis_data_distribution" data-stat-type="percentage" data-chart-title=""></div>
-                <div class="mdl-cell--2-col">
-                        {% include 'profile/_blocks/_stat_list.html' with stat=ruralpopcovered.total_population stat_type='number' %}
-                </div>
-                <div class="mdl-cell--4-col" id="chart-pie-ruralpopcovered-ruralpopcovered_dis_data_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--4-col" id="chart-pie-villagescovered-villagescovered_dis_data_distribution" data-stat-type="percentage" data-chart-title="Villages covered by centres"></div>
             </section>
 
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--2-col">
-                        {% include 'profile/_blocks/_stat_list.html' with stat=allopathicdocphcs.total_allodoc stat_type='number' %}
+                    {% include 'profile/_blocks/_stat_list.html' with stat=ruralpopcovered.total_population stat_type='number' %}
                 </div>
-                <div class="mdl-cell--4-col" id="chart-pie-allopathicdocphcs-allopathicdocphcs_dis_data_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--4-col" id="chart-bar-ruralpopcovered-ruralpopcovered_dis_data_distribution" data-stat-type="scaled-percentage" data-chart-title="Rural population covered by centres"></div>
                 <div class="mdl-cell--2-col">
-                        {% include 'profile/_blocks/_stat_list.html' with stat=doctorsdissubhospital.total_disdoctor stat_type='number' %}
-                </div>
-                <div class="mdl-cell--4-col" id="chart-pie-doctorsdissubhospital-doctorsdissubhospital_dis_data_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                    {% include 'profile/_blocks/_stat_list.html' with stat=nursestaffphcschcs.total_nursestaffphcschcs stat_type='number' %}
+                    </div>
+                    <div class="mdl-cell--4-col" id="chart-pie-nursestaffphcschcs-nursestaffphcschcs_dis_data_distribution" data-stat-type="percentage" data-chart-title="Nurse staff in PHCS & CHCS"></div>
             </section>
 
+            <h2 class="section-secondary-heading">Doctors</h2>
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--2-col">
-                        {% include 'profile/_blocks/_stat_list.html' with stat=physicianchcs.total_physicianchcs stat_type='number' %}
+                    {% include 'profile/_blocks/_stat_list.html' with stat=allopathicdocphcs.total_allodoc stat_type='number' %}
                 </div>
-                <div class="mdl-cell--4-col" id="chart-pie-physicianchcs-physicianchcs_dis_data_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--4-col" id="chart-pie-allopathicdocphcs-allopathicdocphcs_dis_data_distribution" data-stat-type="percentage" data-chart-title="Allopathic doctor in PHCS"></div>
+                <div class="mdl-cell--2-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=doctorsdissubhospital.total_disdoctor stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-doctorsdissubhospital-doctorsdissubhospital_dis_data_distribution" data-stat-type="percentage" data-chart-title="Doctors at dis/sub-dis hospital"></div>
+            </section>
+            
+            <h2 class="section-secondary-heading">Physician & Surgeons</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=physicianchcs.total_physicianchcs stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-physicianchcs-physicianchcs_dis_data_distribution" data-stat-type="percentage" data-chart-title="Physicians in CHCS"></div>
+                
+                <div class="mdl-cell--2-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=surgeonchcs.total_surgeonchcs stat_type='number' %}
+                </div>
+               <div class="mdl-cell--4-col" id="chart-pie-surgeonchcs-surgeonchcs_dis_data_distribution" data-stat-type="percentage" data-chart-title="Surgeons in CHCS"></div>
             </section>
 
+            <h2 class="section-secondary-heading">Radiographer & Pharmacist</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--3-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=radiographerchcs.total_radiographerchcs stat_type='number' %}
+                </div>
+                <div class="mdl-cell--3-col" id="chart-pie-radiographerchcs-radiographerchcs_dis_data_distribution" data-stat-type="percentage" data-chart-title="Radiographer in CHCS"></div>
+                <div class="mdl-cell--2-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=pharmacistphcschcs.total_pharmacistphcschcs stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-pharmacistphcschcs-pharmacistphcschcs_dis_data_distribution" data-stat-type="percentage" data-chart-title="Total pharmacist in PHCS"></div>
+            </section>
+        
             <h2 class="section-secondary-heading">Year wise primary health care centres functioning</h2>
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--2-col">
@@ -56,6 +86,44 @@
                   {% include 'profile/_blocks/_stat_list.html' with stat=subcenfunctioning.total_subcen stat_type='number' %}
                 </div>
                <div class="mdl-cell--10-col" id="chart-column-subcenfunctioning-subcenfunctioning_dis_data_distribution" data-stat-type="scaled-percentage" data-chart-title=""></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Workers at subcentre</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                  {% include 'profile/_blocks/_stat_list.html' with stat=workersubcentre.total_workersubcentre stat_type='number' %}
+                </div>
+               <div class="mdl-cell--5-col" id="chart-pie-workersubcentre-workersubcentre_by_gender_distribution" data-stat-type="percentage" data-chart-title="Workers by gender"></div>
+               <div class="mdl-cell--5-col" id="chart-pie-workersubcentre-workersubcentre_by_availability_distribution" data-stat-type="percentage" data-chart-title="Workers by availability"></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Workers by gender and availability </h2>
+            <section class="clearfix stat-row mdl-grid section-second-row">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-workersubcentre-workersubcentre_by_availability_gender_distribution" data-stat-type="scaled-percentage"></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Assistant in PHCS</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                  {% include 'profile/_blocks/_stat_list.html' with stat=assistantphcs.total_assistantphcs stat_type='number' %}
+                </div>
+               <div class="mdl-cell--5-col" id="chart-pie-assistantphcs-assistantphcs_by_gender_distribution" data-stat-type="percentage" data-chart-title="Assistant by gender"></div>
+               <div class="mdl-cell--5-col" id="chart-pie-assistantphcs-assistantphcs_by_availability_distribution" data-stat-type="percentage" data-chart-title="Assistant by availability"></div>
+            </section>
+            
+            <h2 class="section-secondary-heading">Assistant by gender and availability </h2>
+            <section class="clearfix stat-row mdl-grid section-second-row">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-assistantphcs-assistantphcs_by_availability_gender_distribution" data-stat-type="scaled-percentage"></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Facilities in CHCS</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-column-facilitieschcs-facilitieschcs_dis_data_distribution" data-stat-type="scaled-percentage" data-chart-title=""></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Facilities in PHCS</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-column-facilitiesphcs-facilitiesphcs_dis_data_distribution" data-stat-type="scaled-percentage" data-chart-title=""></div>
             </section>
         </div>
     </div>

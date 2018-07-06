@@ -14,12 +14,12 @@ Janaganana is a Django application for exploring census and other similar data. 
 
 # CI On Docker(Yes CI is on Docker :smile:)  ( :star2: :star2: :star2: :star2:)
 
-1. Follwoing instuctions to install Docker  - https://docs.docker.com/install/
+1. Following instuctions to install Docker  - https://docs.docker.com/install/
 2. Start docker daemon if not running
 3. docker-compose build
 4. docker network create ci-net
 5. docker-compose up
-6. find ip address of docker machine if http://localhost:8000/ not working (docker-machine ip default) 
+6. find ip address of docker machine if http://localhost:8000/ not working (docker-machine ip default)
 and use that ip - http://192.168.99.100:8000/
 7. Application is up :)
 

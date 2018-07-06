@@ -12,50 +12,13 @@ import janaganana.tables  # noqa
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
-PROFILE_SECTIONS = (
-    'demographics',
-    'religion',
-    'education',
-    'maritalstatus',
-    'workers',
-    'age',
-    'schools',
-    'schoolsgender',
-    'students',
-    'girlsenrolment',
-    'teachers',
-    'teachersgender',
-    'teachersqualification',
-    'toilets',
-    'schoolsfacilities',
-    'gdp',
-    'caste',
-    'household',
-    'drinkingsource',
-    'classrooms',
-    'crimes',
-    'violentcrimes',
-    'rapes',
-    'cybercrimes',
-    'kidnapping',
-    'kidnappedrecovery',
-    'trafficing',
-    'trafficingmotives',
-    'childcrimes',
-    'juvenilecrimes',
-    'juvenileducations',
-    'juvenilefamilybg',
-    'murdervictims',
-    'murdermotives',
-    'corruptioncases',
-    'phcsfunctioning',
-    'chcsfunctioning',
-    'subcenfunctioning',
-    'villagescovered',
-    'ruralpopcovered',
-    'allopathicdocphcs',
-    'doctorsdissubhospital',
-    'physicianchcs',
+PROFILE_SECTIONS = ('demographics','religion','education','maritalstatus','workers','age','schools','schoolsgender',
+    'students','girlsenrolment','teachers','teachersgender','teachersqualification','toilets','schoolsfacilities',
+    'gdp','caste','household','drinkingsource','classrooms','crimes','violentcrimes','rapes','cybercrimes','kidnapping',
+    'kidnappedrecovery','trafficing','trafficingmotives','childcrimes','juvenilecrimes','juvenileducations','juvenilefamilybg',
+    'murdervictims','murdermotives','corruptioncases','healthcarecentre','phcsfunctioning','chcsfunctioning','subcenfunctioning','villagescovered',
+    'ruralpopcovered','allopathicdocphcs','doctorsdissubhospital','physicianchcs','surgeonchcs','radiographerchcs','workersubcentre',
+    'assistantphcs','nursestaffphcschcs','facilitieschcs','facilitiesphcs','pharmacistphcschcs',
 )
 
 def sort_stats_result(ip,key=None):
@@ -77,7 +40,7 @@ def get_census_profile(geo, profile_name,request):
 
     session = get_session()
     try:
-        geo_summary_levels = geo_data.get_summary_geo_info(geo)
+        #geo_summary_levels = geo_data.get_summary_geo_info(geo)
         data = {}
 
         for section in PROFILE_SECTIONS:
@@ -1161,6 +1124,23 @@ def get_corruptioncases_profile(geo,session):
     }
     return final_data
 
+# Added healthcarecentre profile
+def get_healthcarecentre_profile(geo,session):
+
+    healthcarecentre_dis_data,t_lit = get_stat_data(
+        ['healthcarecentre'],geo,session,
+        table_fields=['healthcarecentre'],
+    )
+
+    final_data = {
+        'healthcarecentre_dis_data_distribution':  healthcarecentre_dis_data,
+        'total_healthcarecentre': {
+            "name": "Total healthcare centre",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
 # Added phcsfunctioning profile
 def get_phcsfunctioning_profile(geo,session):
     phcsfunctioning_dis_data,t_lit = get_stat_data(
@@ -1255,7 +1235,7 @@ def get_allopathicdocphcs_profile(geo,session):
     final_data = {
         'allopathicdocphcs_dis_data_distribution':  allopathicdocphcs_dis_data,
         'total_allodoc': {
-            "name": "Total allopathic doctors in PHCS",
+            "name": "Total allopathic doctors",
             "values": {"this": t_lit}
         }
     }
@@ -1289,7 +1269,169 @@ def get_physicianchcs_profile(geo,session):
     final_data = {
         'physicianchcs_dis_data_distribution':  physicianchcs_dis_data,
         'total_physicianchcs': {
-            "name": "Total physicians in CHCS",
+            "name": "Total physicians",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added surgeonchcs profile
+def get_surgeonchcs_profile(geo,session):
+
+    surgeonchcs_dis_data,t_lit = get_stat_data(
+        ['surgeonchcs'],geo,session,
+        table_fields=['surgeonchcs'],
+    )
+
+    final_data = {
+        'surgeonchcs_dis_data_distribution':  surgeonchcs_dis_data,
+        'total_surgeonchcs': {
+            "name": "Total surgeons",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added radiographerchcs profile
+def get_radiographerchcs_profile(geo,session):
+
+    radiographerchcs_dis_data,t_lit = get_stat_data(
+        ['radiographerchcs'],geo,session,
+        table_fields=['radiographerchcs'],
+    )
+
+    final_data = {
+        'radiographerchcs_dis_data_distribution':  radiographerchcs_dis_data,
+        'total_radiographerchcs': {
+            "name": "Total radiographers",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added workersubcentre profile
+def get_workersubcentre_profile(geo,session):
+
+    workersubcentre_by_gender,_ = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['workersubcentre','gender'],
+    )
+
+    workersubcentre_by_availability,_ = get_stat_data(
+        ['workersubcentre'],geo,session,
+        table_fields=['workersubcentre','gender'],
+    )
+
+    workersubcentre_by_availability_gender,t_lit = get_stat_data(
+         ['workersubcentre','gender'],geo,session,
+         table_fields=['workersubcentre','gender'],
+         percent_grouping=['gender'],
+    )
+    
+    final_data = {
+        'workersubcentre_by_gender_distribution':  workersubcentre_by_gender,
+        'workersubcentre_by_availability_distribution':  workersubcentre_by_availability,
+        'workersubcentre_by_availability_gender_distribution': workersubcentre_by_availability_gender,
+        'total_workersubcentre': {
+            "name": "Total workers in sub centre",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added assistantphcs profile
+def get_assistantphcs_profile(geo,session):
+
+    assistantphcs_by_gender,_ = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['assistantphcs','gender'],
+    )
+
+    assistantphcs_by_availability,_ = get_stat_data(
+        ['assistantphcs'],geo,session,
+        table_fields=['assistantphcs','gender'],
+    )
+
+    assistantphcs_by_availability_gender,t_lit = get_stat_data(
+         ['assistantphcs','gender'],geo,session,
+         table_fields=['assistantphcs','gender'],
+         percent_grouping=['gender'],
+    )
+    
+    final_data = {
+        'assistantphcs_by_gender_distribution':  assistantphcs_by_gender,
+        'assistantphcs_by_availability_distribution':  assistantphcs_by_availability,
+        'assistantphcs_by_availability_gender_distribution': assistantphcs_by_availability_gender,
+        'total_assistantphcs': {
+            "name": "Total assistant in PHCS",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added nursestaffphcschcs profile
+def get_nursestaffphcschcs_profile(geo,session):
+
+    nursestaffphcschcs_dis_data,t_lit = get_stat_data(
+        ['nursestaffphcschcs'],geo,session,
+        table_fields=['nursestaffphcschcs'],
+    )
+
+    final_data = {
+        'nursestaffphcschcs_dis_data_distribution':  nursestaffphcschcs_dis_data,
+        'total_nursestaffphcschcs': {
+            "name": "Total nurse staff",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added facilitieschcs profile
+def get_facilitieschcs_profile(geo,session):
+
+    facilitieschcs_dis_data,t_lit = get_stat_data(
+        ['facilitieschcs'],geo,session,
+        table_fields=['facilitieschcs'],
+    )
+
+    final_data = {
+        'facilitieschcs_dis_data_distribution':  facilitieschcs_dis_data,
+        'total_facilitieschcs': {
+            "name": "Total facilities CHCS",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added facilitiesphcs profile
+def get_facilitiesphcs_profile(geo,session):
+
+    facilitiesphcs_dis_data,t_lit = get_stat_data(
+        ['facilitiesphcs'],geo,session,
+        table_fields=['facilitiesphcs'],
+    )
+
+    final_data = {
+        'facilitiesphcs_dis_data_distribution':  facilitiesphcs_dis_data,
+        'total_facilitiesphcs': {
+            "name": "Total facilities PHCS",
+            "values": {"this": t_lit}
+        }
+    }
+    return final_data
+
+# Added pharmacistphcschcs profile
+def get_pharmacistphcschcs_profile(geo,session):
+
+    pharmacistphcschcs_dis_data,t_lit = get_stat_data(
+        ['pharmacistphcschcs'],geo,session,
+        table_fields=['pharmacistphcschcs'],
+    )
+
+    final_data = {
+        'pharmacistphcschcs_dis_data_distribution':  pharmacistphcschcs_dis_data,
+        'total_pharmacistphcschcs': {
+            "name": "Total pharmacist in PHCS",
             "values": {"this": t_lit}
         }
     }
