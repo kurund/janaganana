@@ -105,8 +105,8 @@ FieldTable(['assistantphcs','gender'], universe='Health')
 
 FieldTable(['nursestaffphcschcs'], universe='Health')
 
-FieldTable(['facilitieschcs'], universe='Health')
-
 FieldTable(['facilitiesphcs'], universe='Health')
+
+FieldTable(['facilitieschcs'], universe='Health')
 
 FieldTable(['pharmacistphcschcs'], universe='Health')

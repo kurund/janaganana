@@ -1,8 +1,8 @@
 ---Telangana - age_area_sex
 
-delete from age_area_sex where geo_code='28' and geo_level='state' and geo_version='';
+delete from age_area_sex where geo_code='28' and geo_level='state' and geo_version='2011';
 
-delete from age_area_sex where geo_code='36' and geo_level='state' and geo_version='';
+delete from age_area_sex where geo_code='36' and geo_level='state' and geo_version='2011';
 
 INSERT into age_area_sex (geo_level, geo_code, age, area, sex, total)(
   (
@@ -21,9 +21,9 @@ INSERT into age_area_sex (geo_level, geo_code, age, area, sex, total)(
 
 ---Telangana - area_education_sex
 
-delete from area_education_sex where geo_code='28' and geo_level='state' and geo_version='';
+delete from area_education_sex where geo_code='28' and geo_level='state' and geo_version='2011';
 
-delete from area_education_sex where geo_code='36' and geo_level='state' and geo_version='';
+delete from area_education_sex where geo_code='36' and geo_level='state' and geo_version='2011';
 
 INSERT into area_education_sex (geo_level, geo_code, education, area, sex, total)(
   (
@@ -41,9 +41,9 @@ INSERT into area_education_sex (geo_level, geo_code, education, area, sex, total
 
 ---Telangana - area_literacy_sex
 
-delete from area_literacy_sex where geo_code='28' and geo_level='state' and geo_version='';
+delete from area_literacy_sex where geo_code='28' and geo_level='state' and geo_version='2011';
 
-delete from area_literacy_sex where geo_code='36' and geo_level='state' and geo_version='';
+delete from area_literacy_sex where geo_code='36' and geo_level='state' and geo_version='2011';
 
 INSERT into area_literacy_sex (geo_level, geo_code, literacy, area, sex, total)(
   (
@@ -62,9 +62,9 @@ INSERT into area_literacy_sex (geo_level, geo_code, literacy, area, sex, total)(
 
 ---Telangana - area_maritalstatus_sex
 
-delete from area_maritalstatus_sex where geo_code='28' and geo_level='state' and geo_version='';
+delete from area_maritalstatus_sex where geo_code='28' and geo_level='state' and geo_version='2011';
 
-delete from area_maritalstatus_sex where geo_code='36' and geo_level='state' and geo_version='';
+delete from area_maritalstatus_sex where geo_code='36' and geo_level='state' and geo_version='2011';
 
 INSERT into area_maritalstatus_sex (geo_level, geo_code, maritalstatus, area, sex, total)(
   (
@@ -83,9 +83,9 @@ INSERT into area_maritalstatus_sex (geo_level, geo_code, maritalstatus, area, se
 
 ---Telangana - area_religion_sex
 
-delete from area_religion_sex where geo_code='28' and geo_level='state' and geo_version='';
+delete from area_religion_sex where geo_code='28' and geo_level='state' and geo_version='2011';
 
-delete from area_religion_sex where geo_code='36' and geo_level='state' and geo_version='';
+delete from area_religion_sex where geo_code='36' and geo_level='state' and geo_version='2011';
 
 INSERT into area_religion_sex (geo_level, geo_code, religion, area, sex, total)(
   (
@@ -104,9 +104,9 @@ INSERT into area_religion_sex (geo_level, geo_code, religion, area, sex, total)(
 
 ---Telangana - area_workers_workerssex
 
-delete from area_workers_workerssex where geo_code='28' and geo_level='state' and geo_version='';
+delete from area_workers_workerssex where geo_code='28' and geo_level='state' and geo_version='2011';
 
-delete from area_workers_workerssex where geo_code='36' and geo_level='state' and geo_version='';
+delete from area_workers_workerssex where geo_code='36' and geo_level='state' and geo_version='2011';
 
 INSERT into area_workers_workerssex (geo_level, geo_code, workers, area, workerssex, total)(
   (
@@ -125,9 +125,9 @@ INSERT into area_workers_workerssex (geo_level, geo_code, workers, area, workers
 
 ---Telangana - area_sex
 
-delete from area_sex where geo_code='28' and geo_level='state' and geo_version='';
+delete from area_sex where geo_code='28' and geo_level='state' and geo_version='2011';
 
-delete from area_sex where geo_code='36' and geo_level='state' and geo_version='';
+delete from area_sex where geo_code='36' and geo_level='state' and geo_version='2011';
 
 INSERT into area_sex (geo_level, geo_code, area, sex, total)(
   (

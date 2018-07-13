@@ -28,6 +28,7 @@ function Chart(options) {
         chart.chartQualifier = options.chartQualifier || null;
         chart.chartInitialSort = options.chartInitialSort || null;
         chart.chartStatType = options.chartStatType || 'number';
+        chart.chartNullLabel = options.chartNullLabel || "N/A";
         chart.decimalPlaces = parseInt(options.chartDecimalPlaces) || 0;
         chart.tableDecimalPlaces = parseInt(options.chartDecimalPlaces) || 1;
         chart.chartChartShowYAxis = options.chartChartShowYAxis || (chart.chartStatType == "percentage" ? true : false);
@@ -100,7 +101,7 @@ function Chart(options) {
                 // otherwise, just grab the name and value of the data point
                 dataObj = {
                     name: d.name,
-                    value: +d.values['this'],
+                    value: (d.values['this'] === null) ? null : +d.values['this'],
                     context: d
                 }
             }
@@ -319,6 +320,11 @@ function Chart(options) {
             displayHeight: chart.settings.height - chart.settings.margin.top - chart.settings.margin.bottom
         });
 
+        // add optional title, adjust height available height for columns if necessary
+        if (!!chart.chartChartTitle) {
+            chart.addChartTitle(chart.chartContainer);
+        }
+
         // create the base for upcoming html elements
         chart.htmlBase = chart.chartContainer.append("div")
             .attr("class", "column-set")
@@ -326,12 +332,6 @@ function Chart(options) {
                 return (chart.chartChartShowYAxis) ? -(chart.settings.height) + "px" : "0";
             })
             .style("height", chart.settings.height + "px");
-
-        // add optional title, adjust height available height for columns if necessary
-        if (!!chart.chartChartTitle) {
-            chart.addChartTitle(chart.htmlBase);
-            chart.settings.displayHeight -= 20;
-        }
 
         // narrow padding for histograms
         if (chart.chartType == 'histogram') {
@@ -481,7 +481,8 @@ function Chart(options) {
                     .style("position", "absolute")
                     .style("background-color", chart.colorbrewer[chart.chartColorScale][0])
                     .style("width", chart.x.rangeBand() + "px")
-                    .style("bottom", function(d) { return (chart.settings.margin.bottom + chart.settings.tickPadding) + "px"; })
+                    .style("bottom", function(d) {
+                        return (chart.settings.margin.bottom + chart.settings.tickPadding + ((d.value !== null) ? 0 : 20)) + "px"; })
                     .style("height", function(d) { return (chart.settings.displayHeight - chart.y(d.value)) + "px"; });
 
             chart.columnNames = chart.columns
@@ -729,22 +730,58 @@ function Chart(options) {
 
     chart.addActionLinks = function() {
         chart.actionLinks = chart.chartContainer
-            .append("div")
-            .classed("action-links", true);
+            .append("div") // shift drop down chart options to below chart
+            .classed("action-links tool-group toggle-sub-group", true);
 
-        chart.getData = chart.actionLinks
+        chart.actionLinks
+            .append("a")
+            .text("Chart Options")
+            .append("i")
+            .classed("fa fa-chevron-circle-down", true);
+
+        var links = chart.actionLinks
+            .append("ul")
+            .classed("sub-group", true)
+            .attr("style", "display: none");
+            
+        chart.getData = links
+            .append("li")
             .append("a")
                 .classed("chart-get-data", true)
                 .text("Show data")
                 .on("click", chart.toggleDataDrawer);
 
-        chart.actionLinks.append("span").text("/");
-
-        chart.showEmbed = chart.actionLinks
+        chart.showEmbed = links
+            .append("li")
             .append("a")
                 .classed("chart-show-embed", true)
                 .text("Embed")
                 .on("click", chart.showEmbedCode);
+
+        chart.showEmbed = links
+            .append("li")
+            .append("a")
+                .classed("chart-show-embed", true)
+                .text("Explore data")
+                .attr("href", chart.tableURL);
+
+        chart.showEmbed = links
+            .append("li")
+            .append("a")
+                .classed("chart-show-embed", true)
+                .text("Map data")
+                .attr("href", chart.mapURL);
+
+        chart.showEmbed = links
+            .append("li")
+            .append("a")
+                .classed("chart-show-embed", true)
+                .text("Compare")
+                .attr("href", chart.distributionURL);
+
+        $(chart.actionLinks[0]).hover(function() {
+            $(this).find('.sub-group').toggle();
+        });
     }
 
     chart.fillEmbedCode = function(textarea, align) {
@@ -755,6 +792,7 @@ function Chart(options) {
             embedID = 'cr-embed-'+chart.primaryGeoID+'-'+embedKey,
             embedParams = {
                 geoID: chart.primaryGeoID,
+                geoVersion: chart.thisGeo.version,
                 chartDataID: embedKey,
                 dataYear: embedDataYear,
                 chartType: chart.chartType,
@@ -866,16 +904,6 @@ function Chart(options) {
             chart.dataDrawer = row.append("div")
                     .attr("class", "data-drawer column-full");
 
-            chart.dataDrawer.append("div")
-                    .attr("class", "tool-group")
-                    .append("ul")
-                    .attr("class", "toggle-set")
-                    .html(function() {
-                        return " <li><a class='smaller' href='" + chart.tableURL + "'>Table</a></li>" +
-                               //" <li><a class='smaller' href='" + chart.mapURL + "'>Map</a></li>" +
-                               " <li><a class='smaller' href='" + chart.distributionURL + "'>Distribution</a></li>";
-                    });
-
             chart.dataDrawer.append("h3")
                     .attr("class", "chart-title")
                     .html(function() {
@@ -886,7 +914,10 @@ function Chart(options) {
                             titleText = "Table " + tableID;
                         }
                         return titleText;
-                    });
+                    })
+                    .append("a")
+                    .attr("href", chart.tableURL)
+                    .html("Explore and download this data");
 
             chart.dataTable = chart.dataDrawer.append("table")
                     .attr("id", "data-table")
@@ -1120,6 +1151,9 @@ function Chart(options) {
 
     // format percentages and/or dollar signs
     chart.valFmt = function(value, decimals) {
+        if (value === null) {
+            return chart.chartNullLabel;
+        }
         var precision = (!!decimals) ? decimals : chart.decimalPlaces,
             factor = Math.pow(10, precision),
             value = Math.round(value * factor) / factor;

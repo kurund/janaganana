@@ -29,7 +29,7 @@ CREATE TABLE area_workers_workerssex (
     workerssex character varying(10) NOT NULL,
     workers character varying(50) NOT NULL,
     total integer NOT NULL,
-    geo_version character varying(100) DEFAULT ''::character varying NOT NULL
+    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL
 );
 
 

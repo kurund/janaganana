@@ -54,18 +54,6 @@ a.action-button,
     cursor: pointer;
     color: #E00015;
 }
-
-#schools .action-links ,#crimes .action-links  {
-    padding-top: 35px;
-}
-#chart-pie-classrooms-classrooms_by_schools_distribution .action-links {
-    padding-top: 55px;
-}
-
-#household .action-links,#drinkingsource .action-links {
-    padding-top: 15px;
-}
-
 .action-links a:hover {
     color: #FA1A2F;
 }
@@ -688,6 +676,14 @@ tr:hover td, tr.highlight td, .grid .highlight, .grid .hover {
 
 }
 
+/* adding custom css for drop down chart options */
+.toggle-sub-group a {
+    margin-top: .15em;
+}
 
+.action-links.tool-group.toggle-sub-group ul {font-size: 10px;}
 
-
+.data-drawer.column-full .chart-title a{
+ text-decoration: none;
+ margin-left: 550px;
+}
