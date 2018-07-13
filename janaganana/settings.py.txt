@@ -95,10 +95,10 @@ WAZIMAP['levels'] = {
 }
 
 
-WAZIMAP['default_geo_version'] = ''
+WAZIMAP['default_geo_version'] = '2011'
 WAZIMAP['comparative_levels'] = ['country', 'state', 'district']
 
-WAZIMAP['geometry_data'] = {'': {
+WAZIMAP['geometry_data'] = {'2011': {
   'country':  'geo/country.topojson',
   'state':    'geo/state.topojson',
   'district': 'geo/district.topojson',

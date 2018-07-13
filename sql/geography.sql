@@ -42,7 +42,7 @@ CREATE TABLE wazimap_geography (
     parent_level character varying(15),
     parent_code character varying(10),
     long_name character varying(100),
-    version character varying(100) DEFAULT ''::character varying NOT NULL
+    version character varying(100) DEFAULT '2011'::character varying NOT NULL
 );
 
 

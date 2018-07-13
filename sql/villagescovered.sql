@@ -30,7 +30,7 @@ SET default_with_oids = false;
 CREATE TABLE public.villagescovered (
     geo_level character varying(15) NOT NULL,
     geo_code character varying(10) NOT NULL,
-    geo_version character varying(100) DEFAULT ''::character varying NOT NULL,
+    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL,
     villagescovered character varying(128) NOT NULL,
     total integer
 );

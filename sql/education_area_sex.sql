@@ -29,7 +29,7 @@ CREATE TABLE area_education_sex (
     sex character varying(10) NOT NULL,
     education character varying(50) NOT NULL,
     total integer NOT NULL,
-    geo_version character varying(100) DEFAULT ''::character varying NOT NULL
+    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL
 );
 
 

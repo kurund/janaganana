@@ -28,7 +28,7 @@ CREATE TABLE area_sex (
     area character varying(10) NOT NULL,
     sex character varying(10) NOT NULL,
     total integer NOT NULL,
-    geo_version character varying(100) DEFAULT ''::character varying NOT NULL
+    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL
 );
 
 

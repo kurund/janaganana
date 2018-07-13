@@ -38,7 +38,6 @@
             ga('create', '{{ WAZIMAP.ga_tracking_id }}', 'auto');
             {% endif %}
             ga('send', 'pageview');
-
         </script> -->
         <!-- End Google Analytics -->
         {% block favicon %}
@@ -56,17 +55,17 @@
         <![endif]-->
 
         <!-- Always shows a header, even in smaller screens. -->
-        
+
         <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header bgcolor">
             {% block header %}
             <header class="mdl-layout__header .mdl-color--indigo-700">
                 <div class="mdl-layout__header-row">
                   <!-- Title -->
                   <span class="mdl-layout-title"><a href="{% url 'homepage' %}"><img class="counting-india-logo-image" src="{% static 'img/counting-india-logo-beta.png' %}"></a></span>
-                    
+
                   <!-- Add spacer, to align navigation to the right -->
                   <div class="mdl-layout-spacer"></div>
-                    
+
                   <!-- Needs more work for mobile & tablets -->
                   <!-- Displayed on Computer and Tablet -->
                   <!-- Search -->
@@ -96,7 +95,7 @@
                     </button>
                   </nav>
                 </div>
-                			
+
             </header>
             <div class="mdl-layout__drawer">
                 <span class="mdl-layout-title"><a href="{% url 'homepage' %}"><img class="counting-india-logo-image" src="{% static 'img/counting-india-logo-drawer.png' %}"></a></span>
@@ -124,7 +123,6 @@
                 {% block content %}{% endblock %}
             </div>
             {% endblock %}
-
 
             <footer class="mdl-mega-footer">
                 {% block footer_content %}
@@ -159,7 +157,7 @@
                 </div>
                 {% endblock footer_content %}
             </footer>
-        </div>     
+        </div>
 
         {% endblock body %}
 
@@ -169,7 +167,6 @@
         <!--[if gte IE 9]><!-->
         <script src="//cdn.jsdelivr.net/g/jquery@2.1,d3js@3.4,typeahead.js@0.10.2(typeahead.bundle.min.js),underscorejs@1.6,spinjs@1.3,handlebarsjs@1.3(handlebars.min.js)"></script>
         <!--<![endif]-->
-
         <!-- local patched version of r2d3 handles percentage widths, HTML overlays -->
         <!--[if lte IE 8]>
         <script src="{{ STATIC_URL }}js/vendor/r2d3.js" charset="utf-8"></script>
