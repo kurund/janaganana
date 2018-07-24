@@ -41,7 +41,7 @@
                               {% endfor %}
                           {% endif %}
                         </p>
-                    </div>    
+                    </div>
                 </header>
 
                 <div style="padding-left: 10px; padding-right: 10px;">
@@ -80,16 +80,29 @@
                 {% endif %}
 
                 {% block profile_header_tail %}
-                <div style="padding-left: 10px; padding-right: 10px;">
+                <!--<div style="padding-left: 10px; padding-right: 10px;">
                     <p class="caption"><strong>Census data:</strong> 2011</p>
+                </div> -->
+                <div class="column-full">
+                    <strong>{{ primary_releases.active.name }} {{ primary_releases.active.year }}</strong>
+                    {% if primary_releases.other %}
+                    <div class="tool-group toggle-sub-group release-list">
+                        <a>Change release<i class="fa fa-chevron-circle-down"></i></a>
+                        <ul class="sub-group" style="display: none;">
+                        {% for release in primary_releases.other %}
+                            <li><a href="{{ request.path }}?release={{release.year}}">{{ release.name }} {{ release.year }}</a></li>
+                        {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
                 </div>
                 {% endblock %}
             </div>
         </div>
     </div>
     {% endblock %}
-    
-    
+
+
     {% block content %}
     {% comment %}
     <section class="clearfix" id="query-topic-picker">
@@ -101,7 +114,7 @@
     {% endcomment %}
 
     {% block profile_preamble %}
-    <div style="background-color:#9FA8DA;" class="mdl-cell--hide-phone mdl-cell--hide-tablet compare-place">   
+    <div style="background-color:#9FA8DA;" class="mdl-cell--hide-phone mdl-cell--hide-tablet compare-place">
         <section class="clearfix wrapper" style="margin-bottom: 0px; padding-top: 25px; padding-bottom: 25px; ">
             <h2 style="margin-top: 0px; margin-bottom: 0px; font-size: 1.5em; opacity: 0.8">Compare this place with another</h2>
             <div class="profile-search-compare">
@@ -125,10 +138,10 @@
     {% include 'profile/sections/caste.html' %}
     {% include 'profile/sections/household.html' %}
     {% include 'profile/sections/drinkingsource.html' %}
-    {% include 'profile/sections/schools.html' %}
     {% include 'profile/sections/gdp.html' %}
     {% include 'profile/sections/crimes.html' %}
     {% include 'profile/sections/primaryhealth.html' %}
+    {% include 'profile/sections/schools.html' %}
     {% endblock profile_detail %}
 {% endblock content %}
 </main>
