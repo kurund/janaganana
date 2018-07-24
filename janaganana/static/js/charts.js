@@ -289,6 +289,7 @@ function Chart(options) {
             chart.addChartQualifier(chart.chartContainer);
         }
         chart.addActionLinks();
+        chart.addYearLinks();
 
         return chart;
     }
@@ -517,6 +518,7 @@ function Chart(options) {
             chart.addChartQualifier(chart.chartContainer);
         }
         chart.addActionLinks();
+        chart.addYearLinks();
 
         return chart;
     }
@@ -724,6 +726,7 @@ function Chart(options) {
             chart.addChartQualifier(chart.chartContainer);
         }
         chart.addActionLinks();
+        chart.addYearLinks();
 
         return chart;
     }
@@ -783,6 +786,62 @@ function Chart(options) {
             $(this).find('.sub-group').toggle();
         });
     }
+    
+    /*Adding custom year filter for geoversion*/
+    chart.addYearLinks = function() {
+
+        chart.yearLinks = chart.chartContainer
+            .insert("div", ":first-child")
+            //.insert("div")
+            .classed("year-links tool-group toggle-sub-group", true);
+        
+        chart.yearLinks
+            .append("a")
+            .text("Year")
+            .append("i")
+            .classed("fa fa-chevron-circle-down", true);
+
+        var ylinks = chart.yearLinks
+            .append("ul")
+            .classed("sub-year", true)
+            .attr("style", "display: none");
+            
+        chart.getYearData = ylinks
+            .append("li")
+            .append("a")
+                .classed("year-show-embed", true)
+                .text("2010")
+                .attr("href", chart.releaseURL+"2010");
+        
+        chart.getYearData = ylinks
+            .append("li")
+            .append("a")
+                .classed("year-show-embed", true)
+                .text("2011")
+                .attr("href", chart.releaseURL+"2011");
+
+        chart.getYearData = ylinks
+            .append("li")
+            .append("a")
+                .classed("year-show-embed", true)
+                .text("2015")
+                .attr("href", chart.releaseURL+"2015");
+
+        chart.getYearData = ylinks
+            .append("li")
+            .append("a")
+                .classed("year-show-embed", true)
+                .text("2017")
+                .attr("href", chart.releaseURL+"2017");
+    
+
+        $(chart.yearLinks[0]).hover(function() {
+            $(this).find('.sub-year').toggle();
+        });
+        //console.log(chart.initialData.metadata.table_id);
+        //console.log(chart.initialData.metadata.year);
+    }
+    /*end of custom filter*/
 
     chart.fillEmbedCode = function(textarea, align) {
         var embedHeight = 300,
@@ -1328,6 +1387,13 @@ function Chart(options) {
 
             chart.mapURL = '/data/map/?table='+chart.tableID+'&primary_geo_id='+chart.primaryGeoID+'&geo_ids='+geoIDs.join(',');
             chart.distributionURL = '/data/distribution/?table='+chart.tableID+'&primary_geo_id='+chart.primaryGeoID+'&geo_ids='+geoIDs.join(',');
+            var currentURLPath = window.location.pathname;
+            var chartRef = chart.tableID;
+            var temptableName = chartRef.substring(0, chartRef.length - 4);
+            var tableName = temptableName .toLowerCase()
+            //console.log(tableName);
+            chart.releaseURL   = currentURLPath+'?table='+tableName;
+            //console.log(currentURLPath);
         }
     }
 

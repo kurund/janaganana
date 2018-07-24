@@ -7,10 +7,10 @@
         <div class="section-container">
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--2-col">
-                  {% include 'profile/_blocks/_stat_list.html' with stat=crimes.total_crimes stat_type='number' %}
+                  {% include 'profile/_blocks/_stat_list.html' with stat=yearlyCrimes.total_crimes stat_type='number' %}
                 </div>
-                <div class="mdl-cell--4-col" id="chart-pie-crimes-crimes_by_year_distribution" data-stat-type="percentage" data-chart-title=""></div>
-                <div class="mdl-cell--6-col" id="chart-column-crimes-crimes_by_year_distribution" data-stat-type="scaled-percentage" data-chart-title="Crimes by year"></div>
+                <div class="mdl-cell--4-col" id="chart-pie-yearlyCrimes-crimes_by_year_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--6-col" id="chart-column-yearlyCrimes-crimes_by_year_distribution" data-stat-type="scaled-percentage" data-chart-title="Crimes by year"></div>
             </section>
           
             <h2 class="section-secondary-heading">Violent crimes</h2>
