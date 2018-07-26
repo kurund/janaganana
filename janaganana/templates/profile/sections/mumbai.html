@@ -1,0 +1,19 @@
+<article id="schools" class="clearfix wrapper mdl-card mdl-shadow--2dp mdl-cell--12-col profile-section">
+    <div class="mdl-card__title">
+        <i class="material-icons">school</i>
+        <h2 class="mdl-card__title-text">Mumbai data</h2>
+    </div>
+    <div class="mdl-card__supporting-text wrapper" >
+        <div class="section-container">
+            <h2 class="section-secondary-heading">Top 5 civic complaint days elapsed in 2017</h2>
+            
+            <section class="clearfix stat-row mdl-grid section-second-row">
+                <div class="mdl-cell--4-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=civiccomplaint.total_complaint stat_type='number' %}
+                </div>
+                <div class="mdl-cell--8-col" id="chart-pie-civiccomplaint-civiccomplaint_dis_data_dis" data-stat-type="percentage"></div>
+            </section>
+
+        </div>
+    </div>
+</article>
