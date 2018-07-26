@@ -22,7 +22,7 @@ FieldTable(['household','year'], id='household_2011', universe='Household')
 
 FieldTable(['drinkingsource','year'], id='drinkingsource_2011', universe='Drinkingsource')
 
-#FieldTable(['civiccomplaint'], universe='Civic')
+FieldTable(['civiccomplaint','year'], id='civiccomplaint_mum_2017', universe='Civic')
 
 # GDP data table
 FieldTable(['gdpyear'], id='gdp_yearly', universe='GDP')
@@ -94,6 +94,26 @@ FieldTable(['facilitieschcs','year'], id='facilitieschcs_2017', universe='Health
 FieldTable(['facilitiesphcs','year'], id='facilitiesphcs_2017', universe='Health')
 
 # Schools data table
-FieldTable(['schools','type','year'], id='schools_type_2010', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_by_type_2015', universe='Schools')
 
-FieldTable(['schools','type','year'], id='schools_type_2011', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_by_type_2014', universe='Schools')
+
+FieldTable(['schools','gender','year'], id='schools_by_gender_2015', universe='Schools')
+
+FieldTable(['schools','gender','year'], id='schools_by_gender_2014', universe='Schools')
+
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2015', universe='Schools')
+
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2014', universe='Schools')
+
+FieldTable(['teachers','type','year'], id='teachers_type_2015', universe='Schools')
+
+FieldTable(['teachers','type','year'], id='teachers_type_2014', universe='Schools')
+
+FieldTable(['teachers','gender','year'], id='teachers_gender_2015', universe='Schools')
+
+FieldTable(['teachers','gender','year'], id='teachers_gender_2014', universe='Schools')
+
+FieldTable(['schooltoilet','gender','year'], id='schooltoilet_by_gender_2015', universe='Schools')
+
+FieldTable(['schooltoilet','gender','year'], id='schooltoilet_by_gender_2014', universe='Schools')

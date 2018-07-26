@@ -763,6 +763,10 @@ ul.sub-year {
     margin-left: 18em;
 }
 
+.year-links.tool-group.toggle-sub-group {
+    width: fit-content;
+}
+
 .year-links.tool-group.toggle-sub-group ul {
     font-size: 12px;
 }
@@ -796,4 +800,25 @@ ul.sub-year li:first-child a {
     -moz-border-radius-topleft: 4px;
     border-top-right-radius: 4px;
     border-top-left-radius: 4px;
+}
+
+/*custom css for chart toggle in school data*/
+#chart-pie-studentsenrol-students_by_schools_distribution .action-links.tool-group.toggle-sub-group {
+    margin-top: 60px;
+}
+
+#chart-pie-studentsenrol-students_by_type_distribution .action-links.tool-group.toggle-sub-group {
+    margin-top: 60px;
+}
+
+#chart-pie-schooltoilet-toilets_by_school_distribution .action-links.tool-group.toggle-sub-group {
+    margin-top: 60px;
+}
+
+#chart-pie-schooltoilet-toilets_by_gender_distribution .action-links.tool-group.toggle-sub-group {
+    margin-top: 60px;
+}
+
+.chart.column-chart.grouped-column-chart .action-links.tool-group.toggle-sub-group {
+    margin-top: 20px;
 }

@@ -5,12 +5,68 @@
     </div>
     <div class="mdl-card__supporting-text wrapper" >
         <div class="section-container">
-            <h2 class="section-secondary-heading">Schools multi year test</h2>
+            <h2 class="section-secondary-heading">Schools</h2>
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--4-col">
                   {% include 'profile/_blocks/_stat_list.html' with stat=schoolstype.total_schools stat_type='number' %}
                 </div>
-                <div class="mdl-cell--8-col" id="chart-pie-schoolstype-schoolstype_dis_data_distribution" data-stat-type="percentage" data-chart-title=""></div>
+                <div class="mdl-cell--4-col" id="chart-pie-schoolstype-schools_by_type_distribution" data-stat-type="percentage" data-chart-title="Schools by type"></div>
+                <div class="mdl-cell--4-col" id="chart-pie-schoolsgender-schools_by_gender_distribution" data-stat-type="percentage" data-chart-title="Schools by gender"></div>
+            </section>
+
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-column-schoolstype-schoolstype_dis_data_distribution" data-stat-type="scaled-percentage" data-chart-title="Schools by category"></div>
+            </section>
+            <h2 class="section-secondary-heading">Schools by category type</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-schoolstype-schools_by_category_type_dis" data-stat-type="scaled-percentage" data-chart-title=""></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Schools by category gender</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-schoolsgender-schools_by_gender_type_distribution" data-stat-type="scaled-percentage" data-chart-title=""></div>
+            </section>
+            
+            <h2 class="section-secondary-heading">Students enrolment</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                  {% include 'profile/_blocks/_stat_list.html' with stat=studentsenrol.total_students stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-studentsenrol-students_by_type_distribution" data-stat-type="percentage" data-chart-title="Students by type"></div>
+                <div class="mdl-cell--6-col" id="chart-pie-studentsenrol-students_by_schools_distribution" data-stat-type="percentage" data-chart-title="Students by schools"></div>
+            </section>
+
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-studentsenrol-students_by_schools_type_distribution" data-stat-type="scaled-percentage" data-chart-title="Students by school type"></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Teachers</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--4-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=teachers.total_teachers stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-teachers-teachers_by_type_distribution" data-stat-type="percentage" data-chart-title="Teachers by type"></div>
+                <div class="mdl-cell--4-col" id="chart-pie-teachersgender-teachers_by_gender_distribution" data-stat-type="percentage" data-chart-title="Teachers by gender"></div>
+            </section>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-teachers-teachers_by_schools_type_distribution" data-stat-type="scaled-percentage" data-chart-title="Teachers by school type"></div>
+            </section>
+
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-teachersgender-teachers_by_gender_school_distribution" data-stat-type="scaled-percentage" data-chart-title="Teachers by gender type"></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Toilets facilities</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=schooltoilet.total_toilets stat_type='number' %}
+                </div>
+                <div class="mdl-cell--4-col" id="chart-pie-schooltoilet-toilets_by_gender_distribution" data-stat-type="percentage" data-chart-title="Toilets by gender"></div>
+                <div class="mdl-cell--6-col" id="chart-pie-schooltoilet-toilets_by_school_distribution" data-stat-type="percentage" data-chart-title="Toilets by school"></div>
+            </section>
+
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--12-col" id="chart-grouped_column-schooltoilet-toilets_by_schools_gender_distribution" data-stat-type="scaled-percentage" data-chart-title="Toilets by school gender"></div>
             </section>
         </div>
     </div>

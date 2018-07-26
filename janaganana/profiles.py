@@ -19,6 +19,7 @@ PROFILE_SECTIONS = ('demographics','schoolstype','religion','education','marital
     'villagescovered', 'ruralpopcovered', 'nursestaffphcschcs', 'allopathicdocphcs', 'doctorsdissubhospital',
     'physicianchcs', 'surgeonchcs', 'radiographerchcs', 'pharmacistphcschcs', 'phcsfunctioning', 'chcsfunctioning',
     'subcenfunctioning', 'workersubcentre', 'assistantphcs', 'facilitieschcs', 'facilitiesphcs', 'gdp',
+    'schoolsgender', 'studentsenrol', 'teachers', 'teachersgender','schooltoilet',
 )
 
 def sort_stats_result(ip,key=None):
@@ -44,7 +45,6 @@ def get_census_profile(geo, profile_name,request):
             if function_name in globals():
                 func = globals()[function_name]
                 data[section] = func(geo, session, request)# calling get_PROFILE_SECTIONS_profile
-
                 # get profiles for province and/or country
                 for comp_geo in comparative_geos:
                     try:
@@ -1423,21 +1423,52 @@ def get_facilitiesphcs_profile(geo,session,request):
     }
     return final_data
 
-# Adding schools type profile
+# civiccomplaint profile
+def get_civiccomplaint_profile(geo,session,request):
+
+    civiccomplaint_dis_data,t_lit = get_stat_data(
+        'civiccomplaint',geo,session,
+        table_fields=['civiccomplaint','year'],
+    )
+    final_data = {
+        'civiccomplaint_dis_data_dis':civiccomplaint_dis_data,
+        'total_complaint':{
+            "name": "Total complaint",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
+
+    # Adding schools type profile
 def get_schoolstype_profile(geo,session,request):
-    table = 'schools_type_2011'
+    table = 'schools_by_type_2015'
     if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('schools_type_2010','schools_type_2011'):
+        if request.GET.get('table') in ('schools_by_type_2014','schools_by_type_2015'):
             table = request.GET.get('table')
     
     schoolstype_dis_data,t_lit = get_stat_data(
         ['schools'],geo,session,
         table_fields=['schools','type','year'],
-        table_name = table,
+        table_name = table
+    )
+
+    schools_by_type,_ = get_stat_data(
+        ['type'],geo,session,
+        table_fields=['schools','type','year'],
+        table_name = table
+    )
+
+    schools_by_category_type,_ = get_stat_data(
+        ['schools','type'],geo,session,
+        table_fields=['schools','type','year'],
+        percent_grouping=['type'],
+        table_name = table
     )
 
     final_data = {
         'schoolstype_dis_data_distribution':  schoolstype_dis_data,
+        'schools_by_type_distribution':  schools_by_type,
+        'schools_by_category_type_dis':schools_by_category_type,
         'total_schools': {
             "name": "Total schools",
             "values": {"this": t_lit}
@@ -1445,19 +1476,173 @@ def get_schoolstype_profile(geo,session,request):
     }
     return final_data
 
-# civiccomplaint profile
-"""def get_civiccomplaint_profile(geo,session,request):
+# Schools by gender boys/girls profile
+def get_schoolsgender_profile(geo,session,request):
 
-    civic_dis_dat,t_lit = get_stat_data(
-        'civiccomplaint',geo,session,
-        table_fields=['civiccomplaint'],
+    table = 'schools_by_gender_2015'
+    if request.GET.get('table') is  not None:
+        if request.GET.get('table') in ('schools_by_gender_2014','schools_by_gender_2015'):
+            table = request.GET.get('table')
+
+    school_by_gender,_ = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['schools','gender','year'],
+        table_name = table
     )
+
+    schools_by_gender_type,_ = get_stat_data(
+        ['schools','gender'],geo,session,
+        table_fields=['schools','gender','year'],
+        percent_grouping=['gender'],
+        table_name = table
+    )
+
     final_data = {
-        'civic_ratio':civic_dis_dat,
-        'total_complaint':{
-            "name": "Total complaint",
+        'schools_by_gender_distribution':  school_by_gender,
+        'schools_by_gender_type_distribution':schools_by_gender_type,
+        'total_schools': {
+            "name": "Total schools",
+            "values": {"this": _}
+        }
+    }
+    return final_data
+
+# Students enrol profile
+def get_studentsenrol_profile(geo,session,request):
+
+    table = 'studentsenrol_type_2015'
+    if request.GET.get('table') is  not None:
+        if request.GET.get('table') in ('studentsenrol_type_2014','studentsenrol_type_2015'):
+            table = request.GET.get('table')
+
+    students_by_type,t_lit = get_stat_data(
+        ['type'],geo,session,
+        table_fields=['studentsenrol','type','year'],
+        table_name = table
+    )
+
+    students_by_school,_ = get_stat_data(
+        ['studentsenrol'],geo,session,
+        table_fields=['studentsenrol','type','year'],
+        table_name = table
+    )
+    
+    students_by_school_type,_ = get_stat_data(
+        ['studentsenrol','type'],geo,session,
+        table_fields=['studentsenrol','type','year'],
+        percent_grouping=['type'],
+        table_name = table
+    )
+
+    final_data = {
+        'students_by_type_distribution':  students_by_type,
+        'students_by_schools_distribution':students_by_school,
+        'students_by_schools_type_distribution':students_by_school_type,
+        'total_students': {
+            "name": "Total students",
             "values": {"this":t_lit}
         }
     }
     return final_data
-"""
+
+# Added teachers profile
+def get_teachers_profile(geo,session,request):
+
+    table = 'teachers_type_2015'
+    if request.GET.get('table') is  not None:
+        if request.GET.get('table') in ('teachers_type_2014','teachers_type_2015'):
+            table = request.GET.get('table')
+
+    teachers_by_type,t_lit = get_stat_data(
+        ['type'],geo,session,
+        table_fields=['teachers','type','year'],
+        table_name = table
+    )
+
+    
+    teachers_by_school_type,_ = get_stat_data(
+        ['teachers','type'],geo,session,
+        table_fields=['teachers','type','year'],
+        percent_grouping=['type'],
+        table_name = table,
+    )
+
+    final_data = {
+        'teachers_by_type_distribution':  teachers_by_type,
+        'teachers_by_schools_type_distribution':teachers_by_school_type,
+        'total_teachers': {
+            "name": "Total teachers",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
+
+# Added teachers gender profile
+def get_teachersgender_profile(geo,session,request):
+
+    table = 'teachers_gender_2015'
+    if request.GET.get('table') is  not None:
+        if request.GET.get('table') in ('teachers_gender_2014','teachers_gender_2015'):
+            table = request.GET.get('table')
+
+    teachers_by_gender,t_lit = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['teachers','gender','year'],
+        table_name = table
+    )
+
+    teachers_by_gender_school,_ = get_stat_data(
+        ['teachers','gender'],geo,session,
+        table_fields=['teachers','gender','year'],
+        percent_grouping=['gender'],
+        table_name = table
+    )
+
+    final_data = {
+        'teachers_by_gender_distribution':  teachers_by_gender,
+        'teachers_by_gender_school_distribution':teachers_by_gender_school,
+        'total_teachers': {
+            "name": "Total teachers",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
+
+# Added schooltoilet profile
+def get_schooltoilet_profile(geo,session,request):
+
+    table = 'schooltoilet_by_gender_2015'
+    if request.GET.get('table') is  not None:
+        if request.GET.get('table') in ('schooltoilet_by_gender_2014','schooltoilet_by_gender_2015'):
+            table = request.GET.get('table')
+
+    toilets_by_gender,t_lit = get_stat_data(
+        ['gender'],geo,session,
+        table_fields=['schooltoilet','gender','year'],
+        table_name = table
+    )
+
+    toilets_by_school_type,_  = get_stat_data(
+        ['schooltoilet'],geo,session,
+        table_fields=['schooltoilet','gender','year'],
+        table_name = table
+    )
+
+    toilets_by_school_gender,_  = get_stat_data(
+        ['schooltoilet','gender'],geo,session,
+        table_fields=['schooltoilet','gender','year'],
+        percent_grouping=['gender'],
+        table_name = table
+    )
+
+    final_data = {
+        'toilets_by_gender_distribution':  toilets_by_gender,
+        'toilets_by_school_distribution': toilets_by_school_type,
+        'toilets_by_schools_gender_distribution': toilets_by_school_gender,
+
+        'total_toilets': {
+            "name": "Total toilets",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
