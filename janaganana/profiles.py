@@ -19,7 +19,8 @@ PROFILE_SECTIONS = ('demographics','schoolstype','religion','education','marital
     'villagescovered', 'ruralpopcovered', 'nursestaffphcschcs', 'allopathicdocphcs', 'doctorsdissubhospital',
     'physicianchcs', 'surgeonchcs', 'radiographerchcs', 'pharmacistphcschcs', 'phcsfunctioning', 'chcsfunctioning',
     'subcenfunctioning', 'workersubcentre', 'assistantphcs', 'facilitieschcs', 'facilitiesphcs', 'gdp',
-    'schoolsgender', 'studentsenrol', 'teachers', 'teachersgender','schooltoilet',
+    'schoolsgender', 'studentsenrol', 'teachers', 'teachersgender','schooltoilet', 'schoolfacilities',
+    'girlsenrolment', 'classroomconditions',
 )
 
 def sort_stats_result(ip,key=None):
@@ -1544,6 +1545,27 @@ def get_studentsenrol_profile(geo,session,request):
         }
     }
     return final_data
+# Added girlsenrolment profile
+def get_girlsenrolment_profile(geo,session,request):
+
+    table = 'girlsenrolment_2015'
+    if request.GET.get('table') is  not None:
+        if request.GET.get('table') in ('girlsenrolment_2014','girlsenrolment_2015'):
+            table = request.GET.get('table')
+
+    girlsenrol_by_schooltype,t_lit = get_stat_data(
+        ['girlsenrolment'],geo,session,
+        table_fields=['girlsenrolment','year'],
+        table_name = table
+    )
+    final_data = {
+        'girlsenrol_by_schooltype_distribution':  girlsenrol_by_schooltype,
+        'total_girls': {
+            "name": "Total girls",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
 
 # Added teachers profile
 def get_teachers_profile(geo,session,request):
@@ -1642,6 +1664,61 @@ def get_schooltoilet_profile(geo,session,request):
 
         'total_toilets': {
             "name": "Total toilets",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
+
+# schoolfacilities profile
+def get_schoolfacilities_profile(geo,session,request):
+
+    table = 'schoolfacilities_2015'
+    if request.GET.get('table') is  not None:
+        if request.GET.get('table') in ('schoolfacilities_2014','schoolfacilities_2015'):
+            table = request.GET.get('table')
+
+    schools_dis_facilities,t_lit = get_stat_data(
+        ['schoolfacilities'],geo,session,
+        table_fields=['schoolfacilities','year'],
+        table_name = table
+    )
+
+    final_data = {
+        'schools_dis_facilities_distribution':  schools_dis_facilities,
+
+        'total_facilities': {
+            "name": "Total facilities",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
+
+# Added classroomconditions profile
+def get_classroomconditions_profile(geo,session,request):
+
+    table = 'classroom_conditions_2015'
+    if request.GET.get('table') is  not None:
+        if request.GET.get('table') in ('classroom_conditions_2014','classroom_conditions_2015'):
+            table = request.GET.get('table')
+
+    classroom_by_conditions,t_lit = get_stat_data(
+        ['conditions'],geo,session,
+        table_fields=['classroom','conditions','year'],
+        table_name = table
+    )
+
+    classroom_by_school_conditions,_ = get_stat_data(
+        ['classroom','conditions'],geo,session,
+        table_fields=['classroom','conditions','year'],
+        percent_grouping=['conditions'],
+        table_name = table
+    )
+
+    final_data = {
+        'classroom_by_conditions_distribution':  classroom_by_conditions,
+        'classroom_by_school_conditions_distribution':  classroom_by_school_conditions,
+        'total_classrooms': {
+            "name": "Total classrooms",
             "values": {"this":t_lit}
         }
     }
