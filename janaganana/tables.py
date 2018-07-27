@@ -106,6 +106,10 @@ FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2015', univer
 
 FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2014', universe='Schools')
 
+FieldTable(['girlsenrolment','year'], id='girlsenrolment_2015', universe='Schools')
+
+FieldTable(['girlsenrolment','year'], id='girlsenrolment_2014', universe='Schools')
+
 FieldTable(['teachers','type','year'], id='teachers_type_2015', universe='Schools')
 
 FieldTable(['teachers','type','year'], id='teachers_type_2014', universe='Schools')
@@ -117,3 +121,11 @@ FieldTable(['teachers','gender','year'], id='teachers_gender_2014', universe='Sc
 FieldTable(['schooltoilet','gender','year'], id='schooltoilet_by_gender_2015', universe='Schools')
 
 FieldTable(['schooltoilet','gender','year'], id='schooltoilet_by_gender_2014', universe='Schools')
+
+FieldTable(['schoolfacilities','year'], id='schoolfacilities_2015', universe='Schools')
+
+FieldTable(['schoolfacilities','year'], id='schoolfacilities_2014', universe='Schools')
+
+FieldTable(['classroom','conditions','year'], id='classroom_conditions_2015', universe='Schools')
+
+FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', universe='Schools')

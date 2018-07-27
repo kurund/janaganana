@@ -40,6 +40,13 @@
                 <div class="mdl-cell--12-col" id="chart-grouped_column-studentsenrol-students_by_schools_type_distribution" data-stat-type="scaled-percentage" data-chart-title="Students by school type"></div>
             </section>
 
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                  {% include 'profile/_blocks/_stat_list.html' with stat=girlsenrolment.total_girls stat_type='number' %}
+                </div>
+                <div class="mdl-cell--10-col" id="chart-column-girlsenrolment-girlsenrol_by_schooltype_distribution" data-stat-type="scaled-percentage" data-chart-title="Girls enrolment by school type"></div>
+            </section>
+
             <h2 class="section-secondary-heading">Teachers</h2>
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--4-col">
@@ -68,6 +75,26 @@
             <section class="clearfix stat-row mdl-grid">
                 <div class="mdl-cell--12-col" id="chart-grouped_column-schooltoilet-toilets_by_schools_gender_distribution" data-stat-type="scaled-percentage" data-chart-title="Toilets by school gender"></div>
             </section>
+
+            <h2 class="section-secondary-heading">Schools basic facilities</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=schoolfacilities.total_facilities stat_type='number' %}
+                </div>
+                <div class="mdl-cell--10-col" id="chart-column-schoolfacilities-schools_dis_facilities_distribution" data-stat-type="scaled-percentage" data-chart-title="School basic facilities"></div>
+            </section>
+
+            <h2 class="section-secondary-heading">Classrooms</h2>
+            <section class="clearfix stat-row mdl-grid">
+                <div class="mdl-cell--2-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=classroomconditions.total_classrooms stat_type='number' %}
+                </div>
+                <div class="mdl-cell--8-col" id="chart-pie-classroomconditions-classroom_by_conditions_distribution" data-stat-type="percentage" data-chart-title="Classrooms condition"></div>
+            </section>
+            <section>
+                <div class="mdl-cell--12-col" id="chart-grouped_column-classroomconditions-classroom_by_school_conditions_distribution" data-stat-type="scaled-percentage" data-chart-title="Classrooms condition by school type"></div>
+            </section>
+
         </div>
     </div>
 </article>
