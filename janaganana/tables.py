@@ -98,13 +98,19 @@ FieldTable(['schools','type','year'], id='schools_by_type_2015', universe='Schoo
 
 FieldTable(['schools','type','year'], id='schools_by_type_2014', universe='Schools')
 
+FieldTable(['schools','type','year'], id='schools_by_type_2013', universe='Schools')
+
 FieldTable(['schools','gender','year'], id='schools_by_gender_2015', universe='Schools')
 
 FieldTable(['schools','gender','year'], id='schools_by_gender_2014', universe='Schools')
 
+FieldTable(['schools','gender','year'], id='schools_by_gender_2013', universe='Schools')
+
 FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2015', universe='Schools')
 
 FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2014', universe='Schools')
+
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2013', universe='Schools')
 
 FieldTable(['girlsenrolment','year'], id='girlsenrolment_2015', universe='Schools')
 
@@ -129,3 +135,5 @@ FieldTable(['schoolfacilities','year'], id='schoolfacilities_2014', universe='Sc
 FieldTable(['classroom','conditions','year'], id='classroom_conditions_2015', universe='Schools')
 
 FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', universe='Schools')
+
+FieldTable(['disease','year'], id='healthdata_mum_2016', universe='Mumbai')
