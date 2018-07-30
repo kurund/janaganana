@@ -20,7 +20,7 @@ PROFILE_SECTIONS = ('demographics','schoolstype','religion','education','marital
     'physicianchcs', 'surgeonchcs', 'radiographerchcs', 'pharmacistphcschcs', 'phcsfunctioning', 'chcsfunctioning',
     'subcenfunctioning', 'workersubcentre', 'assistantphcs', 'facilitieschcs', 'facilitiesphcs', 'gdp',
     'schoolsgender', 'studentsenrol', 'teachers', 'teachersgender','schooltoilet', 'schoolfacilities',
-    'girlsenrolment', 'classroomconditions',
+    'girlsenrolment', 'classroomconditions', 'mumhealth',
 )
 
 def sort_stats_result(ip,key=None):
@@ -1444,7 +1444,7 @@ def get_civiccomplaint_profile(geo,session,request):
 def get_schoolstype_profile(geo,session,request):
     table = 'schools_by_type_2015'
     if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('schools_by_type_2014','schools_by_type_2015'):
+        if request.GET.get('table') in ('schools_by_type_2013','schools_by_type_2014','schools_by_type_2015'):
             table = request.GET.get('table')
     
     schoolstype_dis_data,t_lit = get_stat_data(
@@ -1482,7 +1482,7 @@ def get_schoolsgender_profile(geo,session,request):
 
     table = 'schools_by_gender_2015'
     if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('schools_by_gender_2014','schools_by_gender_2015'):
+        if request.GET.get('table') in ('schools_by_gender_2013','schools_by_gender_2014','schools_by_gender_2015'):
             table = request.GET.get('table')
 
     school_by_gender,_ = get_stat_data(
@@ -1513,7 +1513,7 @@ def get_studentsenrol_profile(geo,session,request):
 
     table = 'studentsenrol_type_2015'
     if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('studentsenrol_type_2014','studentsenrol_type_2015'):
+        if request.GET.get('table') in ('studentsenrol_type_2013','studentsenrol_type_2014','studentsenrol_type_2015'):
             table = request.GET.get('table')
 
     students_by_type,t_lit = get_stat_data(
@@ -1719,6 +1719,24 @@ def get_classroomconditions_profile(geo,session,request):
         'classroom_by_school_conditions_distribution':  classroom_by_school_conditions,
         'total_classrooms': {
             "name": "Total classrooms",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
+
+# Added mumhealth profile
+def get_mumhealth_profile(geo,session,request):
+
+    mum_dis_diseases, t_lit = get_stat_data(
+        ['disease'],geo,session,
+        table_fields=['disease','year'],
+        table_name  = 'healthdata_mum_2016'
+    )
+
+    final_data = {
+    'mum_health_dis_data_distribution':  mum_dis_diseases,
+        'total_diseases': {
+            "name": "Total diseases occurence",
             "values": {"this":t_lit}
         }
     }

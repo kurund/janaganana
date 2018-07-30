@@ -824,6 +824,13 @@ function Chart(options) {
             .append("li")
             .append("a")
                 .classed("year-show-embed", true)
+                .text("2013")
+                .attr("href", chart.releaseURL+"2013");
+
+        chart.getYearData = ylinks
+            .append("li")
+            .append("a")
+                .classed("year-show-embed", true)
                 .text("2014")
                 .attr("href", chart.releaseURL+"2014");
 

@@ -6,7 +6,6 @@
     <div class="mdl-card__supporting-text wrapper" >
         <div class="section-container">
             <h2 class="section-secondary-heading">Top 5 civic complaint days elapsed in 2017</h2>
-            
             <section class="clearfix stat-row mdl-grid section-second-row">
                 <div class="mdl-cell--4-col">
                     {% include 'profile/_blocks/_stat_list.html' with stat=civiccomplaint.total_complaint stat_type='number' %}
@@ -14,6 +13,13 @@
                 <div class="mdl-cell--8-col" id="chart-pie-civiccomplaint-civiccomplaint_dis_data_dis" data-stat-type="percentage"></div>
             </section>
 
+            <h2 class="section-secondary-heading">Top 5 diseases occurence in 2016</h2>
+            <section class="clearfix stat-row mdl-grid section-second-row">
+                <div class="mdl-cell--4-col">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=mumhealth.total_diseases stat_type='number' %}
+                </div>
+                <div class="mdl-cell--8-col" id="chart-pie-mumhealth-mum_health_dis_data_distribution" data-stat-type="percentage"></div>
+            </section>
         </div>
     </div>
 </article>
