@@ -87,9 +87,10 @@ RELIGION_RECODES = OrderedDict([
 def get_demographics_profile(geo,session,request):
 
     table = 'area_sex_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('area_sex_2011'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'area_sex_' + request.GET.get('release')
+        if tablereq  in ('area_sex_2011'):
+            table = tablereq
 
     population_by_area_dist_data, total_population_by_area = get_stat_data(
         'area', geo, session,
@@ -164,9 +165,11 @@ def get_demographics_profile(geo,session,request):
 # Religion profile
 def get_religion_profile(geo,session,request):
     table = 'area_sex_religion_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('area_sex_religion_2011'):
-            table = request.GET.get('table')
+
+    if request.GET.get('release') is  not None:
+        tablereq = 'area_sex_religion_' + request.GET.get('release')
+        if tablereq  in ('area_sex_religion_2011'):
+            table = tablereq
 
     def religion_category_recode(f, x):
         if x in ('Hindu', 'Muslim', 'Christian', 'Sikh'):
@@ -256,9 +259,11 @@ def get_religion_profile(geo,session,request):
 def get_education_profile(geo,session,request):
 
     table = 'area_sex_education_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('area_sex_education_2011'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'area_sex_education_' + request.GET.get('release')
+        if tablereq  in ('area_sex_education_2011'):
+            table = tablereq
+
 
     def get_education_category(key):
         if key in ('Below Primary', 'Primary', 'Middle', 'Secondary Matric','Intermediate Puc', 'Graduate Above'):
@@ -351,9 +356,11 @@ def get_education_profile(geo,session,request):
 def get_maritalstatus_profile(geo,session,request):
 
     table = 'area_sex_maritalstatus_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('area_sex_maritalstatus_2011'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'area_sex_maritalstatus_' + request.GET.get('release')
+        if tablereq  in ('area_sex_maritalstatus_2011'):
+            table = tablereq
+
 
     def get_maritalstatu(x):
         if x in ('never married', 'currently married', 'widowed', 'separated', 'divorced'):
@@ -417,9 +424,11 @@ def get_maritalstatus_profile(geo,session,request):
 def get_workers_profile(geo,session,request):
     
     table = 'area_sex_workers_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('area_sex_workers_2011'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'area_sex_workers_' + request.GET.get('release')
+        if tablereq  in ('area_sex_workers_2011'):
+            table = tablereq
+
     # sum of different category of workers exceeds total population because of
     # the way they are classified. Some of the classes get accounted twice causing
     # it to exceed total population, so subtract the excess to get correct total
@@ -491,9 +500,10 @@ def get_workers_profile(geo,session,request):
 # Age profile
 def get_age_profile(geo,session,request):
     table = 'area_sex_age_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('area_sex_age_2011'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'area_sex_age_' + request.GET.get('release')
+        if tablereq  in ('area_sex_age_2011'):
+            table = tablereq
 
     # age category
     def age_cat_recode(f, x):
@@ -578,9 +588,10 @@ def get_age_profile(geo,session,request):
 def get_caste_profile(geo,session,request):
     
     table = 'caste_sex_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('caste_sex_2011'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'caste_sex_' + request.GET.get('release')
+        if tablereq  in ('caste_sex_2011'):
+            table = tablereq
 
     caste_dist_data, _ = get_stat_data(
         'caste', geo, session,
@@ -609,9 +620,10 @@ def get_caste_profile(geo,session,request):
 def get_household_profile(geo,session,request):
 
     table = 'household_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('household_2011'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'household_' + request.GET.get('release')
+        if tablereq  in ('household_2011'):
+            table = tablereq
 
     household_dis_data,t_lit= get_stat_data(
         'household',geo,session,
@@ -632,9 +644,10 @@ def get_household_profile(geo,session,request):
 def get_drinkingsource_profile(geo,session,request):
 
     table = 'drinkingsource_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('drinkingsource_2011'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'drinkingsource_' + request.GET.get('release')
+        if tablereq  in ('drinkingsource_2011'):
+            table = tablereq
 
     drinking_source_dis_data,t_lit= get_stat_data(
         'drinkingsource',geo,session,
@@ -691,9 +704,10 @@ def get_yearlyCrimes_profile(geo,session,request):
 def get_violentcrimes_profile(geo,session,request):
     
     table = 'violentcrimes_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('violentcrimes_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'violentcrimes_' + request.GET.get('release')
+        if tablereq  in ('violentcrimes_2015'):
+            table = tablereq
 
     violentcrimes_dis_data,t_lit = get_stat_data (
         ['violentcrimes'],geo,session,
@@ -714,10 +728,10 @@ def get_violentcrimes_profile(geo,session,request):
 def get_rapes_profile(geo,session,request):
 
     table = 'rapes_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('rapes_2015'):
-            table = request.GET.get('table')
-
+    if request.GET.get('release') is  not None:
+        tablereq = 'rapes_' + request.GET.get('release')
+        if tablereq  in ('rapes_2015'):
+            table = tablereq
 
     rapes_by_age,t_lit = get_stat_data(
         ['rapes'],geo,session,
@@ -755,9 +769,10 @@ def get_cybercrimes_profile(geo,session,request):
 def get_kidnapping_profile(geo,session,request):
 
     table = 'kidnapping_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('kidnapping_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'kidnapping_' + request.GET.get('release')
+        if tablereq  in ('kidnapping_2015'):
+            table = tablereq
 
     kidnapping_by_gender,t_lit = get_stat_data(
         ['kidnapgender'],geo,session,
@@ -778,9 +793,10 @@ def get_kidnapping_profile(geo,session,request):
 def get_kidnappedrecovery_profile(geo,session,request):
 
     table = 'kidnaprecovery_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('kidnaprecovery_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'kidnaprecovery_' + request.GET.get('release')
+        if tablereq  in ('kidnaprecovery_2015'):
+            table = tablereq
 
     recovery_by_gender,_ = get_stat_data(
         ['gender'],geo,session,
@@ -816,9 +832,10 @@ def get_kidnappedrecovery_profile(geo,session,request):
 def get_trafficing_profile(geo,session,request):
 
     table = 'trafficing_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('trafficing_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'trafficing_' + request.GET.get('release')
+        if tablereq  in ('trafficing_2015'):
+            table = tablereq
 
     trafficing_by_gender,_ = get_stat_data(
         ['gender'],geo,session,
@@ -854,9 +871,10 @@ def get_trafficing_profile(geo,session,request):
 def get_trafficingmotives_profile(geo,session,request):
     
     table = 'trafficingmotives_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('trafficingmotives_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'trafficingmotives_' + request.GET.get('release')
+        if tablereq  in ('trafficingmotives_2015'):
+            table = tablereq
 
     trafficingmotives_dis_data,_ = get_stat_data (
         ['trafficingmotives'],geo,session,
@@ -907,9 +925,10 @@ def get_juvenilecrimes_profile(geo,session,request):
 def get_juvenileducations_profile(geo,session,request):
     
     table = 'juvenileedubg_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('juvenileedubg_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'juvenileedubg_' + request.GET.get('release')
+        if tablereq  in ('juvenileedubg_2015'):
+            table = tablereq
 
     juveniledu_dis_data,t_lit = get_stat_data(
         ['juveniledu'],geo,session,
@@ -930,9 +949,10 @@ def get_juvenileducations_profile(geo,session,request):
 def get_juvenilefamilybg_profile(geo,session,request):
 
     table = 'juvenilefamilybg_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('juvenilefamilybg_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'juvenilefamilybg_' + request.GET.get('release')
+        if tablereq  in ('juvenilefamilybg_2015'):
+            table = tablereq
 
     juvenilefamilybg_dis_data,_ = get_stat_data(
         ['juvenilefamily'],geo,session,
@@ -949,9 +969,10 @@ def get_juvenilefamilybg_profile(geo,session,request):
 def get_murdervictims_profile(geo,session,request):
     
     table = 'murdervictims_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('murdervictims_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'murdervictims_' + request.GET.get('release')
+        if tablereq  in ('murdervictims_2015'):
+            table = tablereq
 
     murdervictims_by_gender,_ = get_stat_data(
         ['gender'],geo,session,
@@ -987,9 +1008,10 @@ def get_murdervictims_profile(geo,session,request):
 def get_murdermotives_profile(geo,session,request):
 
     table = 'murdermotives_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('murdermotives_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'murdermotives_' + request.GET.get('release')
+        if tablereq  in ('murdermotives_2015'):
+            table = tablereq
 
     murdermotives_dis_data,t_lit = get_stat_data(
         ['murdermotive'],geo,session,
@@ -1027,9 +1049,11 @@ def get_corruptioncases_profile(geo,session,request):
 def get_healthcarecentre_profile(geo,session,request):
     
     table = 'healthcarecentre_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('healthcarecentre_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'healthcarecentre_' + request.GET.get('release')
+        if tablereq  in ('healthcarecentre_2017'):
+            table = tablereq
+
 
     healthcarecentre_dis_data,t_lit = get_stat_data(
         ['healthcarecentre'],geo,session,
@@ -1050,9 +1074,10 @@ def get_healthcarecentre_profile(geo,session,request):
 def get_villagescovered_profile(geo,session,request):
     
     table = 'villagescovered_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('villagescovered_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'villagescovered_' + request.GET.get('release')
+        if tablereq  in ('villagescovered_2017'):
+            table = tablereq
 
     villagescovered_dis_data,t_lit = get_stat_data(
         ['villagescovered'],geo,session,
@@ -1073,6 +1098,11 @@ def get_villagescovered_profile(geo,session,request):
 def get_ruralpopcovered_profile(geo,session,request):
 
     table = 'ruralpopcovered_2017'
+    if request.GET.get('release') is  not None:
+        tablereq = 'ruralpopcovered_' + request.GET.get('release')
+        if tablereq  in ('ruralpopcovered_2017'):
+            table = tablereq
+
     if request.GET.get('table') is  not None:
         if request.GET.get('table') in ('ruralpopcovered_2017'):
             table = request.GET.get('table')
@@ -1096,9 +1126,10 @@ def get_ruralpopcovered_profile(geo,session,request):
 def get_nursestaffphcschcs_profile(geo,session,request):
 
     table = 'nursestaffphcschcs_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('nursestaffphcschcs_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'nursestaffphcschcs_' + request.GET.get('release')
+        if tablereq  in ('nursestaffphcschcs_2017'):
+            table = tablereq
 
     nursestaffphcschcs_dis_data,t_lit = get_stat_data(
         ['nursestaffphcschcs'],geo,session,
@@ -1119,9 +1150,10 @@ def get_nursestaffphcschcs_profile(geo,session,request):
 def get_allopathicdocphcs_profile(geo,session,request):
 
     table = 'allopathicdocphcs_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('allopathicdocphcs_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'allopathicdocphcs_' + request.GET.get('release')
+        if tablereq  in ('allopathicdocphcs_2017'):
+            table = tablereq
 
     allopathicdocphcs_dis_data,t_lit = get_stat_data(
         ['allopathicdocphcs'],geo,session,
@@ -1142,9 +1174,10 @@ def get_allopathicdocphcs_profile(geo,session,request):
 def get_doctorsdissubhospital_profile(geo,session,request):
 
     table = 'doctorsdissubhospital_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('doctorsdissubhospital_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'doctorsdissubhospital_' + request.GET.get('release')
+        if tablereq  in ('doctorsdissubhospital_2017'):
+            table = tablereq
 
     doctorsdissubhospital_dis_data,t_lit = get_stat_data(
         ['doctorsdissubhospital'],geo,session,
@@ -1165,9 +1198,10 @@ def get_doctorsdissubhospital_profile(geo,session,request):
 def get_physicianchcs_profile(geo,session,request):
 
     table = 'physicianchcs_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('physicianchcs_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'physicianchcs_' + request.GET.get('release')
+        if tablereq  in ('physicianchcs_2017'):
+            table = tablereq
 
     physicianchcs_dis_data,t_lit = get_stat_data(
         ['physicianchcs'],geo,session,
@@ -1188,9 +1222,10 @@ def get_physicianchcs_profile(geo,session,request):
 def get_surgeonchcs_profile(geo,session,request):
 
     table = 'surgeonchcs_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('surgeonchcs_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'surgeonchcs_' + request.GET.get('release')
+        if tablereq  in ('surgeonchcs_2017'):
+            table = tablereq
 
     surgeonchcs_dis_data,t_lit = get_stat_data(
         ['surgeonchcs'],geo,session,
@@ -1211,9 +1246,10 @@ def get_surgeonchcs_profile(geo,session,request):
 def get_radiographerchcs_profile(geo,session,request):
 
     table = 'radiographerchcs_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('radiographerchcs_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'radiographerchcs_' + request.GET.get('release')
+        if tablereq  in ('radiographerchcs_2017'):
+            table = tablereq
 
     radiographerchcs_dis_data,t_lit = get_stat_data(
         ['radiographerchcs'],geo,session,
@@ -1234,9 +1270,10 @@ def get_radiographerchcs_profile(geo,session,request):
 def get_pharmacistphcschcs_profile(geo,session,request):
 
     table = 'pharmacistphcschcs_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('pharmacistphcschcs_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'pharmacistphcschcs_' + request.GET.get('release')
+        if tablereq  in ('pharmacistphcschcs_2017'):
+            table = tablereq
 
     pharmacistphcschcs_dis_data,t_lit = get_stat_data(
         ['pharmacistphcschcs'],geo,session,
@@ -1306,9 +1343,10 @@ def get_subcenfunctioning_profile(geo,session,request):
 def get_workersubcentre_profile(geo,session,request):
 
     table = 'workersubcentre_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('workersubcentre_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'workersubcentre_' + request.GET.get('release')
+        if tablereq  in ('workersubcentre_2017'):
+            table = tablereq
 
     workersubcentre_by_gender,_ = get_stat_data(
         ['gender'],geo,session,
@@ -1344,9 +1382,10 @@ def get_workersubcentre_profile(geo,session,request):
 def get_assistantphcs_profile(geo,session,request):
 
     table = 'assistantphcs_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('assistantphcs_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'assistantphcs_' + request.GET.get('release')
+        if tablereq  in ('assistantphcs_2017'):
+            table = tablereq
 
     assistantphcs_by_gender,_ = get_stat_data(
         ['gender'],geo,session,
@@ -1382,9 +1421,10 @@ def get_assistantphcs_profile(geo,session,request):
 def get_facilitieschcs_profile(geo,session,request):
 
     table = 'facilitieschcs_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('facilitieschcs_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'facilitieschcs_' + request.GET.get('release')
+        if tablereq  in ('facilitieschcs_2017'):
+            table = tablereq
 
     facilitieschcs_dis_data,t_lit = get_stat_data(
         ['facilitieschcs'],geo,session,
@@ -1405,9 +1445,10 @@ def get_facilitieschcs_profile(geo,session,request):
 def get_facilitiesphcs_profile(geo,session,request):
     
     table = 'facilitiesphcs_2017'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('facilitiesphcs_2017'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'facilitiesphcs_' + request.GET.get('release')
+        if tablereq  in ('facilitiesphcs_2017'):
+            table = tablereq
 
     facilitiesphcs_dis_data,t_lit = get_stat_data(
         ['facilitiesphcs'],geo,session,
@@ -1443,9 +1484,10 @@ def get_civiccomplaint_profile(geo,session,request):
     # Adding schools type profile
 def get_schoolstype_profile(geo,session,request):
     table = 'schools_by_type_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('schools_by_type_2013','schools_by_type_2014','schools_by_type_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'schools_by_type_' + request.GET.get('release')
+        if tablereq  in ('schools_by_type_2013','schools_by_type_2014','schools_by_type_2015'):
+            table = tablereq
     
     schoolstype_dis_data,t_lit = get_stat_data(
         ['schools'],geo,session,
@@ -1481,9 +1523,10 @@ def get_schoolstype_profile(geo,session,request):
 def get_schoolsgender_profile(geo,session,request):
 
     table = 'schools_by_gender_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('schools_by_gender_2013','schools_by_gender_2014','schools_by_gender_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'schools_by_gender_' + request.GET.get('release')
+        if tablereq  in ('schools_by_gender_2013','schools_by_gender_2014','schools_by_gender_2015'):
+            table = tablereq
 
     school_by_gender,_ = get_stat_data(
         ['gender'],geo,session,
@@ -1512,9 +1555,10 @@ def get_schoolsgender_profile(geo,session,request):
 def get_studentsenrol_profile(geo,session,request):
 
     table = 'studentsenrol_type_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('studentsenrol_type_2013','studentsenrol_type_2014','studentsenrol_type_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'studentsenrol_type_' + request.GET.get('release')
+        if tablereq  in ('studentsenrol_type_2013','studentsenrol_type_2014','studentsenrol_type_2015'):
+            table = tablereq
 
     students_by_type,t_lit = get_stat_data(
         ['type'],geo,session,
@@ -1549,9 +1593,10 @@ def get_studentsenrol_profile(geo,session,request):
 def get_girlsenrolment_profile(geo,session,request):
 
     table = 'girlsenrolment_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('girlsenrolment_2014','girlsenrolment_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'girlsenrolment_' + request.GET.get('release')
+        if tablereq  in ('girlsenrolment_2014','girlsenrolment_2015'):
+            table = tablereq
 
     girlsenrol_by_schooltype,t_lit = get_stat_data(
         ['girlsenrolment'],geo,session,
@@ -1571,9 +1616,10 @@ def get_girlsenrolment_profile(geo,session,request):
 def get_teachers_profile(geo,session,request):
 
     table = 'teachers_type_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('teachers_type_2014','teachers_type_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'teachers_type_' + request.GET.get('release')
+        if tablereq  in ('teachers_type_2014','teachers_type_2015'):
+            table = tablereq
 
     teachers_by_type,t_lit = get_stat_data(
         ['type'],geo,session,
@@ -1603,9 +1649,10 @@ def get_teachers_profile(geo,session,request):
 def get_teachersgender_profile(geo,session,request):
 
     table = 'teachers_gender_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('teachers_gender_2014','teachers_gender_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'teachers_gender_' + request.GET.get('release')
+        if tablereq  in ('teachers_gender_2014','teachers_gender_2015'):
+            table = tablereq
 
     teachers_by_gender,t_lit = get_stat_data(
         ['gender'],geo,session,
@@ -1634,9 +1681,10 @@ def get_teachersgender_profile(geo,session,request):
 def get_schooltoilet_profile(geo,session,request):
 
     table = 'schooltoilet_by_gender_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('schooltoilet_by_gender_2014','schooltoilet_by_gender_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'schooltoilet_by_gender_' + request.GET.get('release')
+        if tablereq  in ('schooltoilet_by_gender_2014','schooltoilet_by_gender_2015'):
+            table = tablereq
 
     toilets_by_gender,t_lit = get_stat_data(
         ['gender'],geo,session,
@@ -1673,9 +1721,10 @@ def get_schooltoilet_profile(geo,session,request):
 def get_schoolfacilities_profile(geo,session,request):
 
     table = 'schoolfacilities_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('schoolfacilities_2014','schoolfacilities_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'schoolfacilities_' + request.GET.get('release')
+        if tablereq  in ('schoolfacilities_2014','schoolfacilities_2015'):
+            table = tablereq
 
     schools_dis_facilities,t_lit = get_stat_data(
         ['schoolfacilities'],geo,session,
@@ -1697,9 +1746,10 @@ def get_schoolfacilities_profile(geo,session,request):
 def get_classroomconditions_profile(geo,session,request):
 
     table = 'classroom_conditions_2015'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('classroom_conditions_2014','classroom_conditions_2015'):
-            table = request.GET.get('table')
+    if request.GET.get('release') is  not None:
+        tablereq = 'classroom_conditions_' + request.GET.get('release')
+        if tablereq  in ('classroom_conditions_2014','classroom_conditions_2015'):
+            table = tablereq
 
     classroom_by_conditions,t_lit = get_stat_data(
         ['conditions'],geo,session,
