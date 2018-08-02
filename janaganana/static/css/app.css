@@ -12,7 +12,7 @@ orange: #f55b2c
 *, *:before, *:after {
     -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
 }
-    
+
 html,
 body {
     margin: 0;
@@ -1330,7 +1330,7 @@ form select {
     padding: 0;
 }
 .select-wrapper i.fa,
-.filter-group i.fa, 
+.filter-group i.fa,
 .item-chosen i.fa {
     position: absolute;
     top: 0;
@@ -2304,7 +2304,7 @@ dl#racial-iteration dt {
 }
 
 .twitter-typeahead,
-.twitter-typeahead .tt-query, 
+.twitter-typeahead .tt-query,
 .twitter-typeahead .tt-hint {
     width: 100%;
 }
@@ -2509,7 +2509,7 @@ blockquote {
     .chosen {
         margin: 0 0 1em;
     }
-    
+
 } /* END: @media only screen and (max-width: 1139px) */
 @media only screen and (max-width: 768px) {
     article,
