@@ -761,3 +761,38 @@ ul.sub-group-year li:first-child a {
 .action-links.tool-group.toggle-sub-group a {
     text-decoration: none;
 }
+
+.year-header {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.yearselect{
+    font-size: 12px;
+}
+
+#year-submit{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.year-header{
+    margin-left: 10px;
+}
+
+a#reset-year {
+    color: black !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+button#timeseries {
+    float: right;
+    background-color: rgb(105,240,174)
+}
+
+a#timserieslink {
+    text-decoration: none !important;
+    color: black !important;
+}

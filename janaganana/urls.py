@@ -1,14 +1,21 @@
+from django.conf import settings
 from django.conf.urls import url, patterns
 from django.contrib.sitemaps.views import sitemap
 from wazimap.urls import urlpatterns
+from wazimap.views import GeographyDetailView
+from janaganana.views import TimeseriesDetailView
+from django.views.decorators.cache import cache_page
 
-from janaganana.sitemap import JanagananaSitemap
+
+STANDARD_CACHE_TIME = settings.WAZIMAP['cache_secs']
 
 
-sitemaps = {
-    'static': JanagananaSitemap,
-}
-site_url = url(r'^sitemap\.xml$', sitemap, {'sitemaps': sitemaps},
-    name='django.contrib.sitemaps.views.sitemap')
+timeseries_url = url(
+    regex   = '^profiles-timeseries/(?P<geography_id>\w+-\w+)(-(?P<slug>[\w-]+))?/$',
+    view    = cache_page(STANDARD_CACHE_TIME)(TimeseriesDetailView.as_view()),
+    kwargs  = {},
+    name    = 'geography_detail',
+)
 
-urlpatterns.append(site_url)
+
+urlpatterns.append(timeseries_url)
