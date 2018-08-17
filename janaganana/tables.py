@@ -136,4 +136,6 @@ FieldTable(['classroom','conditions','year'], id='classroom_conditions_2015', un
 
 FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', universe='Schools')
 
+FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', universe='Schools')
+
 FieldTable(['disease','year'], id='healthdata_mum_2016', universe='Mumbai')

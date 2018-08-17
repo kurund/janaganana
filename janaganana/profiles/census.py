@@ -1,8 +1,7 @@
 from collections import OrderedDict
 from wazimap.data.utils import LocationNotFound
 from wazimap.geo import geo_data
-from wazimap.data.tables import get_model_from_fields
-from wazimap.data.utils import get_session, calculate_median, merge_dicts, get_stat_data, get_objects_by_geo, group_remainder
+from wazimap.data.utils import get_session, calculate_median, merge_dicts, get_stat_data, group_remainder
 import logging
 #from osgeo import gdal
 
@@ -18,7 +17,7 @@ PROFILE_SECTIONS = ('demographics','schoolstype','religion','education','marital
     'juvenileducations','juvenilefamilybg', 'murdervictims', 'murdermotives', 'corruptioncases','healthcarecentre',
     'villagescovered', 'ruralpopcovered', 'nursestaffphcschcs', 'allopathicdocphcs', 'doctorsdissubhospital',
     'physicianchcs', 'surgeonchcs', 'radiographerchcs', 'pharmacistphcschcs', 'phcsfunctioning', 'chcsfunctioning',
-    'subcenfunctioning', 'workersubcentre', 'assistantphcs', 'facilitieschcs', 'facilitiesphcs', 'gdp',
+    'subcenfunctioning', 'workersubcentre', 'assistantphcs', 'facilitieschcs', 'facilitiesphcs',
     'schoolsgender', 'studentsenrol', 'teachers', 'teachersgender','schooltoilet', 'schoolfacilities',
     'girlsenrolment', 'classroomconditions', 'mumhealth',
 )
@@ -125,7 +124,7 @@ def get_demographics_profile(geo,session,request):
 
     literacy_dist_data = sort_stats_result(literacy_dist_data)
 
-    literacy_by_sex,__package__ = get_stat_data(
+    literacy_by_sex,_ = get_stat_data(
         ['sex', 'literacy'], geo, session,
         table_fields=['area', 'literacy', 'sex'],
         table_name = table,
@@ -659,24 +658,6 @@ def get_drinkingsource_profile(geo,session,request):
         'drinkingsource_ratio':drinking_source_dis_data,
         'total_population':{
             "name": "Total Household",
-            "values": {"this":t_lit}
-        }
-    }
-
-    return final_data
-
-# Added gdp data
-def get_gdp_profile(geo,session,request):
-
-    gdp_by_year,t_lit = get_stat_data(
-        ['gdpyear'],geo,session,
-        table_fields=['gdpyear'],
-    )
-
-    final_data = {
-        'gdp_by_year_distribution': gdp_by_year,
-        'total_gdp':{
-            "name": "Total GDP in crore",
             "values": {"this":t_lit}
         }
     }

@@ -13,7 +13,7 @@ SECRET_KEY = 'wt08^t@ugzs4sw*qn=c*=$d+jgkqkkp4$0z98j-k5s!o2um$(n'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['192.168.2.115']
 
 # Application definition
 
@@ -72,7 +72,7 @@ WAZIMAP['name'] = 'Counting India'
 # NB: this must be https if your site supports HTTPS.
 WAZIMAP['url'] = 'http://127.0.0.1:8000'
 WAZIMAP['country_code'] = 'IN'
-WAZIMAP['profile_builder'] = 'janaganana.profiles.get_census_profile'
+#WAZIMAP['profile_builder'] = 'janaganana.profiles.get_census_profile'
 
 WAZIMAP['levels'] = {
     'country': {
@@ -103,6 +103,16 @@ WAZIMAP['geometry_data'] = {'2011': {
   'state':    'geo/state.topojson',
   'district': 'geo/district.topojson',
 }}
+
+wazi_profile = os.environ.get('WAZI_PROFILE', 'census')
+WAZIMAP['default_profile']    = wazi_profile
+WAZIMAP['profile_builder']    = 'janaganana.profiles.{}.get_census_profile'.format(wazi_profile)
+
+# Custom timeseries profile
+timeseries_profile = os.environ.get('WAZI_PROFILE', 'timeseries')
+WAZIMAP['timeseries_profile'] = timeseries_profile
+WAZIMAP['timeseries_profile_builder'] = 'janaganana.profiles.{}.get_timeseries_profile'.format(timeseries_profile)
+
 # testing GDAL
 try:
     import osgeo.gdal  # noqa
