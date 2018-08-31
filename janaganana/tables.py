@@ -24,9 +24,6 @@ FieldTable(['drinkingsource','year'], id='drinkingsource_2011', universe='Drinki
 
 FieldTable(['civiccomplaint','year'], id='civiccomplaint_mum_2017', universe='Civic')
 
-# GDP data table
-FieldTable(['gdpyear'], id='gdp_yearly', universe='GDP')
-
 # Crimes data table
 FieldTable(['year'], id='crimes_yearly', universe='Crimes')
 
@@ -139,3 +136,12 @@ FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', un
 FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', universe='Schools')
 
 FieldTable(['disease','year'], id='healthdata_mum_2016', universe='Mumbai')
+
+
+# Timeseries table
+
+FieldTable(['gdpyear'], id='gdp_timeseries_2001_17', universe='gdptimeseries')
+
+FieldTable(['year','schoolstimeseries','type'], id='schools_timeseries_2001_17',  universe='schooltimeseries')
+FieldTable(['year','studentstimeseries','type'], id='students_timeseries_2001_17', universe='schooltimeseries')
+FieldTable(['year','teacherstimeseries','type'], id='teachers_timeseries_2001_17', universe='schooltimeseries')
