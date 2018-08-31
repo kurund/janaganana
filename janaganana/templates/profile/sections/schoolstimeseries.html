@@ -1,0 +1,27 @@
+<article id="schools" class="clearfix wrapper mdl-card mdl-shadow--2dp mdl-cell--12-col profile-section">
+    <div class="mdl-card__title">
+        <i class="material-icons">school</i>
+        <h2 class="mdl-card__title-text">Elementary schools</h2>
+    </div>
+    <div class="mdl-card__supporting-text wrapper" >
+        <div class="section-container">
+                <h2 class="section-secondary-heading">Schools</h2>
+                <section class="clearfix stat-row mdl-grid">
+                      {% include 'profile/_blocks/_stat_list.html' with stat=schools.total_schools stat_type='number' %}
+                    <div class="mdl-cell--12-col" id="chart-column-schools-schools_by_year_distribution" data-stat-type="scaled-percentage"></div>
+                </section>
+
+                <h2 class="section-secondary-heading">Students</h2>
+                <section class="clearfix stat-row mdl-grid">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=students.total_students stat_type='number' %}
+                  <div class="mdl-cell--12-col" id="chart-column-students-students_by_year_distribution" data-stat-type="scaled-percentage"></div>
+              </section>
+
+              <h2 class="section-secondary-heading">teachers</h2>
+                <section class="clearfix stat-row mdl-grid">
+                    {% include 'profile/_blocks/_stat_list.html' with stat=teachers.total_teachers stat_type='number' %}
+                  <div class="mdl-cell--12-col" id="chart-column-teachers-teachers_by_year_distribution" data-stat-type="scaled-percentage"></div>
+              </section>
+        </div>
+    </div>
+</article>

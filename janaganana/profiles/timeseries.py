@@ -11,7 +11,7 @@ import janaganana.tables  # noqa
 # Get an instance of a logger
 log = logging.getLogger(__name__)
 
-PROFILE_SECTIONS = ('gdp','demographics')
+PROFILE_SECTIONS = ('gdp','demographics','schools','students','teachers')
 
 def sort_stats_result(ip,key=None):
     metadata = ip['metadata']
@@ -174,6 +174,109 @@ def get_gdp_profile(geo,session,request):
         'gdp_by_year_distribution': gdp_by_year,
         'total_gdp':{
             "name": "Total GDP in crore",
+            "values": {"this":t_lit}
+        }
+    }
+
+    return final_data
+
+
+# Added schools data
+def get_schools_profile(geo,session,request):
+    
+    yearSetsIni = []
+    for i in range(2001,2019):
+            yearSetsIni.append(i)
+
+    if request.GET.get('startYear') and request.GET.get('endYear') is  not None:
+        yearSets = []
+        syear    = int(request.GET.get('startYear'))
+        eyear    = int(request.GET.get('endYear')) + 1
+        for y in range(syear,eyear):
+            yearSets.append(y)
+        ExcYearSet = list(set(yearSetsIni)-set(yearSets))
+        ExcYearSet = map(str, ExcYearSet)
+    else:
+        ExcYearSet = []
+    
+    schools_by_year,t_lit = get_stat_data(
+        ['year'],geo,session,
+        table_fields =['year','schoolstimeseries','type'],
+        exclude = ExcYearSet,
+    )
+
+    final_data = {
+        'schools_by_year_distribution': schools_by_year,
+        'total_schools':{
+            "name": "Total schools",
+            "values": {"this":t_lit}
+        }
+    }
+
+    return final_data
+
+# Added students data
+def get_students_profile(geo,session,request):
+    
+    yearSetsIni = []
+    for i in range(2001,2019):
+            yearSetsIni.append(i)
+
+    if request.GET.get('startYear') and request.GET.get('endYear') is  not None:
+        yearSets = []
+        syear    = int(request.GET.get('startYear'))
+        eyear    = int(request.GET.get('endYear')) + 1
+        for y in range(syear,eyear):
+            yearSets.append(y)
+        ExcYearSet = list(set(yearSetsIni)-set(yearSets))
+        ExcYearSet = map(str, ExcYearSet)
+    else:
+        ExcYearSet = []
+    
+    students_by_year,t_lit = get_stat_data(
+        ['year'],geo,session,
+        table_fields =['year','studentstimeseries','type'],
+        exclude = ExcYearSet,
+    )
+
+    final_data = {
+        'students_by_year_distribution': students_by_year,
+        'total_students':{
+            "name": "Total students",
+            "values": {"this":t_lit}
+        }
+    }
+
+    return final_data
+
+# Added teachers data
+def get_teachers_profile(geo,session,request):
+    
+    yearSetsIni = []
+    for i in range(2001,2019):
+            yearSetsIni.append(i)
+
+    if request.GET.get('startYear') and request.GET.get('endYear') is  not None:
+        yearSets = []
+        syear    = int(request.GET.get('startYear'))
+        eyear    = int(request.GET.get('endYear')) + 1
+        for y in range(syear,eyear):
+            yearSets.append(y)
+        ExcYearSet = list(set(yearSetsIni)-set(yearSets))
+        ExcYearSet = map(str, ExcYearSet)
+    else:
+        ExcYearSet = []
+    
+    teachers_by_year,t_lit = get_stat_data(
+        ['year'],geo,session,
+        table_fields =['year','teacherstimeseries','type'],
+        exclude = ExcYearSet,
+    )
+
+    final_data = {
+        'teachers_by_year_distribution': teachers_by_year,
+        'total_teachers':{
+            "name": "Total teachers",
             "values": {"this":t_lit}
         }
     }
