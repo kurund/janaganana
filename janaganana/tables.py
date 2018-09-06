@@ -2,95 +2,114 @@ from wazimap.data.tables import FieldTable
 
 
 # Census data tables
-FieldTable(['area', 'sex' , 'year'],id='area_sex_2011', universe='Population')
 
-FieldTable(['area', 'sex', 'literacy' ,'year'], id='area_sex_literacy_2011', universe='Population')
+FieldTable(['population' , 'year'],id='population_2001', universe='Population')
+FieldTable(['population' , 'year'],id='population_2011', universe='Population')
+FieldTable(['population' , 'year'],id='population_default', universe='Population')
 
-FieldTable(['area', 'sex' , 'religion', 'year'], id='area_sex_religion_2011', universe='Religion')
+FieldTable(['literacy' ,'year'], id='literacy_2001', universe='Literacy')
+FieldTable(['literacy' ,'year'], id='literacy_2011', universe='Literacy')
+FieldTable(['literacy' ,'year'], id='literacy_default', universe='Literacy')
 
-FieldTable(['area', 'sex' , 'education', 'year'], id='area_sex_education_2011', universe='Education')
+FieldTable(['religion', 'year'], id='religion_2011', universe='Religion')
+FieldTable(['religion', 'year'], id='religion_default', universe='Religion')
 
-FieldTable(['area', 'sex' , 'maritalstatus', 'year'], id='area_sex_maritalstatus_2011', universe='Relation')
+FieldTable(['education', 'year'], id='education_2001', universe='Education')
+FieldTable(['education', 'year'], id='education_2011', universe='Education')
+FieldTable(['education', 'year'], id='education_default', universe='Education')
 
-FieldTable(['area', 'sex', 'workers' ,'year'], id='area_sex_workers_2011', universe='Workers')
+FieldTable(['workers' ,'year'], id='workers_2001', universe='Workers')
+FieldTable(['workers' ,'year'], id='workers_2011', universe='Workers')
+FieldTable([ 'workers' ,'year'], id='workers_default', universe='Workers')
 
-FieldTable(['area', 'sex', 'age', 'year'], id='area_sex_age_2011', universe='Age')
+
+#FieldTable(['area', 'sex', 'age', 'year'], id='area_sex_age_2011', universe='Age')
 
 FieldTable(['caste','sex','year'], id='caste_sex_2011', universe='Caste')
+FieldTable(['caste','sex','year'], id='caste_sex_default', universe='Caste')
 
 FieldTable(['household','year'], id='household_2011', universe='Household')
+FieldTable(['household','year'], id='household_default', universe='Household')
 
 FieldTable(['drinkingsource','year'], id='drinkingsource_2011', universe='Drinkingsource')
+FieldTable(['drinkingsource','year'], id='drinkingsource_default', universe='Drinkingsource')
 
 FieldTable(['civiccomplaint','year'], id='civiccomplaint_mum_2017', universe='Civic')
 
 # Crimes data table
-FieldTable(['year'], id='crimes_yearly', universe='Crimes')
+FieldTable(['violentcrimes','year'], id='violentcrimes_2016', universe='Crimes')
+FieldTable(['violentcrimes','year'], id='violentcrimes_default', universe='Crimes')
 
-FieldTable(['violentcrimes','year'], id='violentcrimes_2015', universe='Crimes')
+FieldTable(['rapes','year'], id='rapes_2016', universe='Crimes')
+FieldTable(['rapes','year'], id='rapes_default', universe='Crimes')
 
-FieldTable(['rapes','year'], id='rapes_2015', universe='Crimes')
+FieldTable(['kidnapgender','year'], id='kidnapping_2016',  universe='Crimes')
+FieldTable(['kidnapgender','year'], id='kidnapping_default',  universe='Crimes')
 
-FieldTable(['cybercrimeyear'], id='cybercrimes_yearly', universe='Crimes')
+FieldTable(['kidnaprecovery','gender','year'], id='kidnaprecovery_2016', universe='Crimes')
+FieldTable(['kidnaprecovery','gender','year'], id='kidnaprecovery_default', universe='Crimes')
 
-FieldTable(['kidnapgender','year'], id='kidnapping_2015',  universe='Crimes')
+FieldTable(['traffickedage','gender','year'], id='trafficking_2016', universe='Crimes')
+FieldTable(['traffickedage','gender','year'], id='trafficking_default', universe='Crimes')
 
-FieldTable(['kidnaprecovery','gender','year'], id='kidnaprecovery_2015', universe='Crimes')
+FieldTable(['traffickingmotives','year'], id='traffickingmotives_2016', universe='Crimes')
+FieldTable(['traffickingmotives','year'], id='traffickingmotives_default', universe='Crimes')
 
-FieldTable(['trafficedage','gender','year'], id='trafficing_2015', universe='Crimes')
+FieldTable(['juveniledu','year'], id='juvenileedubg_2016', universe='Crimes')
+FieldTable(['juveniledu','year'], id='juvenileedubg_default', universe='Crimes')
 
-FieldTable(['trafficingmotives','year'], id='trafficingmotives_2015', universe='Crimes')
+FieldTable(['juvenilefamily','year'], id='juvenilefamilybg_2016', universe='Crimes')
+FieldTable(['juvenilefamily','year'], id='juvenilefamilybg_default', universe='Crimes')
 
-FieldTable(['childcrimeyear'], id='childcrime_yearly', universe='Crimes')
+FieldTable(['murder','gender','year'], id='murdervictims_2016', universe='Crimes')
+FieldTable(['murder','gender','year'], id='murdervictims_default', universe='Crimes')
 
-FieldTable(['juvenilecrimeyear'], id='juvenilecrime_yearly', universe='Crimes')
-
-FieldTable(['juveniledu','year'], id='juvenileedubg_2015', universe='Crimes')
-
-FieldTable(['juvenilefamily','year'], id='juvenilefamilybg_2015', universe='Crimes')
-
-FieldTable(['murder','gender','year'], id='murdervictims_2015', universe='Crimes')
-
-FieldTable(['murdermotive','year'], id='murdermotives_2015', universe='Crimes')
-
-FieldTable(['corruptioncase'], id='corruptioncase_yearly', universe='Crimes')
+FieldTable(['murdermotive','year'], id='murdermotives_2016', universe='Crimes')
+FieldTable(['murdermotive','year'], id='murdermotives_default', universe='Crimes')
 
 # Healthcare data table
-FieldTable(['healthcarecentre','year'], id='healthcarecentre_2017', universe='Health')
 
 FieldTable(['villagescovered','year'], id='villagescovered_2017', universe='Health')
+FieldTable(['villagescovered','year'], id='villagescovered_default', universe='Health')
 
 FieldTable(['ruralpopcovered','year'], id='ruralpopcovered_2017', universe='Health')
+FieldTable(['ruralpopcovered','year'], id='ruralpopcovered_default', universe='Health')
 
 FieldTable(['nursestaffphcschcs','year'], id='nursestaffphcschcs_2017', universe='Health')
+FieldTable(['nursestaffphcschcs','year'], id='nursestaffphcschcs_default', universe='Health')
 
 FieldTable(['allopathicdocphcs','year'], id='allopathicdocphcs_2017', universe='Health')
+FieldTable(['allopathicdocphcs','year'], id='allopathicdocphcs_default', universe='Health')
 
 FieldTable(['doctorsdissubhospital','year'], id='doctorsdissubhospital_2017',  universe='Health')
+FieldTable(['doctorsdissubhospital','year'], id='doctorsdissubhospital_default',  universe='Health')
 
 FieldTable(['physicianchcs','year'], id='physicianchcs_2017', universe='Health')
+FieldTable(['physicianchcs','year'], id='physicianchcs_default', universe='Health')
 
 FieldTable(['surgeonchcs','year'], id='surgeonchcs_2017', universe='Health')
+FieldTable(['surgeonchcs','year'], id='surgeonchcs_default', universe='Health')
 
 FieldTable(['radiographerchcs','year'], id='radiographerchcs_2017', universe='Health')
+FieldTable(['radiographerchcs','year'], id='radiographerchcs_default', universe='Health')
 
 FieldTable(['pharmacistphcschcs','year'], id='pharmacistphcschcs_2017', universe='Health')
-
-FieldTable(['phcsyear'], id='phcsfunctioning_yearly', universe='Health')
-
-FieldTable(['chcsyear'], id='chcsfunctioning_yearly',  universe='Health')
-
-FieldTable(['subcenyear'], id='subcenfunctioning_yearly', universe='Health')
+FieldTable(['pharmacistphcschcs','year'], id='pharmacistphcschcs_default', universe='Health')
 
 FieldTable(['workersubcen','gender','year'], id='workersubcentre_2017', universe='Health')
+FieldTable(['workersubcen','gender','year'], id='workersubcentre_default', universe='Health')
 
 FieldTable(['assistantphcs','gender','year'], id='assistantphcs_2017',  universe='Health')
+FieldTable(['assistantphcs','gender','year'], id='assistantphcs_default',  universe='Health')
 
 FieldTable(['facilitieschcs','year'], id='facilitieschcs_2017', universe='Health')
+FieldTable(['facilitieschcs','year'], id='facilitieschcs_default', universe='Health')
 
 FieldTable(['facilitiesphcs','year'], id='facilitiesphcs_2017', universe='Health')
+FieldTable(['facilitiesphcs','year'], id='facilitiesphcs_default', universe='Health')
 
 # Schools data table
+"""
 FieldTable(['schools','type','year'], id='schools_by_type_2015', universe='Schools')
 
 FieldTable(['schools','type','year'], id='schools_by_type_2014', universe='Schools')
@@ -135,11 +154,9 @@ FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', un
 
 FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', universe='Schools')
 
-FieldTable(['disease','year'], id='healthdata_mum_2016', universe='Mumbai')
-
-
+#FieldTable(['disease','year'], id='healthdata_mum_2016', universe='Mumbai')
+"""
 # Timeseries table
-
 FieldTable(['gdpyear'], id='gdp_timeseries_2001_17', universe='gdptimeseries')
 
 FieldTable(['year','schoolstimeseries','type'], id='schools_timeseries_2001_17',  universe='schooltimeseries')

@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.13
 -- Dumped by pg_dump version 9.5.13
 
--- Started on 2018-07-24 11:47:59 IST
+-- Started on 2018-09-06 17:33:33 IST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,16 +23,16 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 302 (class 1259 OID 28647)
+-- TOC entry 299 (class 1259 OID 18531)
 -- Name: facilitiesphcs_2017; Type: TABLE; Schema: public; Owner: wazimap
 --
 
 CREATE TABLE public.facilitiesphcs_2017 (
     geo_level character varying(15) NOT NULL,
     geo_code character varying(10) NOT NULL,
-    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL,
+    geo_version character varying(100) DEFAULT ''::character varying NOT NULL,
     facilitiesphcs character varying(128) NOT NULL,
-    year character varying(128) DEFAULT '2017'::character varying NOT NULL,
+    year character varying(128) NOT NULL,
     total integer
 );
 
@@ -40,8 +40,8 @@ CREATE TABLE public.facilitiesphcs_2017 (
 ALTER TABLE public.facilitiesphcs_2017 OWNER TO wazimap;
 
 --
--- TOC entry 2503 (class 0 OID 28647)
--- Dependencies: 302
+-- TOC entry 2515 (class 0 OID 18531)
+-- Dependencies: 299
 -- Data for Name: facilitiesphcs_2017; Type: TABLE DATA; Schema: public; Owner: wazimap
 --
 
@@ -4112,7 +4112,7 @@ state,19,2011,Referral Transport,2017,272
 
 
 --
--- TOC entry 2388 (class 2606 OID 28652)
+-- TOC entry 2400 (class 2606 OID 18536)
 -- Name: pk_facilitiesphcs_2017; Type: CONSTRAINT; Schema: public; Owner: wazimap
 --
 
@@ -4120,7 +4120,7 @@ ALTER TABLE ONLY public.facilitiesphcs_2017
     ADD CONSTRAINT pk_facilitiesphcs_2017 PRIMARY KEY (geo_level, geo_code, geo_version, facilitiesphcs, year);
 
 
--- Completed on 2018-07-24 11:47:59 IST
+-- Completed on 2018-09-06 17:33:33 IST
 
 --
 -- PostgreSQL database dump complete
