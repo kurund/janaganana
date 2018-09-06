@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.13
 -- Dumped by pg_dump version 9.5.13
 
--- Started on 2018-07-23 18:49:38 IST
+-- Started on 2018-09-06 16:36:21 IST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,14 +23,14 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 293 (class 1259 OID 28586)
+-- TOC entry 287 (class 1259 OID 18446)
 -- Name: surgeonchcs_2017; Type: TABLE; Schema: public; Owner: wazimap
 --
 
 CREATE TABLE public.surgeonchcs_2017 (
     geo_level character varying(15) NOT NULL,
     geo_code character varying(10) NOT NULL,
-    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL,
+    geo_version character varying(100) DEFAULT ''::character varying NOT NULL,
     surgeonchcs character varying(128) NOT NULL,
     year character varying(128) NOT NULL,
     total integer
@@ -40,8 +40,8 @@ CREATE TABLE public.surgeonchcs_2017 (
 ALTER TABLE public.surgeonchcs_2017 OWNER TO wazimap;
 
 --
--- TOC entry 2474 (class 0 OID 28586)
--- Dependencies: 293
+-- TOC entry 2515 (class 0 OID 18446)
+-- Dependencies: 287
 -- Data for Name: surgeonchcs_2017; Type: TABLE DATA; Schema: public; Owner: wazimap
 --
 
@@ -1404,7 +1404,7 @@ state,19,2011,Available,2017,0
 
 
 --
--- TOC entry 2359 (class 2606 OID 28591)
+-- TOC entry 2400 (class 2606 OID 18451)
 -- Name: pk_surgeonchcs_2017; Type: CONSTRAINT; Schema: public; Owner: wazimap
 --
 
@@ -1412,7 +1412,7 @@ ALTER TABLE ONLY public.surgeonchcs_2017
     ADD CONSTRAINT pk_surgeonchcs_2017 PRIMARY KEY (geo_level, geo_code, geo_version, surgeonchcs, year);
 
 
--- Completed on 2018-07-23 18:49:39 IST
+-- Completed on 2018-09-06 16:36:21 IST
 
 --
 -- PostgreSQL database dump complete

@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.13
 -- Dumped by pg_dump version 9.5.13
 
--- Started on 2018-07-20 12:30:17 IST
+-- Started on 2018-09-06 14:54:02 IST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,16 +23,16 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 269 (class 1259 OID 28425)
+-- TOC entry 253 (class 1259 OID 18197)
 -- Name: drinkingsource_2011; Type: TABLE; Schema: public; Owner: wazimap
 --
 
 CREATE TABLE public.drinkingsource_2011 (
     geo_level character varying(15) NOT NULL,
     geo_code character varying(10) NOT NULL,
-    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL,
+    geo_version character varying(100) DEFAULT ''::character varying NOT NULL,
     drinkingsource character varying(128) NOT NULL,
-    year character varying(128) DEFAULT '2011'::character varying NOT NULL,
+    year character varying(128) NOT NULL,
     total integer
 );
 
@@ -40,8 +40,8 @@ CREATE TABLE public.drinkingsource_2011 (
 ALTER TABLE public.drinkingsource_2011 OWNER TO wazimap;
 
 --
--- TOC entry 2399 (class 0 OID 28425)
--- Dependencies: 269
+-- TOC entry 2515 (class 0 OID 18197)
+-- Dependencies: 253
 -- Data for Name: drinkingsource_2011; Type: TABLE DATA; Schema: public; Owner: wazimap
 --
 
@@ -486,14 +486,14 @@ district,128,2011,Other sources,2011,1968
 district,128,2011,Tank/Pond/Lake,2011,1020
 district,128,2011,Tap water,2011,57191
 district,128,2011,Tubewell/Borehole,2011,51719
-district,335,2011,Un-covered well,2011,330
-district,335,2011,Handpump,2011,414326
-district,335,2011,Spring,2011,82
-district,335,2011,River/Canal,2011,198
-district,335,2011,Other sources,2011,5547
-district,335,2011,Tank/Pond/Lake,2011,588
-district,335,2011,Tap water,2011,323722
-district,335,2011,Tubewell/Borehole,2011,7796
+district,335,2011,Un-covered well,2011,90491
+district,335,2011,Handpump,2011,965484
+district,335,2011,Spring,2011,1037
+district,335,2011,River/Canal,2011,3377
+district,335,2011,Other sources,2011,12276
+district,335,2011,Tank/Pond/Lake,2011,2492
+district,335,2011,Tap water,2011,615383
+district,335,2011,Tubewell/Borehole,2011,239336
 district,150,2011,Un-covered well,2011,330
 district,150,2011,Handpump,2011,414326
 district,150,2011,Spring,2011,82
@@ -5466,7 +5466,7 @@ state,19,2011,Tubewell/Borehole,2011,3344259
 
 
 --
--- TOC entry 2284 (class 2606 OID 28430)
+-- TOC entry 2400 (class 2606 OID 18202)
 -- Name: pk_drinkingsource_2011; Type: CONSTRAINT; Schema: public; Owner: wazimap
 --
 
@@ -5474,7 +5474,7 @@ ALTER TABLE ONLY public.drinkingsource_2011
     ADD CONSTRAINT pk_drinkingsource_2011 PRIMARY KEY (geo_level, geo_code, geo_version, drinkingsource, year);
 
 
--- Completed on 2018-07-20 12:30:17 IST
+-- Completed on 2018-09-06 14:54:02 IST
 
 --
 -- PostgreSQL database dump complete

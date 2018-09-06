@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.13
 -- Dumped by pg_dump version 9.5.13
 
--- Started on 2018-07-23 17:18:06 IST
+-- Started on 2018-09-06 16:00:09 IST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,14 +23,14 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 287 (class 1259 OID 28550)
+-- TOC entry 275 (class 1259 OID 18373)
 -- Name: villagescovered_2017; Type: TABLE; Schema: public; Owner: wazimap
 --
 
 CREATE TABLE public.villagescovered_2017 (
     geo_level character varying(15) NOT NULL,
     geo_code character varying(10) NOT NULL,
-    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL,
+    geo_version character varying(100) DEFAULT ''::character varying NOT NULL,
     villagescovered character varying(128) NOT NULL,
     year character varying(128) NOT NULL,
     total integer
@@ -40,8 +40,8 @@ CREATE TABLE public.villagescovered_2017 (
 ALTER TABLE public.villagescovered_2017 OWNER TO wazimap;
 
 --
--- TOC entry 2456 (class 0 OID 28550)
--- Dependencies: 287
+-- TOC entry 2515 (class 0 OID 18373)
+-- Dependencies: 275
 -- Data for Name: villagescovered_2017; Type: TABLE DATA; Schema: public; Owner: wazimap
 --
 
@@ -2081,7 +2081,7 @@ state,19,2011,CHCS,2017,115
 
 
 --
--- TOC entry 2341 (class 2606 OID 28555)
+-- TOC entry 2400 (class 2606 OID 18378)
 -- Name: pk_villagescovered_2017; Type: CONSTRAINT; Schema: public; Owner: wazimap
 --
 
@@ -2089,7 +2089,7 @@ ALTER TABLE ONLY public.villagescovered_2017
     ADD CONSTRAINT pk_villagescovered_2017 PRIMARY KEY (geo_level, geo_code, geo_version, villagescovered, year);
 
 
--- Completed on 2018-07-23 17:18:06 IST
+-- Completed on 2018-09-06 16:00:09 IST
 
 --
 -- PostgreSQL database dump complete

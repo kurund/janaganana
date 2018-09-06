@@ -74,73 +74,21 @@ RELIGION_RECODES = OrderedDict([
 
 # demographics profile
 def get_demographics_profile(geo,session,request):
-
-    table = 'area_sex_2011'
-    population_by_area_dist_data, total_population_by_area = get_stat_data(
-        'area', geo, session,
-        recode=dict(AREA_RECODES),
-        key_order=AREA_RECODES.values(),
-        table_fields=['area', 'sex'],
-        table_name = table,)
-
-    population_by_area_dist_data = sort_stats_result(population_by_area_dist_data)
-
-    population_by_sex_dist_data, _ = get_stat_data(
-        'sex', geo, session,
-        recode=dict(SEX_RECODES),
-        key_order=SEX_RECODES.values(),
-        table_fields=['area', 'sex'],
-        table_name = table,)
-        #)
-
-    population_by_sex_dist_data = sort_stats_result(population_by_sex_dist_data)
     
-    table = 'area_sex_literacy_2011'
-    if request.GET.get('table') is  not None:
-        if request.GET.get('table') in ('area_sex_literacy_2011'):
-            table = request.GET.get('table')
+    table = 'population_2011'
     
-    literacy_dist_data, _ = get_stat_data(
-        'literacy', geo, session,
-        recode=dict(LITERACY_RECODES),
-        key_order=LITERACY_RECODES.values(),
-        table_fields=['area', 'literacy', 'sex'],
-        table_name = table,)
-
-    literacy_dist_data = sort_stats_result(literacy_dist_data)
-
-    literacy_by_sex,_ = get_stat_data(
-        ['sex', 'literacy'], geo, session,
-        table_fields=['area', 'literacy', 'sex'],
-        table_name = table,
-        recode={'literacy': dict(LITERACY_RECODES)},
-        key_order={'literacy': LITERACY_RECODES.values()},
-        percent_grouping=['sex'])
-
-    literacy_by_area,_ = get_stat_data(
-        ['area', 'literacy'], geo, session,
-        table_fields=['area', 'literacy', 'sex'],
-        table_name = table,
-        recode={'literacy': dict(LITERACY_RECODES)},
-        key_order={'literacy': LITERACY_RECODES.values()},
-        percent_grouping=['area'])
-
+    population_gender,t_lit = get_stat_data(
+        'population', geo, session,
+        table_fields=['population', 'year'],
+        table_name = table
+    )
+    
     final_data = {
 
-        'population_area_ratio': population_by_area_dist_data,
-        'population_sex_ratio': population_by_sex_dist_data,
-        'literacy_by_sex_distribution': literacy_by_sex,
-        'literacy_ratio': literacy_dist_data,
-        'literacy_by_area_distribution': literacy_by_area,
-        'disability_ratio': 123,
+        'population_by_gender': population_gender,
         'total_population': {
             "name": "People",
-            "values": {"this": total_population_by_area}
-        },
-        'total_disabled': {
-            'name': 'People',
-            'values':
-                {'this': 111},
+            "values": {"this": t_lit}
         }
     }
 

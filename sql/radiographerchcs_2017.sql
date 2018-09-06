@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.13
 -- Dumped by pg_dump version 9.5.13
 
--- Started on 2018-07-23 18:57:37 IST
+-- Started on 2018-09-06 16:41:12 IST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,14 +23,14 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 294 (class 1259 OID 28592)
+-- TOC entry 289 (class 1259 OID 18458)
 -- Name: radiographerchcs_2017; Type: TABLE; Schema: public; Owner: wazimap
 --
 
 CREATE TABLE public.radiographerchcs_2017 (
     geo_level character varying(15) NOT NULL,
     geo_code character varying(10) NOT NULL,
-    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL,
+    geo_version character varying(100) DEFAULT ''::character varying NOT NULL,
     radiographerchcs character varying(128) NOT NULL,
     year character varying(128) NOT NULL,
     total integer
@@ -40,8 +40,8 @@ CREATE TABLE public.radiographerchcs_2017 (
 ALTER TABLE public.radiographerchcs_2017 OWNER TO wazimap;
 
 --
--- TOC entry 2477 (class 0 OID 28592)
--- Dependencies: 294
+-- TOC entry 2515 (class 0 OID 18458)
+-- Dependencies: 289
 -- Data for Name: radiographerchcs_2017; Type: TABLE DATA; Schema: public; Owner: wazimap
 --
 
@@ -1404,7 +1404,7 @@ state,19,2011,Available,2017,135
 
 
 --
--- TOC entry 2362 (class 2606 OID 28597)
+-- TOC entry 2400 (class 2606 OID 18463)
 -- Name: pk_radiographerchcs_2017; Type: CONSTRAINT; Schema: public; Owner: wazimap
 --
 
@@ -1412,7 +1412,7 @@ ALTER TABLE ONLY public.radiographerchcs_2017
     ADD CONSTRAINT pk_radiographerchcs_2017 PRIMARY KEY (geo_level, geo_code, geo_version, radiographerchcs, year);
 
 
--- Completed on 2018-07-23 18:57:37 IST
+-- Completed on 2018-09-06 16:41:12 IST
 
 --
 -- PostgreSQL database dump complete

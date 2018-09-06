@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.13
 -- Dumped by pg_dump version 9.5.13
 
--- Started on 2018-07-20 12:12:27 IST
+-- Started on 2018-09-06 14:49:16 IST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,16 +23,16 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 268 (class 1259 OID 28419)
+-- TOC entry 251 (class 1259 OID 18185)
 -- Name: household_2011; Type: TABLE; Schema: public; Owner: wazimap
 --
 
 CREATE TABLE public.household_2011 (
     geo_level character varying(15) NOT NULL,
     geo_code character varying(10) NOT NULL,
-    geo_version character varying(100) DEFAULT '2011'::character varying NOT NULL,
+    geo_version character varying(100) DEFAULT ''::character varying NOT NULL,
     household character varying(128) NOT NULL,
-    year character varying(128) DEFAULT '2011'::character varying NOT NULL,
+    year character varying(128) NOT NULL,
     total integer
 );
 
@@ -40,8 +40,8 @@ CREATE TABLE public.household_2011 (
 ALTER TABLE public.household_2011 OWNER TO wazimap;
 
 --
--- TOC entry 2396 (class 0 OID 28419)
--- Dependencies: 268
+-- TOC entry 2515 (class 0 OID 18185)
+-- Dependencies: 251
 -- Data for Name: household_2011; Type: TABLE DATA; Schema: public; Owner: wazimap
 --
 
@@ -431,13 +431,13 @@ district,128,2011,4 persons,2011,45415
 district,128,2011,5 persons,2011,50418
 district,128,2011,6-8 persons,2011,76898
 district,128,2011,9 persons & above,2011,14041
-district,335,2011,1 person,2011,17381
-district,335,2011,2 persons,2011,47699
-district,335,2011,3 persons,2011,66579
-district,335,2011,4 persons,2011,106979
-district,335,2011,5 persons,2011,125484
-district,335,2011,6-8 persons,2011,284381
-district,335,2011,9 persons & above,2011,97719
+district,335,2011,1 person,2011,63096
+district,335,2011,2 persons,2011,161007
+district,335,2011,3 persons,2011,325155
+district,335,2011,4 persons,2011,471769
+district,335,2011,5 persons,2011,303104
+district,335,2011,6-8 persons,2011,303313
+district,335,2011,9 persons & above,2011,78062
 district,150,2011,1 person,2011,17381
 district,150,2011,2 persons,2011,47699
 district,150,2011,3 persons,2011,66579
@@ -4789,7 +4789,7 @@ state,19,2011,9 persons & above,2011,792209
 
 
 --
--- TOC entry 2281 (class 2606 OID 28424)
+-- TOC entry 2400 (class 2606 OID 18190)
 -- Name: pk_household_2011; Type: CONSTRAINT; Schema: public; Owner: wazimap
 --
 
@@ -4797,7 +4797,7 @@ ALTER TABLE ONLY public.household_2011
     ADD CONSTRAINT pk_household_2011 PRIMARY KEY (geo_level, geo_code, geo_version, household, year);
 
 
--- Completed on 2018-07-20 12:12:27 IST
+-- Completed on 2018-09-06 14:49:16 IST
 
 --
 -- PostgreSQL database dump complete

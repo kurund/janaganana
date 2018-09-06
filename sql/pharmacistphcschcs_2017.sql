@@ -5,7 +5,7 @@
 -- Dumped from database version 9.5.13
 -- Dumped by pg_dump version 9.5.13
 
--- Started on 2018-07-23 19:11:00 IST
+-- Started on 2018-09-06 16:54:19 IST
 
 SET statement_timeout = 0;
 SET lock_timeout = 0;
@@ -23,7 +23,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- TOC entry 295 (class 1259 OID 28598)
+-- TOC entry 291 (class 1259 OID 18470)
 -- Name: pharmacistphcschcs_2017; Type: TABLE; Schema: public; Owner: wazimap
 --
 
@@ -40,8 +40,8 @@ CREATE TABLE public.pharmacistphcschcs_2017 (
 ALTER TABLE public.pharmacistphcschcs_2017 OWNER TO wazimap;
 
 --
--- TOC entry 2480 (class 0 OID 28598)
--- Dependencies: 295
+-- TOC entry 2515 (class 0 OID 18470)
+-- Dependencies: 291
 -- Data for Name: pharmacistphcschcs_2017; Type: TABLE DATA; Schema: public; Owner: wazimap
 --
 
@@ -1404,7 +1404,7 @@ state,19,2011,Available,2017,1381
 
 
 --
--- TOC entry 2365 (class 2606 OID 28603)
+-- TOC entry 2400 (class 2606 OID 18475)
 -- Name: pk_pharmacistphcschcs_2017; Type: CONSTRAINT; Schema: public; Owner: wazimap
 --
 
@@ -1412,7 +1412,7 @@ ALTER TABLE ONLY public.pharmacistphcschcs_2017
     ADD CONSTRAINT pk_pharmacistphcschcs_2017 PRIMARY KEY (geo_level, geo_code, geo_version, pharmacistphcschcs, year);
 
 
--- Completed on 2018-07-23 19:11:00 IST
+-- Completed on 2018-09-06 16:54:19 IST
 
 --
 -- PostgreSQL database dump complete
