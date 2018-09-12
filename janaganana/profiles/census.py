@@ -84,7 +84,7 @@ RELIGION_RECODES = OrderedDict([
 
 # demographics profile
 def get_demographics_profile(geo,session,request):
-    
+
     table = 'population_2011'
     if request.GET.get('release') is  not None:
         tablereq = 'population_' + request.GET.get('release')
@@ -92,12 +92,26 @@ def get_demographics_profile(geo,session,request):
             table = tablereq
         else:
             table = 'population_default'
-    
-    population_gender,population = get_stat_data(
-        'population', geo, session,
-        table_fields=['population', 'year'],
+
+    population_by_area_dist_data, total_population_by_area = get_stat_data(
+        'area', geo, session,
+        recode = dict(AREA_RECODES),
+        key_order = AREA_RECODES.values(),
+        table_fields=['area', 'sex','year'],
         table_name = table
-    )
+        )
+
+    #population_by_area_dist_data = sort_stats_result(population_by_area_dist_data)
+
+    population_by_sex_dist_data, _ = get_stat_data(
+        'sex', geo, session,
+        recode=dict(SEX_RECODES),
+        key_order=SEX_RECODES.values(),
+        table_fields=['area', 'sex','year'],
+        table_name = table,
+        )
+
+    #population_by_sex_dist_data = sort_stats_result(population_by_sex_dist_data)
     
     table = 'literacy_2011'
     if request.GET.get('release') is  not None:
@@ -106,29 +120,49 @@ def get_demographics_profile(geo,session,request):
             table = tablereq
         else:
             table = 'literacy_default'
-
-    literacy_gender,_= get_stat_data(
+    
+    literacy_dist_data,_ = get_stat_data(
         'literacy', geo, session,
-        table_fields=['literacy', 'year'],
+        recode=dict(LITERACY_RECODES),
+        key_order = LITERACY_RECODES.values(),
+        table_fields=['area','literacy','sex','year'],
         table_name = table
         )
 
+    #literacy_dist_data = sort_stats_result(literacy_dist_data)
+    literacy_by_sex,_ = get_stat_data(
+        ['sex', 'literacy'], geo, session,
+        table_fields=['area','literacy','sex','year'],
+        table_name = table,
+        recode={'literacy': dict(LITERACY_RECODES)},
+        key_order={'literacy': LITERACY_RECODES.values()},
+        percent_grouping=['sex'])
+
+    literacy_by_area,_ = get_stat_data(
+        ['area', 'literacy'], geo, session,
+        table_fields=['area','literacy','sex','year'],
+        table_name = table,
+        recode={'literacy': dict(LITERACY_RECODES)},
+        key_order={'literacy': LITERACY_RECODES.values()},
+        percent_grouping=['area'])
+
     final_data = {
 
-        'population_by_gender': population_gender,
-        'literacy_by_gender':  literacy_gender,
+        'population_area_ratio': population_by_area_dist_data,
+        'population_sex_ratio': population_by_sex_dist_data,
+        'literacy_ratio': literacy_dist_data,
+        'literacy_by_sex_distribution': literacy_by_sex,
+        'literacy_by_area_distribution': literacy_by_area,
         'total_population': {
             "name": "People",
-            "values": {"this": population}
+            "values": {"this": total_population_by_area}
         }
     }
-
     return final_data
 
 # Religion profile
 def get_religion_profile(geo,session,request):
     table = 'religion_2011'
-
     if request.GET.get('release') is  not None:
         tablereq = 'religion_' + request.GET.get('release')
         if tablereq  in ('religion_2011'):
@@ -153,23 +187,165 @@ def get_religion_profile(geo,session,request):
 
 # Education profile
 def get_education_profile(geo,session,request):
-
+    
     table = 'education_2011'
     if request.GET.get('release') is  not None:
         tablereq = 'education_' + request.GET.get('release')
-        if tablereq  in ('education_2001','education_2011'):
+        if tablereq  in ('education_2011'):
             table = tablereq
         else:
             table = 'education_default'
+    
+    def get_education_category(key):
+        if key in ('Below Primary', 'Primary', 'Middle', 'Secondary Matric','Intermediate Puc', 'Graduate Above'):
+            return key
+        else:
+            return 'Others'
 
-    education_dist_data,t_lit = get_stat_data(
+    def education_category_recode(f, x):
+        return get_education_category(x)
+
+    # age in 10 year groups
+    def education_recode(f, x):
+
+        if f in ('sex', 'area'):
+            return x
+        return get_education_category(x)
+
+    def edu_sort_fun(x):
+        d = {'Below Primary': 1,
+             'Primary': 2,
+             'Middle':  3,
+             'Secondary Matric': 4,
+             'Intermediate Puc': 5,
+             'Graduate Above': 6,
+             'Others': 7}
+        key = x['metadata']['name']
+        if key:
+            return d[key]
+        else:
+            return 0
+
+    def sort_edu_stats_result(ip, key=None):
+        metadata = ip['metadata']
+        del ip['metadata']
+        rv = None
+        if key:
+            sorted_od = sorted(ip.values(), key=lambda x: x[key]['numerators']['this'], reverse=True)
+            sorted_od_fine = sorted(sorted_od, key=edu_sort_fun)
+            rv = OrderedDict([(i['metadata']['name'], i) for i in sorted_od_fine])
+        else:
+            sorted_od = sorted(ip.values(), key=lambda x: x['numerators']['this'], reverse=True)
+            rv = OrderedDict([(i['name'], i) for i in sorted_od])
+        rv['metadata'] = metadata
+        return rv
+
+    education_dist_data, _ = get_stat_data(
         'education', geo, session,
-        table_fields=['education', 'year'],
+        recode=education_category_recode,
+        # key_order=education_RECODES.values(),
+        table_fields=['area', 'education', 'sex'],
+        table_name  = table
+        )
+
+    education_dist_data = sort_stats_result(education_dist_data)
+
+    education_by_sex, t_lit = get_stat_data(
+        ['education', 'sex'],geo, session,
+        table_fields=['area', 'education', 'sex'],
+        recode=education_recode,
+        # key_order={'education': education_RECODES.values()},
+        key_order={'sex': SEX_RECODES.values()},
+        percent_grouping=['sex'],
         table_name = table
-    )
+        )
+
+    education_by_sex = sort_edu_stats_result(education_by_sex, 'Female')
+
+    education_by_area, t_lit = get_stat_data(
+        ['education', 'area'], geo, session,
+        table_fields=['area', 'education', 'sex'],
+        recode=education_recode,
+        key_order={'area': AREA_RECODES.values()},
+        percent_grouping=['area'],
+        table_name = table
+        )
+
+    education_by_area = sort_edu_stats_result(education_by_area, 'Urban')
 
     final_data = {
-        'education_dist_distribution':education_dist_data,
+        'education_ratio': education_dist_data,
+        'education_by_area_distribution': education_by_area,
+        'education_by_sex_distribution':education_by_sex,
+        'disability_ratio': 123,
+        'total_population': {
+            "name": "People",
+            "values": {"this": t_lit}
+        }
+    }
+
+    return final_data
+
+def get_maritalstatus_profile(geo,session,request):
+    
+    table = 'maritalstatus_2011'
+    if request.GET.get('release') is  not None:
+        tablereq = 'maritalstatus_' + request.GET.get('release')
+        if tablereq  in ('maritalstatus_2011'):
+            table = tablereq
+        else:
+            table = 'maritalstatus_default'
+    
+    def get_maritalstatu(x):
+        if x in ('never married', 'currently married', 'widowed', 'separated', 'divorced'):
+            return x.capitalize()
+        else:
+            return 'Currently married'
+
+    def maritalstatus_category_recode(f, x):
+        return get_maritalstatu(x)
+
+    def maritalstatus_recode(f, x):
+
+        if f in ('sex', 'area'):
+            return x
+
+        return get_maritalstatu(x)
+
+    maritalstatus_dist_data, _ = get_stat_data(
+        'maritalstatus', geo, session,
+        recode=maritalstatus_category_recode,
+        # key_order=education_RECODES.values(),
+        table_fields=['area', 'maritalstatus', 'sex'],
+        table_name= table)
+
+    maritalstatus_dist_data = sort_stats_result(maritalstatus_dist_data)
+
+    maritalstatus_by_sex, t_lit = get_stat_data(
+        ['maritalstatus', 'sex'], geo, session,
+        table_fields=['area', 'maritalstatus', 'sex','year'],
+        recode=maritalstatus_recode,
+        # key_order={'sex': SEX_RECODES.values()},
+        percent_grouping=['sex'],
+        table_name= table)
+
+    maritalstatus_by_sex = sort_stats_result(maritalstatus_by_sex, 'Female')
+
+    maritalstatus_by_area, t_lit = get_stat_data(
+        ['maritalstatus', 'area'], geo, session,
+        table_fields=['area', 'maritalstatus', 'sex','year'],
+        recode=maritalstatus_recode,
+        key_order={'area': AREA_RECODES.values()},
+        percent_grouping=['area'],
+        table_name= table)
+
+    maritalstatus_by_area = sort_stats_result(maritalstatus_by_area, 'Urban')
+
+    final_data = {
+        'maritalstatus_ratio': maritalstatus_dist_data,
+        'maritalstatus_by_area_distribution': maritalstatus_by_area,
+        'maritalstatus_by_sex_distribution': maritalstatus_by_sex,
+        'disability_ratio': 123,
         'total_population': {
             "name": "People",
             "values": {"this": t_lit}
@@ -191,13 +367,29 @@ def get_workers_profile(geo,session,request):
 
     workers_dist_data, t_lit = get_stat_data(
         'workers', geo,session,
-        table_fields=['workers', 'year'],
+        table_fields=['area','workers','sex','year'],
         table_name=table,
+    )
+
+    workers_by_area,_ = get_stat_data(
+        ['workers','area'], geo,session,
+        table_fields=['area','workers','sex','year'],
+        table_name=table,
+        percent_grouping=['area']
+    )
+    
+    workers_by_sex,_ = get_stat_data(
+        ['workers','sex'], geo,session,
+        table_fields=['area','workers','sex','year'],
+        table_name=table,
+        percent_grouping=['sex']
     )
 
     final_data = {
         'workers_ratio': workers_dist_data,
-        'total_population': {
+        'workers_by_area_distribution': workers_by_area,
+        'workers_by_sex_distribution': workers_by_sex,
+        'total_workers': {
             "name": "People",
             "values": {"this": t_lit}
         }
@@ -208,30 +400,38 @@ def get_workers_profile(geo,session,request):
 # Caste profile
 def get_caste_profile(geo,session,request):
     
-    table = 'caste_sex_2011'
+    table = 'caste_2011'
     if request.GET.get('release') is  not None:
-        tablereq = 'caste_sex_' + request.GET.get('release')
-        if tablereq  in ('caste_sex_2011'):
+        tablereq = 'caste_' + request.GET.get('release')
+        if tablereq  in ('caste_2001','caste_2011'):
             table = tablereq
         else:
-            table = 'caste_sex_default'
+            table = 'caste_default'
 
     caste_dist_data, _ = get_stat_data(
         'caste', geo, session,
-        table_fields=['caste','sex'],
+        table_fields=['area','caste','sex','year'],
         table_name=table
         )
 
-    caste_by_sex,t_lit = get_stat_data(
-        ['caste','sex'],geo,session,
-        table_fields=['caste','sex'],
+    caste_by_area,t_lit = get_stat_data(
+        ['caste','area'],geo,session,
+        table_fields=['area','caste','sex','year'],
+        table_name=table,
+        percent_grouping=['area'],
+    )
+
+    caste_by_gender,t_lit = get_stat_data(
+        ['area','sex'],geo,session,
+        table_fields=['area','caste','sex','year'],
         table_name=table,
         percent_grouping=['sex'],
     )
 
     final_data = {
         'caste_ratio':caste_dist_data,
-        'caste_by_sex_distribution': caste_by_sex,
+        'caste_by_area_distribution': caste_by_area,
+        'caste_by_gender_distribution': caste_by_gender,
         'total_population':{
             "name": "People SC / ST",
             "values": {"this":t_lit}
@@ -980,13 +1180,16 @@ def get_civiccomplaint_profile(geo,session,request):
     return final_data
 
     # Adding schools type profile
-"""
 def get_schoolstype_profile(geo,session,request):
-    table = 'schools_by_type_2015'
+    table = 'schools_type_2011'
     if request.GET.get('release') is  not None:
-        tablereq = 'schools_by_type_' + request.GET.get('release')
-        if tablereq  in ('schools_by_type_2013','schools_by_type_2014','schools_by_type_2015'):
+        tablereq = 'schools_type_' + request.GET.get('release')
+        if tablereq  in ('schools_type_2005','schools_type_2006','schools_type_2007','schools_type_2008',
+        'schools_type_2009','schools_type_2010','schools_type_2011','schools_type_2012','schools_type_2013',
+        'schools_type_2015'):
             table = tablereq
+        else:
+            table = 'schools_type_default'
     
     schoolstype_dis_data,t_lit = get_stat_data(
         ['schools'],geo,session,
@@ -1018,6 +1221,87 @@ def get_schoolstype_profile(geo,session,request):
     }
     return final_data
 
+# Students enrol profile
+def get_studentsenrol_profile(geo,session,request):
+
+    table = 'studentsenrol_type_2005'
+    if request.GET.get('release') is  not None:
+        tablereq = 'studentsenrol_type_' + request.GET.get('release')
+        if tablereq  in ('studentsenrol_type_2005','studentsenrol_type_2006','studentsenrol_type_2007',
+        'studentsenrol_type_2008','studentsenrol_type_2009','studentsenrol_type_2010','studentsenrol_type_2011',
+        'studentsenrol_type_2012','studentsenrol_type_2013','studentsenrol_type_2015'):
+            table = tablereq
+        else:
+            table = 'studentsenrol_type_default'
+
+    students_by_type,t_lit = get_stat_data(
+        ['type'],geo,session,
+        table_fields=['studentsenrol','type','year'],
+        table_name = table
+    )
+
+    students_by_school,_ = get_stat_data(
+        ['studentsenrol'],geo,session,
+        table_fields=['studentsenrol','type','year'],
+        table_name = table
+    )
+    
+    students_by_school_type,_ = get_stat_data(
+        ['studentsenrol','type'],geo,session,
+        table_fields=['studentsenrol','type','year'],
+        percent_grouping=['type'],
+        table_name = table
+    )
+
+    final_data = {
+        'students_by_type_distribution':  students_by_type,
+        'students_by_schools_distribution':students_by_school,
+        'students_by_schools_type_distribution':students_by_school_type,
+        'total_students': {
+            "name": "Total students",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
+
+# Added teachers profile
+def get_teachers_profile(geo,session,request):
+
+    table = 'teachers_type_2005'
+    if request.GET.get('release') is  not None:
+        tablereq = 'teachers_type_' + request.GET.get('release')
+        if tablereq  in ('teachers_type_2005','teachers_type_2006','teachers_type_2007','teachers_type_2008',
+        'teachers_type_2009','teachers_type_2010','teachers_type_2011','teachers_type_2012','teachers_type_2013',
+        'teachers_type_2015','teachers_type_default'):
+            table = tablereq
+        else:
+            table = 'teachers_type_default'
+
+    teachers_by_type,t_lit = get_stat_data(
+        ['type'],geo,session,
+        table_fields=['teachers','type','year'],
+        table_name = table
+    )
+
+    
+    teachers_by_school_type,_ = get_stat_data(
+        ['teachers','type'],geo,session,
+        table_fields=['teachers','type','year'],
+        percent_grouping=['type'],
+        table_name = table,
+    )
+
+    final_data = {
+        'teachers_by_type_distribution':  teachers_by_type,
+        'teachers_by_schools_type_distribution':teachers_by_school_type,
+        'total_teachers': {
+            "name": "Total teachers",
+            "values": {"this":t_lit}
+        }
+    }
+    return final_data
+
+"""
 # Schools by gender boys/girls profile
 def get_schoolsgender_profile(geo,session,request):
 

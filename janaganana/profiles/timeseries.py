@@ -74,24 +74,24 @@ RELIGION_RECODES = OrderedDict([
 
 # demographics profile
 def get_demographics_profile(geo,session,request):
-    
-    table = 'population_2011'
-    
-    population_gender,t_lit = get_stat_data(
-        'population', geo, session,
-        table_fields=['population', 'year'],
-        table_name = table
-    )
-    
-    final_data = {
 
-        'population_by_gender': population_gender,
+    table = 'population_2011'
+
+    population_by_area_dist_data, total_population_by_area = get_stat_data(
+        'area', geo, session,
+        recode = dict(AREA_RECODES),
+        key_order = AREA_RECODES.values(),
+        table_fields=['area', 'sex','year'],
+        table_name = table
+        )
+
+    final_data = {
+        'population_area_ratio': population_by_area_dist_data,
         'total_population': {
             "name": "People",
-            "values": {"this": t_lit}
+            "values": {"this": total_population_by_area}
         }
     }
-
     return final_data
 
 # Added gdp data

@@ -3,30 +3,34 @@ from wazimap.data.tables import FieldTable
 
 # Census data tables
 
-FieldTable(['population' , 'year'],id='population_2001', universe='Population')
-FieldTable(['population' , 'year'],id='population_2011', universe='Population')
-FieldTable(['population' , 'year'],id='population_default', universe='Population')
+FieldTable(['area', 'sex' , 'year'],id='population_2001', universe='Population')
+FieldTable(['area', 'sex' , 'year'],id='population_2011', universe='Population')
+FieldTable(['area', 'sex' , 'year'],id='population_default', universe='Population')
 
-FieldTable(['literacy' ,'year'], id='literacy_2001', universe='Literacy')
-FieldTable(['literacy' ,'year'], id='literacy_2011', universe='Literacy')
-FieldTable(['literacy' ,'year'], id='literacy_default', universe='Literacy')
+FieldTable(['area','literacy','sex','year'], id='literacy_2001', universe='Literacy')
+FieldTable(['area','literacy','sex','year'], id='literacy_2011', universe='Literacy')
+FieldTable(['area','literacy','sex','year'], id='literacy_default', universe='Literacy')
 
 FieldTable(['religion', 'year'], id='religion_2011', universe='Religion')
 FieldTable(['religion', 'year'], id='religion_default', universe='Religion')
 
-FieldTable(['education', 'year'], id='education_2001', universe='Education')
-FieldTable(['education', 'year'], id='education_2011', universe='Education')
-FieldTable(['education', 'year'], id='education_default', universe='Education')
+FieldTable(['area','sex','education', 'year'], id='education_2011', universe='Education')
+FieldTable(['area','sex','education', 'year'], id='education_default', universe='Education')
 
-FieldTable(['workers' ,'year'], id='workers_2001', universe='Workers')
-FieldTable(['workers' ,'year'], id='workers_2011', universe='Workers')
-FieldTable([ 'workers' ,'year'], id='workers_default', universe='Workers')
+FieldTable(['area', 'sex' ,'maritalstatus','year'], id='maritalstatus_2011', universe='Marital')
+FieldTable(['area', 'sex' ,'maritalstatus','year'], id='maritalstatus_default', universe='Marital')
+
+FieldTable(['area','workers','sex','year'], id='workers_2001', universe='Workers')
+FieldTable(['area','workers','sex','year'], id='workers_2011', universe='Workers')
+FieldTable(['area','workers','sex','year'], id='workers_default', universe='Workers')
 
 
-#FieldTable(['area', 'sex', 'age', 'year'], id='area_sex_age_2011', universe='Age')
+FieldTable(['area', 'sex', 'age', 'year'], id='agegroup_2011', universe='Age')
+FieldTable(['area', 'sex', 'age', 'year'], id='agegroup_default', universe='Age')
 
-FieldTable(['caste','sex','year'], id='caste_sex_2011', universe='Caste')
-FieldTable(['caste','sex','year'], id='caste_sex_default', universe='Caste')
+FieldTable(['area','caste','sex','year'], id='caste_2001', universe='Caste')
+FieldTable(['area','caste','sex','year'], id='caste_2011', universe='Caste')
+FieldTable(['area','caste','sex','year'], id='caste_default', universe='Caste')
 
 FieldTable(['household','year'], id='household_2011', universe='Household')
 FieldTable(['household','year'], id='household_default', universe='Household')
@@ -109,50 +113,56 @@ FieldTable(['facilitiesphcs','year'], id='facilitiesphcs_2017', universe='Health
 FieldTable(['facilitiesphcs','year'], id='facilitiesphcs_default', universe='Health')
 
 # Schools data table
-"""
-FieldTable(['schools','type','year'], id='schools_by_type_2015', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2005', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2006', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2007', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2008', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2009', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2010', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2011', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2012', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2013', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_2015', universe='Schools')
+FieldTable(['schools','type','year'], id='schools_type_default', universe='Schools')
 
-FieldTable(['schools','type','year'], id='schools_by_type_2014', universe='Schools')
-
-FieldTable(['schools','type','year'], id='schools_by_type_2013', universe='Schools')
-
-FieldTable(['schools','gender','year'], id='schools_by_gender_2015', universe='Schools')
-
-FieldTable(['schools','gender','year'], id='schools_by_gender_2014', universe='Schools')
-
-FieldTable(['schools','gender','year'], id='schools_by_gender_2013', universe='Schools')
-
-FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2015', universe='Schools')
-
-FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2014', universe='Schools')
-
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2005', universe='Schools')
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2006', universe='Schools')
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2007', universe='Schools')
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2008', universe='Schools')
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2009', universe='Schools')
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2010', universe='Schools')
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2011', universe='Schools')
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2012', universe='Schools')
 FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2013', universe='Schools')
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_2015', universe='Schools')
+FieldTable(['studentsenrol','type','year'], id='studentsenrol_type_default', universe='Schools')
+
+FieldTable(['teachers','type','year'], id='teachers_type_2005', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_2006', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_2007', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_2008', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_2009', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_2010', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_2011', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_2012', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_2013', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_2015', universe='Schools')
+FieldTable(['teachers','type','year'], id='teachers_type_default', universe='Schools')
+
+"""
+FieldTable(['schools','gender','year'], id='schools_by_gender_2015', universe='Schools')
 
 FieldTable(['girlsenrolment','year'], id='girlsenrolment_2015', universe='Schools')
 
-FieldTable(['girlsenrolment','year'], id='girlsenrolment_2014', universe='Schools')
-
 FieldTable(['teachers','type','year'], id='teachers_type_2015', universe='Schools')
-
-FieldTable(['teachers','type','year'], id='teachers_type_2014', universe='Schools')
 
 FieldTable(['teachers','gender','year'], id='teachers_gender_2015', universe='Schools')
 
-FieldTable(['teachers','gender','year'], id='teachers_gender_2014', universe='Schools')
-
 FieldTable(['schooltoilet','gender','year'], id='schooltoilet_by_gender_2015', universe='Schools')
-
-FieldTable(['schooltoilet','gender','year'], id='schooltoilet_by_gender_2014', universe='Schools')
 
 FieldTable(['schoolfacilities','year'], id='schoolfacilities_2015', universe='Schools')
 
-FieldTable(['schoolfacilities','year'], id='schoolfacilities_2014', universe='Schools')
-
 FieldTable(['classroom','conditions','year'], id='classroom_conditions_2015', universe='Schools')
-
-FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', universe='Schools')
-
-FieldTable(['classroom','conditions','year'], id='classroom_conditions_2014', universe='Schools')
 
 #FieldTable(['disease','year'], id='healthdata_mum_2016', universe='Mumbai')
 """
