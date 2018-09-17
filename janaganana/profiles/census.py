@@ -19,7 +19,7 @@ PROFILE_SECTIONS = ('demographics','education','workers','schoolstype','religion
     'physicianchcs', 'surgeonchcs', 'radiographerchcs', 'pharmacistphcschcs', 'phcsfunctioning', 'chcsfunctioning',
     'subcenfunctioning', 'workersubcentre', 'assistantphcs', 'facilitieschcs', 'facilitiesphcs',
     'schoolsgender', 'studentsenrol', 'teachers', 'teachersgender','schooltoilet', 'schoolfacilities',
-    'girlsenrolment', 'classroomconditions', 'mumhealth',
+    'girlsenrolment', 'classroomconditions', 'mumhealth', 'gdpyearly',
 )
 
 def sort_stats_result(ip,key=None):
@@ -1301,6 +1301,41 @@ def get_teachers_profile(geo,session,request):
     }
     return final_data
 
+def get_gdpyearly_profile(geo,session,request):
+    
+    yearSetsIni = []
+    ExcYearSet = []
+    for i in range(2001,2018):
+        yearSetsIni.append(i)
+    
+    cyear = 2011
+    for y in yearSetsIni:
+        if y != cyear:
+            ExcYearSet.append(y)
+    ExcYearSet = map(str, ExcYearSet)
+
+    if request.GET.get('release') is  not None:
+        ExcYearSet = []
+        ryear    = int(request.GET.get('release'))
+        ExcYearSet = [e for e in yearSetsIni if e not in {ryear}]
+        #ExcYearSet = list(set(yearSetsIni)-set(ryear))
+        ExcYearSet = map(str, ExcYearSet)
+    
+    gdp_single_year,t_lit = get_stat_data(
+        ['gdpyear'],geo,session,
+        table_fields =['gdpyear'],
+        exclude = ExcYearSet,
+    )
+
+    final_data = {
+        'gdp_ratio': gdp_single_year,
+        'total_gdp':{
+            "name": "Total GDP in crore",
+            "values": {"this":t_lit}
+        }
+    }
+
+    return final_data
 """
 # Schools by gender boys/girls profile
 def get_schoolsgender_profile(geo,session,request):

@@ -168,7 +168,6 @@ FieldTable(['classroom','conditions','year'], id='classroom_conditions_2015', un
 """
 # Timeseries table
 FieldTable(['gdpyear'], id='gdp_timeseries_2001_17', universe='gdptimeseries')
-
 FieldTable(['year','schoolstimeseries','type'], id='schools_timeseries_2001_17',  universe='schooltimeseries')
 FieldTable(['year','studentstimeseries','type'], id='students_timeseries_2001_17', universe='schooltimeseries')
 FieldTable(['year','teacherstimeseries','type'], id='teachers_timeseries_2001_17', universe='schooltimeseries')
