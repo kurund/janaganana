@@ -144,8 +144,9 @@
     {% endblock %}
 
 
-    {% block profile_detail %}
+{% block profile_detail %}
     {% include 'profile/sections/demographics.html'%}
+    {% include 'profile/sections/gdp.html' %}
     {% include 'profile/sections/religion.html' %}
     {% include 'profile/sections/education.html' %}
     {% include 'profile/sections/maritalstatus.html' %}
@@ -153,9 +154,9 @@
     {% include 'profile/sections/caste.html' %}
     {% include 'profile/sections/household.html' %}
     {% include 'profile/sections/drinkingsource.html' %}
+    {% include 'profile/sections/schools.html' %}
     {% include 'profile/sections/crimes.html' %}
     {% include 'profile/sections/primaryhealth.html' %}
-    {% include 'profile/sections/schools.html' %}
     {% endblock profile_detail %}
 {% endblock content %}
 </main>
