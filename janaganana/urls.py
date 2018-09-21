@@ -14,7 +14,7 @@ timeseries_url = url(
     regex   = '^profiles-timeseries/(?P<geography_id>\w+-\w+)(-(?P<slug>[\w-]+))?/$',
     view    = cache_page(STANDARD_CACHE_TIME)(TimeseriesDetailView.as_view()),
     kwargs  = {},
-    name    = 'geography_detail',
+    name    = 'geography_detail2',
 )
 
 
